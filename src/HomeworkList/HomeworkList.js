@@ -22,7 +22,7 @@ class HomeworkList extends Component {
     console.log("homeworkid "+homeworkId);
     this.setState({  clicked: true });
     this.context.setHomeworkId(homeworkId);
-  //alert("hi!");
+  //alert("hiya");
   console.log("h2!"+ this.context.getHomeworkId());
   }
 
