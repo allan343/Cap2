@@ -16,8 +16,8 @@ export default class ClassDetails extends React.Component {
 
 
   render() {
-    console.log(this.props.homeworkId);
-    let homework = this.context.getHomework(this.props.homeworkId);
+    console.log(this.props.homeworkid);
+    let homework = this.context.getHomework(this.props.homeworkid);
     console.log(homework.description);
     return (
 
@@ -28,9 +28,9 @@ export default class ClassDetails extends React.Component {
         <button type="cancel" className="cancelShowButton" onClick={this.props.hideHomework}>
           Back
         </button>
-        {<h3> Description: {homework.description}</h3>}
-        {<h3> Due date: {homework.dueDate}</h3>}
-        {<h3> Due  time:  {homework.dueTime}</h3>}
+        {<h3> Description: {homework.homeworkdescription}</h3>}
+        {<h3> Due date: {homework.duedate}</h3>}
+        {<h3> Due  time:  {homework.duetime}</h3>}
 
 
         <NavLink className="addClassPath"
