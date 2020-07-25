@@ -9,7 +9,7 @@ export default function HomeworkItem(props) {
     { <h3> {props.homeworkdescription}</h3>}
     { <h3> Class{props.schoolclass}</h3>}
     { <h3> Due Date{props.duedate}</h3>}
-    { <h3> Due time {props.duedime}</h3>}
+    { <h3> Due time {props.duetime}</h3>}
      
       </div>
     
