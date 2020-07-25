@@ -23,14 +23,8 @@ export default class Home extends React.Component {
       
        
     <SchoolClassList schoolClasses={this.context.schoolClasses} ></SchoolClassList>
-    {/*
-    <NavLink className="addHomeWorkPath"
-            to={`/add-homework`}
-          >
-          Homework  +
-    </NavLink>*/}
 
-{(this.context.classClicked)? <HomeworkList homeworkList={this.context.homeworkList.filter(homework=>homework.classId== this.context.getClassId())} ></HomeworkList> :
+{(this.context.classClicked)? <HomeworkList homeworkList={this.context.homeworkList.filter(homework=>homework.classid== this.context.getClassId())} ></HomeworkList> :
 <HomeworkList homeworkList={this.context.homeworkList} ></HomeworkList>
    
     } </span>
