@@ -17,8 +17,8 @@ class App extends Component {
        
         schoolClasses: [],
         homeworkList: [],
-        classId:'',
-        homeworkId:'',
+        id:'',
+        homeworkid:'',
         classClicked: false
     };
 
@@ -43,7 +43,7 @@ class App extends Component {
     handleUpdateSchoolClass = (classObject, classId) => {
 
   
-                    let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.classId == classId);
+                    let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
                     for (let key in schoolClass) {
                         schoolClass[key] = classObject[key];
                     }
@@ -69,7 +69,7 @@ class App extends Component {
     handleDeleteClass = classId => {
         console.log(classId);
                 this.setState({
-                    schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.classId != classId)
+                    schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
                 });
             
     };
@@ -77,29 +77,29 @@ class App extends Component {
      handleGetClass = (id) => {
         return this.state.schoolClasses.find(
             function (schoolClass) {
-            return schoolClass.classId == id;
+            return schoolClass.id == id;
         });
     };
 
     setClassId = (classId) => {
         //console.log("context id "+classId);
         this.setState({
-            classId: classId
+            id: classId
         });
         //console.log("set id "+this.state.classId);
      
     };
 
     getClassId = () => {
-        console.log("get id "+this.state.classId);
-        return this.state.classId;
+        console.log("get id "+this.state.id);
+        return this.state.id;
     };
 
 
     handleUpdateSchoolClass = (classObject, classId) => {
 
   
-                    let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.classId == classId);
+                    let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
                     for (let key in schoolClass) {
                         schoolClass[key] = classObject[key];
                     }
@@ -125,30 +125,29 @@ class App extends Component {
     handleDeleteClass = classId => {
         console.log(classId);
                 this.setState({
-                    schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.classId != classId)
-                });
-            
+                    schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
+                });  
     };
 
      handleGetClass = (id) => {
         return this.state.schoolClasses.find(
             function (schoolClass) {
-            return schoolClass.classId == id;
+            return schoolClass.id == id;
         });
     };
 
     setClassId = (classId) => {
         //console.log("context id "+classId);
         this.setState({
-            classId: classId
+            id: classId
         });
         //console.log("set id "+this.state.classId);
      
     };
 
     getClassId = () => {
-        console.log("get id "+this.state.classId);
-        return this.state.classId;
+        console.log("get id "+this.state.id);
+        return this.state.id;
     };
 
 
@@ -160,15 +159,13 @@ class App extends Component {
     handleUpdateHomework = (homeworkObject, homeworkId) => {
 
         console.log("update being called?");
-        let homework = this.state.homeworkList.find(homework => homework.homeworkId == homeworkId);
+        let homework = this.state.homeworkList.find(homework => homework.homeworkid == homeworkId);
         for (let key in homework) {
             homework[key] = homeworkObject[key];
         }
         this.setState({
             homeworkList: this.state.homeworkList
         });
-    
-
 };
 
 
@@ -194,14 +191,14 @@ handleDeleteHomework = homeworkId => {
 handleGetHomework = (id) => {
 return this.state.homeworkList.find(
 function (homework) {
-return homework.homeworkId == id;
+return homework.homeworkid == id;
 });
 };
 
 setHomeworkId = (homeworkId) => {
 console.log(homeworkId);
 this.setState({
-homeworkId: homeworkId
+homeworkid: homeworkId
 });
 
 
@@ -209,7 +206,7 @@ homeworkId: homeworkId
 
 getHomeworkId = () => {
 
-return this.state.homeworkId;
+return this.state.homeworkid;
 };
 
     renderNavRoutes() {
@@ -296,10 +293,7 @@ return this.state.homeworkId;
             getHomework: this.handleGetHomework,
             setClassClicked: this.setClassClicked,
             closeClass: this.closeClass,
-            constest: this.contest
-
-
-           
+            constest: this.contest           
         };
         return (
            

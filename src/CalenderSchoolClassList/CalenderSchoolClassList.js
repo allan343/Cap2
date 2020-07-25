@@ -14,7 +14,7 @@ class CalenderSchoolClassList extends Component {
   constructor(props)
   {
     super(props);
-  this.state = {
+     this.state = {
     clicked: false
   };
   }
@@ -22,14 +22,11 @@ class CalenderSchoolClassList extends Component {
     console.log("classid "+classId);
     this.setState({  clicked: true });
     this.context.setClassId(classId);
-  //alert("hi!");
   console.log("h1!"+ this.context.getClassId());
   }
 
-  closeClass(classId) {
- 
+  closeClass() {
     this.setState({  clicked: false });
-   
   }
 
 
@@ -39,14 +36,14 @@ class CalenderSchoolClassList extends Component {
     return (
       <section className='SchoolClassList'>
      
-     {(this.state.clicked)? <ClassDetails classId={this.context.getClassId()} hideClass={()=>{this.setState({clicked:false})}} /> : 
+     {(this.state.clicked)? <ClassDetails id={this.context.getClassId()} hideClass={()=>{this.setState({clicked:false})}} /> : 
        <div>
      <ul className='SchoolClassList__list' aria-live='polite'>
           {schoolClasses.map(schoolClass =>
   
-            <li id="class" onClick={() => this.classClicked(schoolClass.classId)}> 
+            <li id="class" onClick={() => this.classClicked(schoolClass.id)}> 
               <SchoolClassItem
-              key={schoolClass.classId}
+              key={schoolClass.id}
              {...schoolClass}
               />
             </li>
@@ -56,7 +53,6 @@ class CalenderSchoolClassList extends Component {
             </div>
           }
 
-       
       </section>
     );
   }

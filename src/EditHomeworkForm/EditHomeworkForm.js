@@ -8,37 +8,37 @@ class EditHomeworkForm extends React.Component {
   // component that allows user
   // to fill in show details
   static defaultProps = {
-    homeworkId: '',
-    classId:'',
-    description: '',
-    schoolClass: '',
-    type: '',
-    dueDate: '',
-    dueTime: '',
-    priority: ''
+    homeworkid: '',
+    classid:'',
+    homeworkdescription: '',
+    schoolclass: '',
+    homeworktype: '',
+    duedate: '',
+    duetime: '',
+    homeworkpriority: ''
   };
 
   constructor(props) {
     //states a show can have
     super(props);
-    console.log(this.props.schoolClass);
+    console.log(this.props.schoolclass);
     this.state = {
-      homeworkId: this.props.homeworkId,
-      classId:this.props.classId,
-      description: {
-        value: this.props.description,
+      homeworkid: this.props.homeworkid,
+      classid:this.props.classid,
+      homeworkdescription: {
+        value: this.props.homeworkdescription,
         touched: false
       },
-      schoolClass:this.props.schoolClass,
-      type: this.props.type,
-      dueDate:this.props.dueDate,
-      dueTime: {
-        value: this.props.dueTime,
+      schoolclass:this.props.schoolclass,
+      homeworktype: this.props.homeworktype,
+      duedate:this.props.duedate,
+      duetime: {
+        value: this.props.duetime,
         touched: false
       },
-      priority:this.props.priority
+      homeworkpriority:this.props.hoemworkpriority
     };
-    console.log(this.state.schoolClass);
+    console.log(this.state.schoolclass);
 
   }
   //methods to update show state from user input
@@ -58,19 +58,19 @@ class EditHomeworkForm extends React.Component {
 
   updateDescription(description) {
   
-    this.setState({ description: { value: description, touched: true } });
+    this.setState({ homeworkdescription: { value: description, touched: true } });
    
   }
 
   updateClass =(event)=> {
-    console.log(this.context.getClass(event.target.value).className);
-    this.setState({classId:event.target.value})
-    this.setState({ schoolClass: this.context.getClass(event.target.value).className });
+    console.log(this.context.getClass(event.target.value).classname);
+    this.setState({classid:event.target.value})
+    this.setState({ schoolclass: this.context.getClass(event.target.value).classname });
     console.log(this.state);
   };
   updateType =(event)=> {
     
-    this.setState({ type: event.target.value });
+    this.setState({ homeworktype: event.target.value });
   };
 
   updateDueDate(date) {
@@ -78,17 +78,17 @@ class EditHomeworkForm extends React.Component {
     var d = new Date(date);
 var n = d.getDay();
 console.log(n);
-    this.setState({ dueDate: date });
+    this.setState({ duedate: date });
   }
 
   updateDueTime(time) {
   
-    this.setState({ dueTime: { value: time, touched: true} });
+    this.setState({ duetime: { value: time, touched: true} });
   }
 
   updatePriority =(event)=> {
     
-    this.setState({ priority: event.target.value });
+    this.setState({ homeworkpriority: event.target.value });
   };
 
   
@@ -100,14 +100,14 @@ console.log(n);
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let homework = {
-            homeworkId: this.state.homeworkId,
-            classId: this.state.classId,
-           description: this.state.description.value,
-           schoolClass: this.state.schoolClass,
+            homeworkid: this.state.homeworkid,
+            classid: this.state.classid,
+           homeworkdescription: this.state.homeworkdescription.value,
+           schoolclass: this.state.schoolclass,
             type: this.state.type,
-            dueDate: this.state.dueDate,
-            dueTime: this.state.dueTime.value,
-            priority: this.state.priority
+            duedate: this.state.duedate,
+            duetime: this.state.duetime.value,
+            homeworkpriority: this.state.homeworkpriority
            
           }
     
@@ -124,19 +124,19 @@ console.log(n);
           <div className="form-group">
             <label htmlFor="homeworkDesc">Description *</label>
             <input type="text" className="folder__control"
-              name="classname" id="classname" value={this.state.description.value} onChange={e => this.updateDescription(e.target.value)}/>
+              name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)}/>
            <label for="cars">Class:</label>
-            <select name="schoolClass" id="schoolClass" value={this.state.classId} onChange={this.updateClass} required="required">
+            <select name="schoolClass" id="schoolClass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
 
                 classList.map(schoolClass =>
 
-                  <option value={schoolClass.classId}>{schoolClass.className}</option>
+                  <option value={schoolClass.id}>{schoolClass.classname}</option>
                 )
               }
             </select>
          <label for="classType">Type:</label>
-            <select name="classType" id="classType" value={this.state.type} onChange={this.updateType}>
+            <select name="classType" id="classType" value={this.state.homeworktype} onChange={this.updateType}>
             <option value="Homework">Homework</option>
             <option value="Test">Test</option>
             <option value="Study">Study</option>
@@ -150,14 +150,14 @@ console.log(n);
             <option value="Project">Project</option>
             </select>
             <label for="dueDate">Due Date</label>
-            <input type="date" id="finishDate" name="finishDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.dueDate} required></input>
+            <input type="date" id="finishDate" name="finishDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.duedate} required></input>
           
           
            <label htmlFor="name">Due Time e.g. 8:30 or 2:15 pm *</label>
            <input type="text" className="folder__control"
-              name="startTime" id="startTime" value={this.state.dueTime.value} onChange={e => this.updateDueTime(e.target.value)}  value={this.state.dueTime.value} />
+              name="startTime" id="startTime" value={this.state.duetime.value} onChange={e => this.updateDueTime(e.target.value)}  value={this.state.duetime.value} />
            <label for="priority">Priority</label>
-          <select name="priority" id="priority" value={this.state.priority} onChange={this.updatePriority}>
+          <select name="priority" id="priority" value={this.state.homeworkpriority} onChange={this.updatePriority}>
             <option value="High">High</option>
             <option value="Medium">Medium</option>
             <option value="Low">Low</option>      

@@ -10,14 +10,9 @@ import './Calender.css';
 export default class Calender extends React.Component {
 
   static contextType = ApiContext;
-/*
-  static defaultProps = {
-      day: ["Mon","Tue","Wed","Thurs","Fri","Sat","Sun"],
-      dayOfWeek:''
-  };
-*/
+
   constructor(props) {
-    //states a show can have
+    
     super(props);
     this.state = {
       day: ["Mon","Tue","Wed","Thurs","Fri","Sat","Sun"],
@@ -25,7 +20,6 @@ export default class Calender extends React.Component {
       date:''
     };
    
-   // this.updateClass = this.updateClass.bind(this);
   }
 
   updateDayOfWeek(date) {
@@ -49,10 +43,10 @@ export default class Calender extends React.Component {
        <label for="startDate">Select a day</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateDayOfWeek(e.target.value)} ></input>
             </div>
-        <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass.dayOfWeek[this.state.dayOfWeek]==true && new Date(schoolClass.startDate)<= new Date(this.state.date) && new Date(schoolClass.finishDate)>= new Date(this.state.date))} ></SchoolClassList>
+        <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass.dayOfWeek[this.state.dayOfWeek]==true && new Date(schoolClass.startdate)<= new Date(this.state.date) && new Date(schoolClass.finishdate)>= new Date(this.state.date))} ></SchoolClassList>
        
        Homework due that day:
-       <HomeworkList homeworkList={   this.context.homeworkList.filter(homework => homework.dueDate==this.state.date)} ></HomeworkList>
+       <HomeworkList homeworkList={   this.context.homeworkList.filter(homework => homework.duedate==this.state.date)} ></HomeworkList>
       </span>
     )
   }

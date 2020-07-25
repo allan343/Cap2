@@ -8,24 +8,24 @@ class AddSchoolClassForm extends React.Component {
   // component that allows user
   // to fill in show details
   static defaultProps = {
-    classId: '',
-    className: '',
-    finishDate: '',
-    startDate: '',
+    id: '',
+    classname: '',
+    finishdate: '',
+    startdate: '',
     building: '',
     room: '',
     teacher: '',
     dayOfWeek:{
-    Sun: false,
-            Mon: false,
-            Tue: false,
-            Wed: false,
-            Thursday: false,
-            Friday: false,
-            Sat: false,
+    sun: false,
+            mon: false,
+            tue: false,
+            wed: false,
+            thurs: false,
+            fri: false,
+            sat: false,
     },
-            StartTime:'',
-            EndTime:''
+            starttime:'',
+            endtime:''
   };
 
   constructor(props) {
@@ -33,12 +33,12 @@ class AddSchoolClassForm extends React.Component {
     super(props);
     this.state = {
       id: '',
-      className: {
+      classname: {
         value: '',
         touched: false
       },
-      finishDate: "",
-      startDate: "",
+      finishdate: "",
+      startdate: "",
       building: {
         value: '',
         touched: false
@@ -52,23 +52,23 @@ class AddSchoolClassForm extends React.Component {
         touched: false
       },
       dayOfWeek:{
-        Sun: false,
-                Mon: false,
-                Tue: false,
-                Wed: false,
-                Thurs: false,
-                Fri: false,
-                Sat: false,
+        sun: false,
+                mon: false,
+                tue: false,
+                wed: false,
+                thurs: false,
+                fri: false,
+                sat: false,
         },
         room: {
             value: '',
             touched: false
           },
-          startTime: {
+          starttime: {
             value: '',
             touched: false
           },
-          endTime: {
+          endtime: {
             value: '',
             touched: false
           }
@@ -83,10 +83,10 @@ class AddSchoolClassForm extends React.Component {
    this.props.history.goBack();
   }
 
-  updateClassName(className) {
-    console.log("classname is " + className);
-    this.setState({ className: { value: className, touched: true } });
-    console.log("state classname "+ this.state.className);
+  updateClassName(classname) {
+    console.log("classname is " + classname);
+    this.setState({ classname: { value: classname, touched: true } });
+    console.log("state classname "+ this.state.classname);
   }
 
   updateBuilding(building) {
@@ -113,19 +113,19 @@ class AddSchoolClassForm extends React.Component {
   }
 
   updateStartDate(date) {
-    this.setState({ startDate: date });
+    this.setState({ startdate: date });
   }
 
   updateFinishDate(date) {
-    this.setState({ finishDate: date });
+    this.setState({ finishdate: date });
   }
 
   updateStartTime(time) {
-    this.setState({ startTime: { value: time, touched: true } });
+    this.setState({ starttime: { value: time, touched: true } });
   }
 
   updateEndTime(time) {
-    this.setState({ endTime: { value: time, touched: true } });
+    this.setState({ endtime: { value: time, touched: true } });
   }
 
   render() {
@@ -135,15 +135,15 @@ class AddSchoolClassForm extends React.Component {
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let schoolClass = {
-            classId: Math.random(),
-            className: this.state.className.value,
-            finishDate: this.state.finishDate,
-            startDate: this.state.startDate,
+            id: Math.random(),
+            classname: this.state.classname.value,
+            finishdate: this.state.finishdate,
+            startdate: this.state.startdate,
             building: this.state.building.value,
             room: this.state.room.value,
             teacher: this.state.teacher.value,
-            startTime:this.state.startTime.value,
-            endTime: this.state.endTime.value,
+            starttime:this.state.starttime.value,
+            endtime: this.state.endtime.value,
             dayOfWeek: this.state.dayOfWeek
            
           }
@@ -166,7 +166,7 @@ class AddSchoolClassForm extends React.Component {
           <div className="form-group">
             <label htmlFor="classname">Name *</label>
             <input type="text" className="folder__control"
-              name="classname" id="classname" value={this.state.className.value} onChange={e => this.updateClassName(e.target.value)} required="required"/>
+              name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required"/>
             <label for="startDate">Start Date</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateStartDate(e.target.value)} ></input>
             <label for="finishDate">Finish Date</label>
@@ -198,10 +198,10 @@ class AddSchoolClassForm extends React.Component {
            <label for="Sat"> Sat</label><br></br>
            <label htmlFor="name">Start Time e.g. 8:30 or 2:15 pm *</label>
            <input type="text" className="folder__control"
-              name="startTime" id="startTime" value={this.state.startTime.value} onChange={e => this.updateStartTime(e.target.value)} />
+              name="startTime" id="startTime" value={this.state.starttime.value} onChange={e => this.updateStartTime(e.target.value)} />
              <label htmlFor="name">End Time e.g. 8:30 or 2:15 pm *</label>
              <input type="text" className="folder__control"
-              name="endTime" id="endTime" value={this.state.endTime.value} onChange={e => this.updateEndTime(e.target.value)} />
+              name="endTime" id="endTime" value={this.state.endtime.value} onChange={e => this.updateEndTime(e.target.value)} />
           </div>
           <div className="addShow__button__group">
 

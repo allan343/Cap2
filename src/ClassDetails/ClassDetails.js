@@ -18,8 +18,8 @@ export default class ClassDetails extends React.Component {
     
 
   render() {
-    console.log(this.props.classId);
-  let schoolClass = this.context.getClass(this.props.classId);
+    console.log(this.props.id);
+  let schoolClass = this.context.getClass(this.props.id);
   console.log(schoolClass);
 
   return (
@@ -31,27 +31,20 @@ export default class ClassDetails extends React.Component {
 <button type="cancel" className="cancelShowButton" onClick={()=>this.cancelHandle()}>
             Close Details
         </button>
-    { <h3> {schoolClass.className}</h3>}
-  { <h3> Started {schoolClass.startDate}</h3>}
-  { <h3> Ends {schoolClass.finishDate}</h3>}
+    { <h3> {schoolClass.classname}</h3>}
+  { <h3> Started {schoolClass.startdate}</h3>}
+  { <h3> Ends {schoolClass.finishdate}</h3>}
     { <h3> Location {schoolClass.building}</h3>}  
     { <h3> Teacher {schoolClass.teacher}</h3>}  
-    { <h3> Class Start Time {schoolClass.startTime}</h3>}  
-    { <h3> Class End Time {schoolClass.endTime}</h3>}  
+    { <h3> Class Start Time {schoolClass.starttime}</h3>}  
+    { <h3> Class End Time {schoolClass.endtime}</h3>}  
     
     <NavLink className="addClassPath"
             to={`/ClassDetails/Edit/${this.context.getClassId()}`}
           >
             Edit
             </NavLink>
-            {/*
-            <NavLink className="addHomeWorkPath"
-        to={`/add-homework`}
-      >
-      Homework  +
-            </NavLink>
-<HomeworkList homeworkList={this.context.homeworkList.filter(homework=>homework.classId== this.props.classId)} ></HomeworkList>
-    */}
+          
 </div>
     
    

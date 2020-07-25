@@ -8,34 +8,34 @@ class AddHomeworkForm extends React.Component {
   // component that allows user
   // to fill in show details
   static defaultProps = {
-    homeworkId: '',
-    classId:'',
-    description: '',
-    schoolClass: '',
-    type: '',
-    dueDate: '',
-    dueTime: '',
-    priority: ''
+    homeworkid: '',
+    classid:'',
+    homeworkdescription: '',
+    schoolclass: '',
+    homeworktype: '',
+    duedate: '',
+    duetime: '',
+    homeworkpriority: ''
   };
 
   constructor(props) {
     //states a show can have
     super(props);
     this.state = {
-      homeworkId: '',
-      classId: '',
-      description: {
+      homeworkid: '',
+      classid: '',
+      homeworkdescription: {
         value: '',
         touched: false
       },
-      schoolClass: "",
-      type: "Homework",
-      dueDate: "",
-      dueTime: {
+      schoolclass: "",
+      homeworktype: "Homework",
+      duedate: "",
+      duetime: {
         value: '',
         touched: false
       },
-      priority: "High"
+      homeworkpriority: "High"
     };
 
    // this.updateClass = this.updateClass.bind(this);
@@ -47,9 +47,9 @@ class AddHomeworkForm extends React.Component {
    this.props.history.goBack();
   }
 
-  updateDescription(description) {
+  updateDescription(homeworkdescription) {
 
-    this.setState({ description: { value: description, touched: true } });
+    this.setState({ homeworkdescription: { value: homeworkdescription, touched: true } });
 
   }
   /*
@@ -59,17 +59,17 @@ class AddHomeworkForm extends React.Component {
   }*/
   updateClass =(event)=> {
     console.log(event.target.value);
-    this.setState({classId:event.target.value})
-    this.setState({ schoolClass: this.context.getClass(event.target.value).className });
+    this.setState({classid:event.target.value})
+    this.setState({ schoolclass: this.context.getClass(event.target.value).classname });
   };
   updateType =(event)=> {
     console.log(event.target.value);
-    this.setState({ type: event.target.value });
+    this.setState({ homeworktype: event.target.value });
   };
 
   updatePriority =(event)=> {
     console.log(event.target.value);
-    this.setState({ priority: event.target.value });
+    this.setState({ homeworkpriority: event.target.value });
   };
 
   updateDueDate(date) {
@@ -77,16 +77,16 @@ class AddHomeworkForm extends React.Component {
     var d = new Date(date);
     var n = d.getDay();
     console.log(n);
-    this.setState({ dueDate: date });
+    this.setState({ duedate: date });
   }
 
   updateDueTime(time) {
 
-    this.setState({ dueTime: { value: time, touched: true } });
+    this.setState({ duetime: { value: time, touched: true } });
   }
 
   updatePriority(priority) {
-    this.setState({ priority: priority });
+    this.setState({ homeworkpriority: priority });
   }
 
 
@@ -98,14 +98,14 @@ class AddHomeworkForm extends React.Component {
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let homework = {
-            homeworkId: Math.random(),
-            classId: this.state.classId,
-            description: this.state.description.value,
+            homeworkid: Math.random(),
+            classid: this.state.classid,
+            homeworkdescription: this.state.homeworkdescription.value,
             schoolClass: this.state.schoolClass,
-            type: this.state.type,
-            dueDate: this.state.dueDate,
-            dueTime: this.state.dueTime.value,
-            priority: this.state.priority
+            homeworktype: this.state.homeworktype,
+            duedate: this.state.duedate,
+            duetime: this.state.duetime.value,
+            homeworkpriority: this.state.homeworkpriority
 
           }
 
@@ -123,7 +123,7 @@ class AddHomeworkForm extends React.Component {
           <div className="form-group">
             <label htmlFor="homeworkDesc">Description *</label>
             <input type="text" className="folder__control"
-              name="classname" id="classname" value={this.state.description.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
+              name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
             <label for="cars">Class:</label>
             <select name="schoolClass" id="schoolClass"  onChange={this.updateClass}>
             <option  >{"select one"}</option>
@@ -131,7 +131,7 @@ class AddHomeworkForm extends React.Component {
             
                 classList.map(schoolClass =>
 
-                  <option  value={schoolClass.classId}>{schoolClass.className}</option>
+                  <option  value={schoolClass.id}>{schoolClass.classname}</option>
                 )
               }
             </select>
