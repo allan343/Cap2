@@ -11,25 +11,23 @@ class HomeworkList extends Component {
     homeworkList: []
   };
 
-  constructor(props)
-  {
+  constructor(props) {
     super(props);
-  this.state = {
-    clicked: false
-  };
+    this.state = {
+      clicked: false
+    };
   }
   homeworkClicked(homeworkId) {
-    console.log("homeworkid "+homeworkId);
-    this.setState({  clicked: true });
+    console.log("homeworkid " + homeworkId);
+    this.setState({ clicked: true });
     this.context.setHomeworkId(homeworkId);
-  //alert("hiya");
-  console.log("h2!"+ this.context.getHomeworkId());
+    console.log("h2!" + this.context.getHomeworkId());
   }
 
   closeHomework(classId) {
- 
-    this.setState({  clicked: false });
-   
+
+    this.setState({ clicked: false });
+
   }
 
 
@@ -39,27 +37,27 @@ class HomeworkList extends Component {
     return (
       <section className='HomeWorkList'>
         {
-     <NavLink className="addHomeWorkPath"
-        to={`/add-homework`}  
-        >
-        Homework  +
+          <NavLink className="addHomeWorkPath"
+            to={`/add-homework`}
+          >
+            Homework  +
         </NavLink>
-  }
-     {
-   
-       
-     (this.state.clicked)? <HomeworkDetails homeworkId={this.context.getHomeworkId()} hideHomework={()=>{this.setState({clicked:false})}} /> :
-      <ul className='SchoolClassList__list' aria-live='polite'>
-          {homeworkList.map(homework =>
-            <li id="homework" onClick={() => this.homeworkClicked(homework.homeworkid)}>
-              <HomeworkItem
-              key={homework.homeworkid}
-             {...homework}
-             />
-            </li>
-          )}
-        </ul>
-  }   
+        }
+        {
+
+
+          (this.state.clicked) ? <HomeworkDetails homeworkId={this.context.getHomeworkId()} hideHomework={() => { this.setState({ clicked: false }) }} /> :
+            <ul className='SchoolClassList__list' aria-live='polite'>
+              {homeworkList.map(homework =>
+                <li id="homework" onClick={() => this.homeworkClicked(homework.homeworkid)}>
+                  <HomeworkItem
+                    key={homework.homeworkid}
+                    {...homework}
+                  />
+                </li>
+              )}
+            </ul>
+        }
       </section>
     );
   }

@@ -182,20 +182,20 @@ class AddSchoolClassForm extends React.Component {
             <input type="text" className="folder__control"
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} />
           
-           <input type="checkbox"  id="Sun" value={'Sun'} onChange={e=>this.updateDay(e.target.value)} />
-           <label for="Sun"> Sun</label><br></br>
-           <input type="checkbox"  id="Mon" value={'Mon'}  onChange={e=>this.updateDay(e.target.value)} />
-           <label for="Mon"> Mon</label><br></br>
-           <input type="checkbox"  id="Tue" value={'Tue'}  onChange={e=>this.updateDay(e.target.value)} />
-           <label for="Tues"> Tues</label><br></br>
-           <input type="checkbox"  id="Wed" value={'Wed'}   onChange={e=>this.updateDay(e.target.value)} />
-           <label for="Wed"> Wed</label><br></br>
-           <input type="checkbox"  id="Thur" value={'Thurs'} onChange={e=>this.updateDay(e.target.value)} />
-           <label for="Thurs"> Thurs</label><br></br>
-           <input type="checkbox"  id="Fri" value={'Fri'} onChange={e=>this.updateDay(e.target.value)} />
-           <label for="Fri"> Fri</label><br></br>
-           <input type="checkbox"  id="Sat" value={'Sat'}  onChange={e=>this.updateDay(e.target.value)} />
-           <label for="Sat"> Sat</label><br></br>
+           <input type="checkbox"  id="sun" value={'sun'} onChange={e=>this.updateDay(e.target.value)} />
+           <label for="sun"> Sun</label><br></br>
+           <input type="checkbox"  id="mon" value={'mon'}  onChange={e=>this.updateDay(e.target.value)} />
+           <label for="mon"> Mon</label><br></br>
+           <input type="checkbox"  id="tue" value={'tue'}  onChange={e=>this.updateDay(e.target.value)} />
+           <label for="tues"> Tues</label><br></br>
+           <input type="checkbox"  id="wed" value={'wed'}   onChange={e=>this.updateDay(e.target.value)} />
+           <label for="wed"> Wed</label><br></br>
+           <input type="checkbox"  id="thurs" value={'thurs'} onChange={e=>this.updateDay(e.target.value)} />
+           <label for="thurs"> Thurs</label><br></br>
+           <input type="checkbox"  id="fri" value={'fri'} onChange={e=>this.updateDay(e.target.value)} />
+           <label for="fri"> Fri</label><br></br>
+           <input type="checkbox"  id="sat" value={'sat'}  onChange={e=>this.updateDay(e.target.value)} />
+           <label for="sat"> Sat</label><br></br>
            <label htmlFor="name">Start Time e.g. 8:30 or 2:15 pm *</label>
            <input type="text" className="folder__control"
               name="startTime" id="startTime" value={this.state.starttime.value} onChange={e => this.updateStartTime(e.target.value)} />
