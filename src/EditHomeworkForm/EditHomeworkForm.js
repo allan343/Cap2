@@ -104,7 +104,7 @@ console.log(n);
             classid: this.state.classid,
            homeworkdescription: this.state.homeworkdescription.value,
            schoolclass: this.state.schoolclass,
-            type: this.state.type,
+            homeworktype: this.state.homeworktype,
             duedate: this.state.duedate,
             duetime: this.state.duetime.value,
             homeworkpriority: this.state.homeworkpriority
