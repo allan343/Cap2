@@ -36,7 +36,7 @@ class EditHomeworkForm extends React.Component {
         value: this.props.duetime,
         touched: false
       },
-      homeworkpriority:this.props.hoemworkpriority
+      homeworkpriority:this.props.homeworkpriority
     };
     console.log(this.state.schoolclass);
 
@@ -126,7 +126,7 @@ console.log(n);
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)}/>
            <label for="cars">Class:</label>
-            <select name="schoolClass" id="schoolClass" value={this.state.classid} onChange={this.updateClass} required="required">
+            <select name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
 
                 classList.map(schoolClass =>

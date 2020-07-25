@@ -101,7 +101,7 @@ class AddHomeworkForm extends React.Component {
             homeworkid: Math.random(),
             classid: this.state.classid,
             homeworkdescription: this.state.homeworkdescription.value,
-            schoolClass: this.state.schoolclass,
+            schoolclass: this.state.schoolclass,
             homeworktype: this.state.homeworktype,
             duedate: this.state.duedate,
             duetime: this.state.duetime.value,
