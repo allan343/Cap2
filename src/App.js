@@ -183,7 +183,7 @@ handleAddHomework = (homeworkObject) => {
 // deletes a show from the front end in the state array holding all shows
 handleDeleteHomework = homeworkId => {
     this.setState({
-        homeworkList: this.state.homeworkList.filter(homeworkClass => homeworkClass.homeworkId != homeworkId)
+        homeworkList: this.state.homeworkList.filter(homeworkClass => homeworkClass.homeworkid != homeworkId)
     });
 
 };
