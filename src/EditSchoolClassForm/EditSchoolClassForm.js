@@ -166,7 +166,7 @@ class EditSchoolClassForm extends React.Component {
             <input type="date" id="startDate" name="startDate" value={this.state.startdate} onChange={e => this.updateStartDate(e.target.value)} ></input>
 
             <label for="finishDate">Finish Date</label>
-            <input type="date" id="finishDate" name="finishDate" value={this.state.finishDate} onChange={e => this.updateFinishDate(e.target.value)}></input>
+            <input type="date" id="finishDate" name="finishDate" value={this.state.finishdate} onChange={e => this.updateFinishDate(e.target.value)}></input>
 
             <label htmlFor="name">Building*</label>
             <input type="text" className="folder__control"
