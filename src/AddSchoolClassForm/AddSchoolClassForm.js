@@ -120,52 +120,34 @@ class AddSchoolClassForm extends React.Component {
     console.log(this.state);
   }
 
-  updateMonday(dayOfWeek) {
-    console.log(dayOfWeek);
-    console.log(this.state);
+  updateMonday() {
     let checked=!this.state.mon;
     this.setState({ mon:  checked});
-    console.log(this.state);
   }
 
-  updateTuesday(dayOfWeek) {
-    console.log(dayOfWeek);
-    console.log(this.state);
+  updateTuesday() {
     let checked=!this.state.tue;
     this.setState({ tue:  checked});
-    console.log(this.state);
   }
 
-  updateWednesday(dayOfWeek) {
-    console.log(dayOfWeek);
-    console.log(this.state);
+  updateWednesday() {
     let checked=!this.state.wed;
     this.setState({ wed:  checked});
-    console.log(this.state);
   }
 
-  updateThursday(dayOfWeek) {
-    console.log(dayOfWeek);
-    console.log(this.state);
+  updateThursday() {
     let checked=!this.state.thurs;
     this.setState({ thurs:  checked});
-    console.log(this.state);
   }
 
-  updateFriday(dayOfWeek) {
-    console.log(dayOfWeek);
-    console.log(this.state);
+  updateFriday() {
     let checked=!this.state.fri;
     this.setState({ fri : checked});
-    console.log(this.state);
   }
 
-  updateSaturday(dayOfWeek) {
-    console.log(dayOfWeek);
-    console.log(this.state);
+  updateSaturday() {
     let checked=!this.state.sat;
     this.setState({ sat : checked});
-    console.log(this.state);
   }
 
   updateStartDate(date) {
@@ -245,7 +227,7 @@ class AddSchoolClassForm extends React.Component {
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} />
           
            <input type="checkbox"  id="sun" value={'sun'} onChange={e=>this.updateSunday(e.target.value)} />
-           <label for="sun"> Sun</label><br></br>
+           <label htmlFor="sun"> Sun</label><br></br>
            <input type="checkbox"  id="mon" value={'mon'}  onChange={e=>this.updateMonday(e.target.value)} />
            <label for="mon"> Mon</label><br></br>
            <input type="checkbox"  id="tue" value={'tue'}  onChange={e=>this.updateTuesday(e.target.value)} />
