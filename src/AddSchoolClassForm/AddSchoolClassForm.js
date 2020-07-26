@@ -64,14 +64,8 @@ class AddSchoolClassForm extends React.Component {
             value: '',
             touched: false
           },
-          starttime: {
-            value: '',
-            touched: false
-          },
-          endtime: {
-            value: '',
-            touched: false
-          }
+          starttime: "1:00am",
+          endtime: "1:00am"
        
 
     };
@@ -158,14 +152,20 @@ class AddSchoolClassForm extends React.Component {
     this.setState({ finishdate: date });
   }
 
-  updateStartTime(time) {
-    this.setState({ starttime: { value: time, touched: true } });
-  }
+  updateStartTime =(event)=> {
 
+    this.setState({ starttime: event.target.value });
+  };
+  /*
   updateEndTime(time) {
     this.setState({ endtime: { value: time, touched: true } });
   }
+*/
 
+updateEndTime =(event)=> {
+ 
+  this.setState({ endtime: event.target.value });
+};
   render() {
 
     return (
@@ -180,8 +180,8 @@ class AddSchoolClassForm extends React.Component {
             building: this.state.building.value,
             room: this.state.room.value,
             teacher: this.state.teacher.value,
-            starttime:this.state.starttime.value,
-            endtime: this.state.endtime.value,
+            starttime:this.state.starttime,
+            endtime: this.state.endtime,
             sun: this.state.sun,
             mon: this.state.mon,
             tue: this.state.tue,
@@ -240,12 +240,60 @@ class AddSchoolClassForm extends React.Component {
            <label for="fri"> Fri</label><br></br>
            <input type="checkbox"  id="sat" value={'sat'}  onChange={e=>this.updateSaturday(e.target.value)} />
            <label for="sat"> Sat</label><br></br>
-           <label htmlFor="name">Start Time e.g. 8:30 or 2:15 pm *</label>
-           <input type="text" className="folder__control"
-              name="startTime" id="startTime" value={this.state.starttime.value} onChange={e => this.updateStartTime(e.target.value)} />
-             <label htmlFor="name">End Time e.g. 8:30 or 2:15 pm *</label>
-             <input type="text" className="folder__control"
-              name="endTime" id="endTime" value={this.state.endtime.value} onChange={e => this.updateEndTime(e.target.value)} />
+           <label htmlFor="name">Start Time</label>
+           <select name="starttime" id="starttime" onChange={this.updateStartTime}>
+              <option selected="selected" value="1:00am">1:00am</option>
+              <option value="2:00am">2:00am</option>
+              <option value="3:00am">3:00am</option>
+              <option value="4:00am">4:00am</option>
+              <option value="5:00am">5:00am</option>
+              <option value="6:00am">6:00am</option>
+              <option value="7:00am">7:00am</option>
+              <option value="8:00am">8:00am</option>
+              <option value="9:00am">9:00am</option>
+              <option value="10:00am">10:00am</option>
+              <option value="11:00am">11:00am</option>
+              <option value="12:00pm">12:00pm</option>
+              <option value="1:00pm">1:00pm</option>
+              <option value="2:00pm">2:00pm</option>
+              <option value="3:00pm">3:00pm</option>
+              <option value="4:00pm">4:00pm</option>
+              <option value="5:00pm">5:00pm</option>
+              <option value="6:00pm">6:00pm</option>
+              <option value="7:00pm">7:00pm</option>
+              <option value="8:00pm">8:00pm</option>
+              <option value="9:00pm">9:00pm</option>
+              <option value="10:00pm">10:00pm</option>
+              <option value="11:00pm">11:00pm</option>
+              <option value="12:00am">12:00am</option>
+            </select>
+             <label htmlFor="name">End Time</label>
+             <select name="endtime" id="endtime" onChange={this.updateEndTime}>
+              <option selected="selected" value="1:00am">1:00am</option>
+              <option value="2:00am">2:00am</option>
+              <option value="3:00am">3:00am</option>
+              <option value="4:00am">4:00am</option>
+              <option value="5:00am">5:00am</option>
+              <option value="6:00am">6:00am</option>
+              <option value="7:00am">7:00am</option>
+              <option value="8:00am">8:00am</option>
+              <option value="9:00am">9:00am</option>
+              <option value="10:00am">10:00am</option>
+              <option value="11:00am">11:00am</option>
+              <option value="12:00pm">12:00pm</option>
+              <option value="1:00pm">1:00pm</option>
+              <option value="2:00pm">2:00pm</option>
+              <option value="3:00pm">3:00pm</option>
+              <option value="4:00pm">4:00pm</option>
+              <option value="5:00pm">5:00pm</option>
+              <option value="6:00pm">6:00pm</option>
+              <option value="7:00pm">7:00pm</option>
+              <option value="8:00pm">8:00pm</option>
+              <option value="9:00pm">9:00pm</option>
+              <option value="10:00pm">10:00pm</option>
+              <option value="11:00pm">11:00pm</option>
+              <option value="12:00am">12:00am</option>
+            </select>
           </div>
           <div className="addShow__button__group">
 
