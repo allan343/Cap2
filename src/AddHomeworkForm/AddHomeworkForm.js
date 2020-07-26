@@ -52,11 +52,7 @@ class AddHomeworkForm extends React.Component {
     this.setState({ homeworkdescription: { value: homeworkdescription, touched: true } });
 
   }
-  /*
-  updateClass(schoolClass) {
-    console.log("updateclass "+schoolClass);
-    this.setState({ schoolClass:schoolClass });
-  }*/
+ 
   updateClass =(event)=> {
     console.log(event.target.value);
     this.setState({classid:event.target.value})
