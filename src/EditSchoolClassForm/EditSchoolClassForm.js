@@ -15,7 +15,7 @@ class EditSchoolClassForm extends React.Component {
     building: '',
     room: '',
     teacher: '',
-    dayOfWeek: {
+    
       sun: false,
       mon: false,
       tue: false,
@@ -23,7 +23,7 @@ class EditSchoolClassForm extends React.Component {
       thursday: false,
       friday: false,
       sat: false,
-    },
+    
     starttime: '',
     endtime: ''
   };
@@ -52,7 +52,13 @@ class EditSchoolClassForm extends React.Component {
         value: this.props.teacher,
         touched: false
       },
-      dayOfWeek: this.props.dayOfWeek,
+      sun: this.props.sun,
+      mon: this.props.mon,
+      tue: this.props.tue,
+      wed: this.props.wed,
+      thurs: this.props.thurs,
+      fri: this.props.fri,
+      sat: this.props.sat,
       starttime: {
         value: this.props.starttime,
         touched: false
@@ -106,6 +112,44 @@ class EditSchoolClassForm extends React.Component {
     this.setState({ dayOfWeek: days });
   }
 
+  updateSunday(dayOfWeek) {
+    console.log(dayOfWeek);
+    console.log(this.state);
+    let checked=!this.state.sun;
+    this.setState({ sun:  checked});
+    console.log(this.state);
+  }
+
+  updateMonday() {
+    let checked=!this.state.mon;
+    this.setState({ mon:  checked});
+  }
+
+  updateTuesday() {
+    let checked=!this.state.tue;
+    this.setState({ tue:  checked});
+  }
+
+  updateWednesday() {
+    let checked=!this.state.wed;
+    this.setState({ wed:  checked});
+  }
+
+  updateThursday() {
+    let checked=!this.state.thurs;
+    this.setState({ thurs:  checked});
+  }
+
+  updateFriday() {
+    let checked=!this.state.fri;
+    this.setState({ fri : checked});
+  }
+
+  updateSaturday() {
+    let checked=!this.state.sat;
+    this.setState({ sat : checked});
+  }
+
   updateStartDate(date) {
     this.setState({ startdate: date });
   }
@@ -139,7 +183,13 @@ class EditSchoolClassForm extends React.Component {
             teacher: this.state.teacher.value,
             starttime: this.state.starttime.value,
             endtime: this.state.endtime.value,
-            dayOfWeek: this.state.dayOfWeek
+            sun: this.state.sun,
+            mon: this.state.mon,
+            tue: this.state.tue,
+            wed: this.state.wed,
+            thurs: this.state.thurs,
+            fri: this.state.fri,
+            sat: this.state.sat,
 
           }
 
@@ -177,25 +227,19 @@ class EditSchoolClassForm extends React.Component {
             <label htmlFor="name">Teacher *</label>
             <input type="text" className="folder__control"
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} />
-            {/*
-              (this.state.dayOfWeek.Sun) ?
-              (  <input checked type="checkbox" id="Sun" value={'Sun'} defaultChecked={true} onChange={e => this.updateDay(e.target.value)} />)
-                :
-              (  <input type="checkbox" id="Sun" value={'Sun'} defaultChecked={true} onChange={e => this.updateDay(e.target.value)} />)
-            */}
-             <input type="checkbox" id="sun" value={'sun'} defaultChecked={this.state.dayOfWeek.sun ? true: false} onChange={e => this.updateDay(e.target.value)} />
+             <input type="checkbox" id="sun" value={'sun'} defaultChecked={this.state.dayOfWeek.sun ? true: false} onChange={e => this.updateSunday(e.target.value)} />
             <label for="sun"> Sun</label><br></br>
-            <input type="checkbox" id="mon" value={'mon'} defaultChecked={this.state.dayOfWeek.mon ? true: false} onChange={e => this.updateDay(e.target.value)} />
+            <input type="checkbox" id="mon" value={'mon'} defaultChecked={this.state.dayOfWeek.mon ? true: false} onChange={e => this.updateMonday(e.target.value)} />
             <label for="son"> Mon</label><br></br>
-            <input type="checkbox" id="tue" value={'tue'} defaultChecked={this.state.dayOfWeek.tue ? true: false} onChange={e => this.updateDay(e.target.value)} />
+            <input type="checkbox" id="tue" value={'tue'} defaultChecked={this.state.dayOfWeek.tue ? true: false} onChange={e => this.updateTuesday(e.target.value)} />
             <label for="tue"> Tues</label><br></br>
-            <input type="checkbox" id="wed" value={'wed'} defaultChecked={this.state.dayOfWeek.wed ? true: false } onChange={e => this.updateDay(e.target.value)} />
+            <input type="checkbox" id="wed" value={'wed'} defaultChecked={this.state.dayOfWeek.wed ? true: false } onChange={e => this.updateWednesday(e.target.value)} />
             <label for="wed"> Wed</label><br></br>
-            <input type="checkbox" id="thurs" value={'thurs'} defaultChecked={this.state.dayOfWeek.thurs ? true: false} onChange={e => this.updateDay(e.target.value)} />
+            <input type="checkbox" id="thurs" value={'thurs'} defaultChecked={this.state.dayOfWeek.thurs ? true: false} onChange={e => this.updateThursday(e.target.value)} />
             <label for="thurs"> Thurs</label><br></br>
-            <input type="checkbox" id="fri" value={'fri'} defaultChecked={this.state.dayOfWeek.fri ? true: false} onChange={e => this.updateDay(e.target.value)} />
+            <input type="checkbox" id="fri" value={'fri'} defaultChecked={this.state.dayOfWeek.fri ? true: false} onChange={e => this.updateFriday(e.target.value)} />
             <label for="fri"> Fri</label><br></br>
-            <input type="checkbox" id="sat" value={'sat'} defaultChecked={this.state.dayOfWeek.sat ? true: false} onChange={e => this.updateDay(e.target.value)} />
+            <input type="checkbox" id="sat" value={'sat'} defaultChecked={this.state.dayOfWeek.sat ? true: false} onChange={e => this.updateSaturday(e.target.value)} />
             <label for="sat"> Sat</label><br></br>
             <label htmlFor="name">Start Time e.g. 8:30 or 2:15 pm *</label>
             <input type="text" className="folder__control"

@@ -5,13 +5,13 @@ import React from 'react';
 export default function SchoolClassItem(props) {
   let schoolItem = props
   console.log("props " + schoolItem.classname);
-  let Sun = schoolItem.dayOfWeek.sun ? 'Sun' : '';
-  let Mon = schoolItem.dayOfWeek.mon ? 'Mon' : '';
-  let Tue = schoolItem.dayOfWeek.tue ? 'Tue' : '';
-  let Wed = schoolItem.dayOfWeek.wed ? 'Wed' : '';
-  let Thurs = schoolItem.dayOfWeek.thurs ? 'Thurs' : '';
-  let Fri = schoolItem.dayOfWeek.fri ? 'Fri' : '';
-  let Sat = schoolItem.dayOfWeek.sat ? 'Sat' : '';
+  let Sun = schoolItem.sun ? 'Sun' : '';
+  let Mon = schoolItem.mon ? 'Mon' : '';
+  let Tue = schoolItem.tue ? 'Tue' : '';
+  let Wed = schoolItem.wed ? 'Wed' : '';
+  let Thurs = schoolItem.thurs ? 'Thurs' : '';
+  let Fri = schoolItem.fri ? 'Fri' : '';
+  let Sat = schoolItem.sat ? 'Sat' : '';
   let days = `${Sun} ${Mon} ${Tue} ${Wed} ${Thurs} ${Fri} ${Sat}`;
 
   return (

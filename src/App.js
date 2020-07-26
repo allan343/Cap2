@@ -9,8 +9,6 @@ import AddHomeworkForm from './AddHomeworkForm/AddHomeworkForm';
 import EditHomeworkForm from './EditHomeworkForm/EditHomeworkForm';
 import ApiContext from './ApiContext/ApiContext';
 
-
-
 class App extends Component {
     state = {
         //array that holds all shows
