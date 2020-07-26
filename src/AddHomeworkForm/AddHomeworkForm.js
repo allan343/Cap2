@@ -94,7 +94,7 @@ class AddHomeworkForm extends React.Component {
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let homework = {
-            homeworkid: Math.random(),
+            //homeworkid: Math.random(),
             classid: this.state.classid,
             homeworkdescription: this.state.homeworkdescription.value,
             schoolclass: this.state.schoolclass,

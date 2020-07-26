@@ -219,11 +219,34 @@ class App extends Component {
 
     handleAddHomework = (homeworkObject) => {
 
+        fetch(`${config.API_ENDPOINT}/homework`, { headers: { 'content-type': 'application/json' }, method: "POST", body: JSON.stringify(homeworkObject) })
+        .then(response => response.json())
+        .then(responseJson => {
+            console.log("addhw2") ;
+            console.log(responseJson);
+            if (responseJson.homeworkid) {
+                let newid = responseJson.id;
+                const newArr = [...this.state.homeworkList, responseJson];
+                this.setState({
+                    homeworkList: newArr
+                });
+             
+                console.log("addhw3") ;
+            }
+        })
+
+
+
+
+
+
+/*
+
         const newArr = [...this.state.homeworkList, homeworkObject];
         console.log(newArr);
         this.setState({
             homeworkList: newArr
-        });
+        });*/
         //console.log("homeworkList"+this.state.homeworkList);
     };
 
