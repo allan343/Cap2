@@ -156,11 +156,7 @@ class AddSchoolClassForm extends React.Component {
 
     this.setState({ starttime: event.target.value });
   };
-  /*
-  updateEndTime(time) {
-    this.setState({ endtime: { value: time, touched: true } });
-  }
-*/
+  
 
 updateEndTime =(event)=> {
  
