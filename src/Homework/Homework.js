@@ -12,23 +12,18 @@ export default class Home extends React.Component {
   //only show shows that have that state for this view
   render() {
     var Now = Date.now();
-    /*
-    var date = new Date("2020-07-09");
-    console.log(date);
-    console.log(Now);
-    if(date< Now)
-    {console.log("less than")}*/
+   
     return (
       <span className='NoteListMain__button-container'>
        
        <HeaderNav></HeaderNav>
        <section class= "Late">
       {"Late"}
-      <HomeworkList homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.dueDate) < Now)} ></HomeworkList>
+      <HomeworkList homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
       </section>
       <section class= "Upcoming">
        {"Upcoming"}
-       <HomeworkList homeworkList={this.context.homeworkList.filter(homework => new Date(homework.dueDate) > Now)} ></HomeworkList>
+       <HomeworkList homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
       </section>
       </span>
     )
