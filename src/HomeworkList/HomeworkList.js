@@ -36,12 +36,12 @@ class HomeworkList extends Component {
     console.log(homeworkList);
     return (
       <section className='HomeWorkList'>
-        {
+        {(this.context.schoolClasses.length)?
           <NavLink className="addHomeWorkPath"
             to={`/add-homework`}
           >
             Homework  +
-        </NavLink>
+        </NavLink>:""
         }
         {
 

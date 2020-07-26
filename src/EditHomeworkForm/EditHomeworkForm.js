@@ -124,7 +124,7 @@ console.log(n);
           <div className="form-group">
             <label htmlFor="homeworkDesc">Description *</label>
             <input type="text" className="folder__control"
-              name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)}/>
+              name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
            <label for="cars">Class:</label>
             <select name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
@@ -150,12 +150,12 @@ console.log(n);
             <option value="Project">Project</option>
             </select>
             <label for="dueDate">Due Date</label>
-            <input type="date" id="finishDate" name="finishDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.duedate} required></input>
+            <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.duedate} required="required"></input>
           
           
            <label htmlFor="name">Due Time e.g. 8:30 or 2:15 pm *</label>
            <input type="text" className="folder__control"
-              name="startTime" id="startTime" value={this.state.duetime.value} onChange={e => this.updateDueTime(e.target.value)}  value={this.state.duetime.value} />
+              name="dueTime" id="dueTime" value={this.state.duetime.value} onChange={e => this.updateDueTime(e.target.value)}  value={this.state.duetime.value} required="required"/>
            <label for="priority">Priority</label>
           <select name="priority" id="priority" value={this.state.homeworkpriority} onChange={this.updatePriority}>
             <option value="High">High</option>

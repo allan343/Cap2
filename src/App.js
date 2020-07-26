@@ -207,6 +207,14 @@ getHomeworkId = () => {
 return this.state.homeworkid;
 };
 
+getFirstClassName= () =>{
+    return this.state.schoolClasses[0].classname;
+}
+
+getFirstClassId= () =>{
+    return this.state.schoolClasses[0].id;
+}
+
     renderNavRoutes() {
 
         return (
@@ -291,7 +299,8 @@ return this.state.homeworkid;
             getHomework: this.handleGetHomework,
             setClassClicked: this.setClassClicked,
             closeClass: this.closeClass,
-            constest: this.contest           
+            getFirstClassName: this.getFirstClassName,
+            getFirstClassId:this.getFirstClassId   
         };
         return (
            

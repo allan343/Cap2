@@ -208,20 +208,20 @@ class EditSchoolClassForm extends React.Component {
               name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required"/>
             <label for="startDate">Start Date</label>
 
-            <input type="date" id="startDate" name="startDate" value={this.state.startdate} onChange={e => this.updateStartDate(e.target.value)} ></input>
+            <input type="date" id="startDate" name="startDate" value={this.state.startdate} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
 
             <label for="finishDate">Finish Date</label>
-            <input type="date" id="finishDate" name="finishDate" value={this.state.finishdate} onChange={e => this.updateFinishDate(e.target.value)}></input>
+            <input type="date" id="finishDate" name="finishDate" value={this.state.finishdate} onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
 
             <label htmlFor="name">Building*</label>
             <input type="text" className="folder__control"
-              name="building" id="building" value={this.state.building.value} onChange={e => this.updateBuilding(e.target.value)} />
+              name="building" id="building" value={this.state.building.value} onChange={e => this.updateBuilding(e.target.value)} required="required"/>
             <label htmlFor="name">Room *</label>
             <input type="text" className="room"
-              name="room" id="room" value={this.state.room.value} onChange={e => this.updateRoom(e.target.value)} />
+              name="room" id="room" value={this.state.room.value} onChange={e => this.updateRoom(e.target.value)} required="required"/>
             <label htmlFor="name">Teacher *</label>
             <input type="text" className="folder__control"
-              name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} />
+              name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} required="required" />
              <input type="checkbox" id="sun" value={'sun'} defaultChecked={this.state.sun ? true: false} onChange={e => this.updateSunday(e.target.value)} />
             <label for="sun"> Sun</label><br></br>
             <input type="checkbox" id="mon" value={'mon'} defaultChecked={this.state.mon ? true: false} onChange={e => this.updateMonday(e.target.value)} />
@@ -237,7 +237,7 @@ class EditSchoolClassForm extends React.Component {
             <input type="checkbox" id="sat" value={'sat'} defaultChecked={this.state.sat ? true: false} onChange={e => this.updateSaturday(e.target.value)} />
             <label for="sat"> Sat</label><br></br>
             <label htmlFor="name">Start Time</label>
-           <select name="starttime" id="starttime" value={this.state.starttime} onChange={this.updateStartTime}>
+           <select name="starttime" id="starttime" value={this.state.starttime} onChange={this.updateStartTime}required="required">
               <option selected="selected" value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
@@ -264,7 +264,7 @@ class EditSchoolClassForm extends React.Component {
               <option value="12:00am">12:00am</option>
             </select>
              <label htmlFor="name">End Time</label>
-             <select name="endtime" id="endtime" value={this.state.endtime}onChange={this.updateEndTime}>
+             <select name="endtime" id="endtime" value={this.state.endtime}onChange={this.updateEndTime}required="required">
               <option selected="selected" value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>

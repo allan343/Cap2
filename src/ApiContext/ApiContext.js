@@ -21,6 +21,7 @@ export default React.createContext({
   setHomeworkId: () => { },
   setClassClicked: ()=>{ },
   closeClass: ()=>{ },
-  contest: ()=>{},
+  getFirstClassName: ()=>{},
+  getFirstClassId:()=>{}
   
 })
