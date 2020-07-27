@@ -15,15 +15,15 @@ class EditSchoolClassForm extends React.Component {
     building: '',
     room: '',
     teacher: '',
-    
-      sun: false,
-      mon: false,
-      tue: false,
-      wed: false,
-      thursday: false,
-      friday: false,
-      sat: false,
-    
+
+    sun: false,
+    mon: false,
+    tue: false,
+    wed: false,
+    thursday: false,
+    friday: false,
+    sat: false,
+
     starttime: '',
     endtime: ''
   };
@@ -31,15 +31,48 @@ class EditSchoolClassForm extends React.Component {
   constructor(props) {
     //states a show can have
     super(props);
-    console.log(this.props.dayOfWeek);
+
+    let finishDateString = '';
+    let finishDateDayString = '';
+    if (new Date(this.props.finishdate).getDate() < 10) {
+      finishDateDayString = `0${new Date(this.props.finishdate).getDate()}`
+    }
+    else {
+      finishDateDayString = `${new Date(this.props.finishdate).getDate()}`
+    }
+
+    if ((new Date(this.props.finishdate).getMonth() + 1) < 10) {
+      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-0${new Date(this.props.finishdate).getMonth() + 1}-${finishDateDayString}`
+    }
+    else {
+      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-${new Date(this.props.finishdate).getMonth() + 1}-${finishDateDayString}`;
+    }
+  
+    let startDateString = '';
+    let startDateDayString = '';
+    if (new Date(this.props.startdate).getDate() < 10) {
+      startDateDayString = `0${new Date(this.props.startdate).getDate()}`
+    }
+    else {
+      startDateDayString = `${new Date(this.props.startdate).getDate()}`
+    }
+    if ((new Date(this.props.startdate).getMonth() + 1) < 10) {
+      startDateString = `${new Date(this.props.startdate).getFullYear()}-0${new Date(this.props.startdate).getMonth() + 1}-${startDateDayString}`
+    }
+    else {
+      startDateString = `${new Date(this.props.startdate).getFullYear()}-${new Date(this.props.startdate).getMonth() + 1}-${startDateDayString}`;
+    }
+
+    console.log(finishDateString);
+    console.log(startDateString);
     this.state = {
-     id: this.props.id,
+      id: this.props.id,
       classname: {
         value: this.props.classname,
         touched: false
       },
-      finishdate: this.props.finishdate,
-      startdate: this.props.startdate,
+      finishdate: finishDateString,
+      startdate: startDateString,
       building: {
         value: this.props.building,
         touched: false
@@ -61,8 +94,6 @@ class EditSchoolClassForm extends React.Component {
       sat: this.props.sat,
       starttime: this.props.starttime,
       endtime: this.props.endtime
-
-
     };
   }
 
@@ -109,39 +140,39 @@ class EditSchoolClassForm extends React.Component {
   updateSunday(dayOfWeek) {
     console.log(dayOfWeek);
     console.log(this.state);
-    let checked=!this.state.sun;
-    this.setState({ sun:  checked});
+    let checked = !this.state.sun;
+    this.setState({ sun: checked });
     console.log(this.state);
   }
 
   updateMonday() {
-    let checked=!this.state.mon;
-    this.setState({ mon:  checked});
+    let checked = !this.state.mon;
+    this.setState({ mon: checked });
   }
 
   updateTuesday() {
-    let checked=!this.state.tue;
-    this.setState({ tue:  checked});
+    let checked = !this.state.tue;
+    this.setState({ tue: checked });
   }
 
   updateWednesday() {
-    let checked=!this.state.wed;
-    this.setState({ wed:  checked});
+    let checked = !this.state.wed;
+    this.setState({ wed: checked });
   }
 
   updateThursday() {
-    let checked=!this.state.thurs;
-    this.setState({ thurs:  checked});
+    let checked = !this.state.thurs;
+    this.setState({ thurs: checked });
   }
 
   updateFriday() {
-    let checked=!this.state.fri;
-    this.setState({ fri : checked});
+    let checked = !this.state.fri;
+    this.setState({ fri: checked });
   }
 
   updateSaturday() {
-    let checked=!this.state.sat;
-    this.setState({ sat : checked});
+    let checked = !this.state.sat;
+    this.setState({ sat: checked });
   }
 
   updateStartDate(date) {
@@ -152,15 +183,15 @@ class EditSchoolClassForm extends React.Component {
     this.setState({ finishdate: date });
   }
 
-  updateStartTime =(event)=> {
+  updateStartTime = (event) => {
 
     this.setState({ starttime: event.target.value });
   };
-  
-  updateEndTime =(event)=> {
- 
-  this.setState({ endtime: event.target.value });
-};
+
+  updateEndTime = (event) => {
+
+    this.setState({ endtime: event.target.value });
+  };
 
   render() {
     console.log(this.props.startdate);
@@ -205,7 +236,7 @@ class EditSchoolClassForm extends React.Component {
           <div className="form-group">
             <label htmlFor="classname">Name *</label>
             <input type="text" className="folder__control"
-              name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required"/>
+              name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required" />
             <label for="startDate">Start Date</label>
 
             <input type="date" id="startDate" name="startDate" value={this.state.startdate} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
@@ -215,29 +246,29 @@ class EditSchoolClassForm extends React.Component {
 
             <label htmlFor="name">Building*</label>
             <input type="text" className="folder__control"
-              name="building" id="building" value={this.state.building.value} onChange={e => this.updateBuilding(e.target.value)} required="required"/>
+              name="building" id="building" value={this.state.building.value} onChange={e => this.updateBuilding(e.target.value)} required="required" />
             <label htmlFor="name">Room *</label>
             <input type="text" className="room"
-              name="room" id="room" value={this.state.room.value} onChange={e => this.updateRoom(e.target.value)} required="required"/>
+              name="room" id="room" value={this.state.room.value} onChange={e => this.updateRoom(e.target.value)} required="required" />
             <label htmlFor="name">Teacher *</label>
             <input type="text" className="folder__control"
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} required="required" />
-             <input type="checkbox" id="sun" value={'sun'} defaultChecked={this.state.sun ? true: false} onChange={e => this.updateSunday(e.target.value)} />
+            <input type="checkbox" id="sun" value={'sun'} defaultChecked={this.state.sun ? true : false} onChange={e => this.updateSunday(e.target.value)} />
             <label for="sun"> Sun</label><br></br>
-            <input type="checkbox" id="mon" value={'mon'} defaultChecked={this.state.mon ? true: false} onChange={e => this.updateMonday(e.target.value)} />
+            <input type="checkbox" id="mon" value={'mon'} defaultChecked={this.state.mon ? true : false} onChange={e => this.updateMonday(e.target.value)} />
             <label for="son"> Mon</label><br></br>
-            <input type="checkbox" id="tue" value={'tue'} defaultChecked={this.state.tue ? true: false} onChange={e => this.updateTuesday(e.target.value)} />
+            <input type="checkbox" id="tue" value={'tue'} defaultChecked={this.state.tue ? true : false} onChange={e => this.updateTuesday(e.target.value)} />
             <label for="tue"> Tues</label><br></br>
-            <input type="checkbox" id="wed" value={'wed'} defaultChecked={this.state.wed ? true: false } onChange={e => this.updateWednesday(e.target.value)} />
+            <input type="checkbox" id="wed" value={'wed'} defaultChecked={this.state.wed ? true : false} onChange={e => this.updateWednesday(e.target.value)} />
             <label for="wed"> Wed</label><br></br>
-            <input type="checkbox" id="thurs" value={'thurs'} defaultChecked={this.state.thurs ? true: false} onChange={e => this.updateThursday(e.target.value)} />
+            <input type="checkbox" id="thurs" value={'thurs'} defaultChecked={this.state.thurs ? true : false} onChange={e => this.updateThursday(e.target.value)} />
             <label for="thurs"> Thurs</label><br></br>
-            <input type="checkbox" id="fri" value={'fri'} defaultChecked={this.state.fri ? true: false} onChange={e => this.updateFriday(e.target.value)} />
+            <input type="checkbox" id="fri" value={'fri'} defaultChecked={this.state.fri ? true : false} onChange={e => this.updateFriday(e.target.value)} />
             <label for="fri"> Fri</label><br></br>
-            <input type="checkbox" id="sat" value={'sat'} defaultChecked={this.state.sat ? true: false} onChange={e => this.updateSaturday(e.target.value)} />
+            <input type="checkbox" id="sat" value={'sat'} defaultChecked={this.state.sat ? true : false} onChange={e => this.updateSaturday(e.target.value)} />
             <label for="sat"> Sat</label><br></br>
             <label htmlFor="name">Start Time</label>
-           <select name="starttime" id="starttime" value={this.state.starttime} onChange={this.updateStartTime}required="required">
+            <select name="starttime" id="starttime" value={this.state.starttime} onChange={this.updateStartTime} required="required">
               <option selected="selected" value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
@@ -263,8 +294,8 @@ class EditSchoolClassForm extends React.Component {
               <option value="11:00pm">11:00pm</option>
               <option value="12:00am">12:00am</option>
             </select>
-             <label htmlFor="name">End Time</label>
-             <select name="endtime" id="endtime" value={this.state.endtime}onChange={this.updateEndTime}required="required">
+            <label htmlFor="name">End Time</label>
+            <select name="endtime" id="endtime" value={this.state.endtime} onChange={this.updateEndTime} required="required">
               <option selected="selected" value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>

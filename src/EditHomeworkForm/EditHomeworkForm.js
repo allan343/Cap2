@@ -21,7 +21,24 @@ class EditHomeworkForm extends React.Component {
   constructor(props) {
     //states a show can have
     super(props);
-    console.log(this.props.schoolclass);
+    let dueDateString='';
+    let dueDateDayString='';
+    if(new Date(this.props.duedate).getDate()<10)
+    {
+      dueDateDayString=`0${new Date(this.props.duedate).getDate()}`
+    }
+    else {
+      dueDateDayString = `${new Date(this.props.duedate).getDate()}`
+    }
+    if((new Date(this.props.duedate).getMonth()+1)< 10 )
+    { 
+      dueDateString= `${new Date(this.props.duedate).getFullYear()}-0${new Date(this.props.duedate).getMonth()+1}-${dueDateDayString}`
+  }
+    else
+    {
+      dueDateString=`${new Date(this.props.duedate).getFullYear()}-${new Date(this.props.duedate).getMonth()+1}-${dueDateDayString}`;
+  }
+    console.log(dueDateString);
     this.state = {
       homeworkid: this.props.homeworkid,
       classid:this.props.classid,
@@ -31,11 +48,9 @@ class EditHomeworkForm extends React.Component {
       },
       schoolclass:this.props.schoolclass,
       homeworktype: this.props.homeworktype,
-      duedate:this.props.duedate,
-      duetime: {
-        value: this.props.duetime,
-        touched: false
-      },
+      duedate:dueDateString,
+      duetime:this.props.duetime,
+       
       homeworkpriority:this.props.homeworkpriority
     };
     console.log(this.state.schoolclass);
@@ -81,10 +96,10 @@ console.log(n);
     this.setState({ duedate: date });
   }
 
-  updateDueTime(time) {
-  
-    this.setState({ duetime: { value: time, touched: true} });
-  }
+  updateDueTime =(event)=> {
+
+    this.setState({ duetime: event.target.value });
+  };
 
   updatePriority =(event)=> {
     
@@ -106,7 +121,7 @@ console.log(n);
            schoolclass: this.state.schoolclass,
             homeworktype: this.state.homeworktype,
             duedate: this.state.duedate,
-            duetime: this.state.duetime.value,
+            duetime: this.state.duetime,
             homeworkpriority: this.state.homeworkpriority
            
           }
@@ -154,8 +169,32 @@ console.log(n);
           
           
            <label htmlFor="name">Due Time e.g. 8:30 or 2:15 pm *</label>
-           <input type="text" className="folder__control"
-              name="dueTime" id="dueTime" value={this.state.duetime.value} onChange={e => this.updateDueTime(e.target.value)}  value={this.state.duetime.value} required="required"/>
+           <select name="starttime" id="starttime"  value={this.state.duetime} onChange={this.updateDueTime} required="required">
+              <option selected="selected" value="1:00am">1:00am</option>
+              <option value="2:00am">2:00am</option>
+              <option value="3:00am">3:00am</option>
+              <option value="4:00am">4:00am</option>
+              <option value="5:00am">5:00am</option>
+              <option value="6:00am">6:00am</option>
+              <option value="7:00am">7:00am</option>
+              <option value="8:00am">8:00am</option>
+              <option value="9:00am">9:00am</option>
+              <option value="10:00am">10:00am</option>
+              <option value="11:00am">11:00am</option>
+              <option value="12:00pm">12:00pm</option>
+              <option value="1:00pm">1:00pm</option>
+              <option value="2:00pm">2:00pm</option>
+              <option value="3:00pm">3:00pm</option>
+              <option value="4:00pm">4:00pm</option>
+              <option value="5:00pm">5:00pm</option>
+              <option value="6:00pm">6:00pm</option>
+              <option value="7:00pm">7:00pm</option>
+              <option value="8:00pm">8:00pm</option>
+              <option value="9:00pm">9:00pm</option>
+              <option value="10:00pm">10:00pm</option>
+              <option value="11:00pm">11:00pm</option>
+              <option value="12:00am">12:00am</option>
+            </select>
            <label for="priority">Priority</label>
           <select name="priority" id="priority" value={this.state.homeworkpriority} onChange={this.updatePriority}>
             <option value="High">High</option>

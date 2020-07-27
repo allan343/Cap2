@@ -72,12 +72,7 @@ class AddHomeworkForm extends React.Component {
     console.log(n);
     this.setState({ duedate: date });
   }
-/*
-  updateDueTime(time) {
 
-    this.setState({ duetime: { value: time, touched: true } });
-  }
-*/
   updateDueTime =(event)=> {
 
     this.setState({ duetime: event.target.value });
