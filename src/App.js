@@ -171,10 +171,23 @@ class App extends Component {
     //deletes a show from the backend
     // deletes a show from the front end in the state array holding all shows
     handleDeleteClass = classId => {
+        fetch(`${config.API_ENDPOINT}/schoolClass/${classId}`, { method: "DELETE" })
+        .then(response => {response.json()
+            console.log(response);
+        })
+        .then(responseJson => {
+            console.log("here?");
+            console.log()
+            this.setState({
+                schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
+            });
+        });
+
+        /*
         console.log(classId);
         this.setState({
             schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
-        });
+        });*/
     };
 
     handleGetClass = (id) => {
