@@ -169,7 +169,6 @@ updateEndTime =(event)=> {
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let schoolClass = {
-           // id: Math.random(),
             classname: this.state.classname.value,
             finishdate: this.state.finishdate,
             startdate: this.state.startdate,

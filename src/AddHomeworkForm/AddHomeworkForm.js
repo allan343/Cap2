@@ -31,10 +31,7 @@ class AddHomeworkForm extends React.Component {
       schoolclass: "",
       homeworktype: "Homework",
       duedate: "",
-      duetime: {
-        value: '',
-        touched: false
-      },
+      duetime:"1:00am",
       homeworkpriority: "High"
     };
 
@@ -75,11 +72,16 @@ class AddHomeworkForm extends React.Component {
     console.log(n);
     this.setState({ duedate: date });
   }
-
+/*
   updateDueTime(time) {
 
     this.setState({ duetime: { value: time, touched: true } });
   }
+*/
+  updateDueTime =(event)=> {
+
+    this.setState({ duetime: event.target.value });
+  };
 
   updatePriority(priority) {
     this.setState({ homeworkpriority: priority });
@@ -100,7 +102,7 @@ class AddHomeworkForm extends React.Component {
             schoolclass: this.state.schoolclass,
             homeworktype: this.state.homeworktype,
             duedate: this.state.duedate,
-            duetime: this.state.duetime.value,
+            duetime: this.state.duetime,
             homeworkpriority: this.state.homeworkpriority
 
           }
@@ -154,8 +156,32 @@ class AddHomeworkForm extends React.Component {
 
 
             <label htmlFor="name">Due Time e.g. 8:30 or 2:15 pm *</label>
-            <input type="text" className="folder__control"
-              name="startTime" id="startTime" onChange={e => this.updateDueTime(e.target.value)}required="required" />
+            <select name="starttime" id="starttime" onChange={this.updateDueTime} required="required">
+              <option selected="selected" value="1:00am">1:00am</option>
+              <option value="2:00am">2:00am</option>
+              <option value="3:00am">3:00am</option>
+              <option value="4:00am">4:00am</option>
+              <option value="5:00am">5:00am</option>
+              <option value="6:00am">6:00am</option>
+              <option value="7:00am">7:00am</option>
+              <option value="8:00am">8:00am</option>
+              <option value="9:00am">9:00am</option>
+              <option value="10:00am">10:00am</option>
+              <option value="11:00am">11:00am</option>
+              <option value="12:00pm">12:00pm</option>
+              <option value="1:00pm">1:00pm</option>
+              <option value="2:00pm">2:00pm</option>
+              <option value="3:00pm">3:00pm</option>
+              <option value="4:00pm">4:00pm</option>
+              <option value="5:00pm">5:00pm</option>
+              <option value="6:00pm">6:00pm</option>
+              <option value="7:00pm">7:00pm</option>
+              <option value="8:00pm">8:00pm</option>
+              <option value="9:00pm">9:00pm</option>
+              <option value="10:00pm">10:00pm</option>
+              <option value="11:00pm">11:00pm</option>
+              <option value="12:00am">12:00am</option>
+            </select>
             <label for="priority">Priority</label>
             <select name="priority" id="priority" onChange={this.updatePriority} >
               <option value="High" selected>High</option>
