@@ -13,7 +13,6 @@ import config from './config';
 class App extends Component {
     state = {
         //array that holds all shows
-
         schoolClasses: [],
         homeworkList: [],
         id: '',
@@ -23,7 +22,6 @@ class App extends Component {
 
     componentDidMount() {
         //fetches the shows from my endpoint and placed them in my array in state
-
 
         fetch(`${config.API_ENDPOINT}/schoolClass`)
             .then((classRes) => {
@@ -50,17 +48,9 @@ class App extends Component {
             });
     }
 
-
-
-    contest = (classId) => {
-        alert('hi');
-    }
     setClassClicked = (classId) => {
-        console.log("classid " + classId);
         this.setState({ classClicked: true });
         this.setClassId(classId);
-        //alert("hi!");
-        //console.log("h1!"+ this.context.getClassId());
     }
 
     closeClass = () => {
@@ -72,7 +62,6 @@ class App extends Component {
 
     handleUpdateSchoolClass = (classObject, classId) => {
 
-
         let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
         for (let key in schoolClass) {
             schoolClass[key] = classObject[key];
@@ -81,35 +70,23 @@ class App extends Component {
             schoolClasses: this.state.schoolClasses
         });
 
-
     };
 
 
     handleAddSchoolClass = (classObject) => {
-        console.log(classObject);
-        console.log(config.API_ENDPOINT);
-        console.log("add") ;
+       
             fetch(`${config.API_ENDPOINT}/schoolClass`, { headers: { 'content-type': 'application/json' }, method: "POST", body: JSON.stringify(classObject) })
                 .then(response => response.json())
                 .then(responseJson => {
-                    console.log("add2") ;
+               
                     if (responseJson.id) {
                         let newid = responseJson.id;
                         const newArr = [...this.state.schoolClasses, responseJson];
                         this.setState({
                             schoolClasses: newArr
                         });
-                        // newId(newid);
-                        console.log("add3") ;
                     }
                 })
-        /*
-                console.log(classObject);
-                    // this.state.schoolClasses.push(classObject);
-                    const newArr= [...this.state.schoolClasses, classObject];
-                     this.setState({
-                        schoolClasses: newArr
-                    });  */
      };
 
     //deletes a show from the backend
@@ -119,7 +96,6 @@ class App extends Component {
         this.setState({
             schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
         });
-
     };
 
     handleGetClass = (id) => {
@@ -146,7 +122,6 @@ class App extends Component {
 
     handleUpdateSchoolClass = (classObject, classId) => {
 
-
         let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
         for (let key in schoolClass) {
             schoolClass[key] = classObject[key];
@@ -158,16 +133,6 @@ class App extends Component {
 
     };
 
-/*
-    handleAddSchoolClass = (classObject) => {
-        console.log(classObject);
-        // this.state.schoolClasses.push(classObject);
-        const newArr = [...this.state.schoolClasses, classObject];
-        this.setState({
-            schoolClasses: newArr
-        });
-    };
-*/
     //deletes a show from the backend
     // deletes a show from the front end in the state array holding all shows
     handleDeleteClass = classId => {
@@ -182,12 +147,6 @@ class App extends Component {
                 schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
             });
         });
-
-        /*
-        console.log(classId);
-        this.setState({
-            schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
-        });*/
     };
 
     handleGetClass = (id) => {
@@ -247,29 +206,20 @@ class App extends Component {
                 console.log("addhw3") ;
             }
         })
-
-
-
-
-
-
-/*
-
-        const newArr = [...this.state.homeworkList, homeworkObject];
-        console.log(newArr);
-        this.setState({
-            homeworkList: newArr
-        });*/
-        //console.log("homeworkList"+this.state.homeworkList);
     };
 
     //deletes a show from the backend
     // deletes a show from the front end in the state array holding all shows
     handleDeleteHomework = homeworkId => {
-        this.setState({
-            homeworkList: this.state.homeworkList.filter(homeworkClass => homeworkClass.homeworkid != homeworkId)
-        });
 
+        fetch(`${config.API_ENDPOINT}/homework/${homeworkId}`, { method: "DELETE" })
+        .then(response => {response.json()
+        })
+        .then(responseJson => {
+            this.setState({
+                homeworkList: this.state.homeworkList.filter(homeworkClass => homeworkClass.homeworkid != homeworkId)
+            });
+        });
     };
 
     handleGetHomework = (id) => {
