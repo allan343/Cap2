@@ -59,20 +59,6 @@ class App extends Component {
 
     }
 
-
-    handleUpdateSchoolClass = (classObject, classId) => {
-
-        let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
-        for (let key in schoolClass) {
-            schoolClass[key] = classObject[key];
-        }
-        this.setState({
-            schoolClasses: this.state.schoolClasses
-        });
-
-    };
-
-
     handleAddSchoolClass = (classObject) => {
        
             fetch(`${config.API_ENDPOINT}/schoolClass`, { headers: { 'content-type': 'application/json' }, method: "POST", body: JSON.stringify(classObject) })
@@ -121,6 +107,21 @@ class App extends Component {
 
 
     handleUpdateSchoolClass = (classObject, classId) => {
+
+        fetch(`${config.API_ENDPOINT}/schoolClass/${classId}`, { headers: { 'content-type': 'application/json' }, method: "PATCH", body: JSON.stringify(classObject) })
+        .then(response => response.json())
+        .then(responseJson => {
+
+            if (responseJson.id && responseJson.classname) {
+                let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
+                for (let key in schoolClass) {
+                    schoolClass[key] = classObject[key];
+                }
+                this.setState({
+                    schoolClasses: this.state.schoolClasses
+                });
+            }
+        });
 
         let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
         for (let key in schoolClass) {
