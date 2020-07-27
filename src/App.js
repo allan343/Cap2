@@ -123,15 +123,6 @@ class App extends Component {
             }
         });
 
-        let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
-        for (let key in schoolClass) {
-            schoolClass[key] = classObject[key];
-        }
-        this.setState({
-            schoolClasses: this.state.schoolClasses
-        });
-
-
     };
 
     //deletes a show from the backend
@@ -179,14 +170,20 @@ class App extends Component {
 
     handleUpdateHomework = (homeworkObject, homeworkId) => {
 
-        console.log("update being called?");
-        let homework = this.state.homeworkList.find(homework => homework.homeworkid == homeworkId);
+        fetch(`${config.API_ENDPOINT}/homework/${homeworkId}`, { headers: { 'content-type': 'application/json' }, method: "PATCH", body: JSON.stringify(homeworkObject) })
+        .then(response => response.json())
+        .then(responseJson => {
+            if (responseJson.homeworkid && responseJson.homeworkdescription) {
+                let homework = this.state.homeworkList.find(homework => homework.homeworkid == homeworkId);
         for (let key in homework) {
             homework[key] = homeworkObject[key];
         }
         this.setState({
             homeworkList: this.state.homeworkList
         });
+            }
+        });
+      
     };
 
 
