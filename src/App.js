@@ -75,14 +75,6 @@ class App extends Component {
                 })
      };
 
-    //deletes a show from the backend
-    // deletes a show from the front end in the state array holding all shows
-    handleDeleteClass = classId => {
-        console.log(classId);
-        this.setState({
-            schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
-        });
-    };
 
     handleGetClass = (id) => {
         return this.state.schoolClasses.find(
@@ -137,6 +129,11 @@ class App extends Component {
             console.log()
             this.setState({
                 schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
+            });
+            let filteredHomework=this.state.homeworkList.filter(homework => homework.classid != classId)
+            console.log(filteredHomework);
+            this.setState({
+                homeworkList: filteredHomework
             });
         });
     };
