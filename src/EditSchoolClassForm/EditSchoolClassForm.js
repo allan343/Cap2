@@ -35,10 +35,10 @@ class EditSchoolClassForm extends React.Component {
     let finishDateString = '';
     let finishDateDayString = '';
     if (new Date(this.props.finishdate).getDate() < 10) {
-      finishDateDayString = `0${new Date(this.props.finishdate).getDate()}`
+      finishDateDayString = `0${new Date(this.props.finishdate).getDate()+1}`
     }
     else {
-      finishDateDayString = `${new Date(this.props.finishdate).getDate()}`
+      finishDateDayString = `${new Date(this.props.finishdate).getDate()+1}`
     }
 
     if ((new Date(this.props.finishdate).getMonth() + 1) < 10) {
@@ -51,10 +51,10 @@ class EditSchoolClassForm extends React.Component {
     let startDateString = '';
     let startDateDayString = '';
     if (new Date(this.props.startdate).getDate() < 10) {
-      startDateDayString = `0${new Date(this.props.startdate).getDate()}`
+      startDateDayString = `0${new Date(this.props.startdate).getDate()+1}`
     }
     else {
-      startDateDayString = `${new Date(this.props.startdate).getDate()}`
+      startDateDayString = `${new Date(this.props.startdate).getDate()+1}`
     }
     if ((new Date(this.props.startdate).getMonth() + 1) < 10) {
       startDateString = `${new Date(this.props.startdate).getFullYear()}-0${new Date(this.props.startdate).getMonth() + 1}-${startDateDayString}`

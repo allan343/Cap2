@@ -25,10 +25,10 @@ class EditHomeworkForm extends React.Component {
     let dueDateDayString='';
     if(new Date(this.props.duedate).getDate()<10)
     {
-      dueDateDayString=`0${new Date(this.props.duedate).getDate()}`
+      dueDateDayString=`0${new Date(this.props.duedate).getDate()+1}`
     }
     else {
-      dueDateDayString = `${new Date(this.props.duedate).getDate()}`
+      dueDateDayString = `${new Date(this.props.duedate).getDate()+1}`
     }
     if((new Date(this.props.duedate).getMonth()+1)< 10 )
     { 

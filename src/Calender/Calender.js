@@ -23,8 +23,9 @@ export default class Calender extends React.Component {
   }
 
   updateDayOfWeek(date) {
-    console.log(date);
-    this.setState({date: date});
+    let selecteddate= date+ "T00:00:00.000Z";
+    console.log(selecteddate);
+    this.setState({date: selecteddate});
     var selectedDate = new Date(date);
     var dayOfWeekIndex = selectedDate.getDay();
     console.log(dayOfWeekIndex);
@@ -35,6 +36,7 @@ export default class Calender extends React.Component {
   render() {
 
     console.log(this.state.date);
+    //console.log(new Date(this.state.date));
     return (
       <span className='NoteListMain__button-container'>
        
