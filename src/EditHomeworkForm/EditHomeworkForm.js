@@ -23,14 +23,18 @@ class EditHomeworkForm extends React.Component {
     super(props);
     let dueDateString='';
     let dueDateDayString='';
-    if(new Date(this.props.duedate).getDate()<10)
+    console.log(this.props.duedate);
+    console.log(new Date(this.props.duedate).getUTCDate());
+    if(new Date(this.props.duedate).getUTCDate() < 10)
     {
-      dueDateDayString=`0${new Date(this.props.duedate).getDate()+1}`
+      dueDateDayString=`0${new Date(this.props.duedate).getUTCDate()}`
+      console.log(dueDateString);
     }
     else {
-      dueDateDayString = `${new Date(this.props.duedate).getDate()+1}`
+      dueDateDayString = `${new Date(this.props.duedate).getUTCDate()}`
+      console.log(dueDateString);
     }
-    if((new Date(this.props.duedate).getMonth()+1)< 10 )
+    if((new Date(this.props.duedate).getMonth())< 9 )
     { 
       dueDateString= `${new Date(this.props.duedate).getFullYear()}-0${new Date(this.props.duedate).getMonth()+1}-${dueDateDayString}`
   }
@@ -48,7 +52,8 @@ class EditHomeworkForm extends React.Component {
       },
       schoolclass:this.props.schoolclass,
       homeworktype: this.props.homeworktype,
-      duedate:dueDateString,
+      duedate:this.props.duedate,
+      displayduedate:dueDateString,
       duetime:this.props.duetime,
        
       homeworkpriority:this.props.homeworkpriority
@@ -93,7 +98,9 @@ class EditHomeworkForm extends React.Component {
     var d = new Date(date);
 var n = d.getDay();
 console.log(n);
-    this.setState({ duedate: date });
+let dueDate = date + "T00:00:00.000Z";
+    this.setState({ duedate: dueDate });
+    this.setState({displayduedate:date});
   }
 
   updateDueTime =(event)=> {
@@ -165,7 +172,7 @@ console.log(n);
             <option value="Project">Project</option>
             </select>
             <label for="dueDate">Due Date</label>
-            <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.duedate} required="required"></input>
+            <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.displayduedate} required="required"></input>
           
           
            <label htmlFor="name">Due Time e.g. 8:30 or 2:15 pm *</label>

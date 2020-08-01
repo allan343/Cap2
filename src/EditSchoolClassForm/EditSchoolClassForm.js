@@ -34,29 +34,33 @@ class EditSchoolClassForm extends React.Component {
 
     let finishDateString = '';
     let finishDateDayString = '';
-    if (new Date(this.props.finishdate).getDate() < 10) {
-      finishDateDayString = `0${new Date(this.props.finishdate).getDate()+1}`
+    if (new Date(this.props.finishdate).getUTCDate() < 10) {
+      finishDateDayString = `0${new Date(this.props.finishdate).getUTCDate()}`
     }
     else {
-      finishDateDayString = `${new Date(this.props.finishdate).getDate()+1}`
+      finishDateDayString = `${new Date(this.props.finishdate).getUTCDate()}`
     }
 
-    if ((new Date(this.props.finishdate).getMonth() + 1) < 10) {
-      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-0${new Date(this.props.finishdate).getMonth() + 1}-${finishDateDayString}`
+    if ((new Date(this.props.finishdate).getMonth()) < 9) {
+      console.log("a");
+      console.log(new Date(this.props.finishdate).getMonth());
+      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-0${new Date(this.props.finishdate).getMonth() + 1 }-${finishDateDayString}`
     }
     else {
+      console.log("b");
+      console.log(new Date(this.props.finishdate).getMonth());
       finishDateString = `${new Date(this.props.finishdate).getFullYear()}-${new Date(this.props.finishdate).getMonth() + 1}-${finishDateDayString}`;
     }
   
     let startDateString = '';
     let startDateDayString = '';
-    if (new Date(this.props.startdate).getDate() < 10) {
-      startDateDayString = `0${new Date(this.props.startdate).getDate()+1}`
+    if (new Date(this.props.startdate).getUTCDate()< 10) {
+      startDateDayString = `0${new Date(this.props.startdate).getUTCDate()}`
     }
     else {
-      startDateDayString = `${new Date(this.props.startdate).getDate()+1}`
+      startDateDayString = `${new Date(this.props.startdate).getUTCDate()}`
     }
-    if ((new Date(this.props.startdate).getMonth() + 1) < 10) {
+    if ((new Date(this.props.startdate).getMonth()) < 9) {
       startDateString = `${new Date(this.props.startdate).getFullYear()}-0${new Date(this.props.startdate).getMonth() + 1}-${startDateDayString}`
     }
     else {
@@ -71,8 +75,10 @@ class EditSchoolClassForm extends React.Component {
         value: this.props.classname,
         touched: false
       },
-      finishdate: finishDateString,
-      startdate: startDateString,
+      finishdate: this.props.finishdate,
+      startdate: this.props.startdate,
+      displayfinishdate:finishDateString,
+      displaystartdate:startDateString,
       building: {
         value: this.props.building,
         touched: false
@@ -176,11 +182,15 @@ class EditSchoolClassForm extends React.Component {
   }
 
   updateStartDate(date) {
-    this.setState({ startdate: date });
+    let startDate = date + "T00:00:00.000Z";
+    this.setState({ startdate: startDate });
+    this.setState({displaystartdate:date});
   }
 
   updateFinishDate(date) {
-    this.setState({ finishdate: date });
+    let finishDate = date + "T00:00:00.000Z";
+    this.setState({ finishdate: finishDate });
+    this.setState({displayfinishdate:date});
   }
 
   updateStartTime = (event) => {
@@ -239,10 +249,10 @@ class EditSchoolClassForm extends React.Component {
               name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required" />
             <label for="startDate">Start Date</label>
 
-            <input type="date" id="startDate" name="startDate" value={this.state.startdate} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
+            <input type="date" id="startDate" name="startDate" value={this.state.displaystartdate} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
 
             <label for="finishDate">Finish Date</label>
-            <input type="date" id="finishDate" name="finishDate" value={this.state.finishdate} onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
+            <input type="date" id="finishDate" name="finishDate" value={this.state.displayfinishdate} onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
 
             <label htmlFor="name">Building*</label>
             <input type="text" className="folder__control"
