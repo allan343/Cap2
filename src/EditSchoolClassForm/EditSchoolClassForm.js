@@ -1,5 +1,6 @@
 import React from 'react';
 import ApiContext from '../ApiContext/ApiContext';
+import './EditSchoolClassForm.css';
 
 
 class EditSchoolClassForm extends React.Component {
@@ -207,7 +208,7 @@ class EditSchoolClassForm extends React.Component {
     console.log(this.props.startdate);
     console.log(this.state);
     return (
-      <div id="show-details">
+      <div id="schoolClassDetails">
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let schoolClass = {
