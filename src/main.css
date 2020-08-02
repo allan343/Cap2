@@ -8,15 +8,17 @@ body {background-color: #336699;
     float: left;
     width: 38%;
     height: 100vh;
-    background-color: #e2e3e1;
-    margin-left: 10px;
+    background-color: #ebebeb;
+    margin-left: 30px;
 }
 
 .HomeWorkList{
     float:right;
-    width: 60%;
+    width: 55%;
     
     height: 100vh;
-    background-color: #e2e3e1;
+    background-color: #ebebeb;
+    margin-right: 30px;
+    
 }
 

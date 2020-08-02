@@ -28,7 +28,7 @@ class SchoolClassList extends Component {
           Classes  +
             </NavLink>
         {(this.context.classClicked) ? <ClassDetails id={this.context.getClassId()} hideClass={() => { this.setState({ clicked: false }) }} /> :
-          <div>
+          <div className="classList">
             <ul className='SchoolClassList__list' aria-live='polite'>
               {schoolClasses.map(schoolClass =>
 
