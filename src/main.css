@@ -1,11 +1,22 @@
+body {background-color: #336699;
+    height: 100%;
+    margin: 0px;
+}
+
+
 .SchoolClassList{
-    float:left;
-    width: 40%;
+    float: left;
+    width: 38%;
+    height: 100vh;
+    background-color: #e2e3e1;
+    margin-left: 10px;
 }
 
 .HomeWorkList{
     float:right;
     width: 60%;
+    
+    height: 100vh;
+    background-color: #e2e3e1;
 }
 
-body {background-color: #336699;}
