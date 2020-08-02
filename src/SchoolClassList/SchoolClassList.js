@@ -23,12 +23,16 @@ class SchoolClassList extends Component {
     console.log(this.context.classClicked);
     return (
       <section className='SchoolClassList'>
+        <div className= 'titleAndAddButton'>
+          <span className='classTitle'>
         Classes
+        </span>
         <NavLink className="addClassPath"
           to={`/add-class`}
         >
           Classes  +
             </NavLink>
+            </div>
         {(this.context.classClicked) ? <ClassDetails id={this.context.getClassId()} hideClass={() => { this.setState({ clicked: false }) }} /> :
           <div className="classList">
             <ul className='SchoolClassList__list' aria-live='polite'>

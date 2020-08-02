@@ -1,3 +1,12 @@
 .SchoolClassList__list{
     list-style-type:none;
 }
+
+.titleAndAddButton{
+    display:flex;
+    padding:10px;
+}
+
+.classTitle{
+    flex-grow: 1
+}
