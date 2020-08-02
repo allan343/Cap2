@@ -10,6 +10,10 @@ export default class HeaderNav extends React.Component {
   render() {
     //const { shows = [] } = this.context;
     return (
+      <div>
+      <div className='title'>
+      HomeworkApp
+      </div>
       <div className='HeaderListNav'>
         <NavLink
           className='HomeLink'
@@ -44,6 +48,7 @@ export default class HeaderNav extends React.Component {
                 </span>
         </NavLink>
 
+      </div>
       </div>
     )
   }
