@@ -67,11 +67,11 @@ class EditSchoolClassForm extends React.Component {
     else {
       startDateDayString = `${new Date(this.props.startdate).getUTCDate()}`
     }
-    if ((new Date(this.props.startdate).getMonth()) < 9) {
-      startDateString = `${new Date(this.props.startdate).getFullYear()}-0${new Date(this.props.startdate).getMonth() + 1}-${startDateDayString}`
+    if ((new Date(this.props.startdate).getUTCMonth()) < 9) {
+      startDateString = `${new Date(this.props.startdate).getFullYear()}-0${new Date(this.props.startdate).getUTCMonth() + 1}-${startDateDayString}`
     }
     else {
-      startDateString = `${new Date(this.props.startdate).getFullYear()}-${new Date(this.props.startdate).getMonth() + 1}-${startDateDayString}`;
+      startDateString = `${new Date(this.props.startdate).getFullYear()}-${new Date(this.props.startdate).getUTCMonth() + 1}-${startDateDayString}`;
     }
 
     console.log(finishDateString);

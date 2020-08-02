@@ -34,13 +34,13 @@ class EditHomeworkForm extends React.Component {
       dueDateDayString = `${new Date(this.props.duedate).getUTCDate()}`
       console.log(dueDateString);
     }
-    if((new Date(this.props.duedate).getMonth())< 9 )
+    if((new Date(this.props.duedate).getUTCMonth())< 9 )
     { 
-      dueDateString= `${new Date(this.props.duedate).getFullYear()}-0${new Date(this.props.duedate).getMonth()+1}-${dueDateDayString}`
+      dueDateString= `${new Date(this.props.duedate).getFullYear()}-0${new Date(this.props.duedate).getUTCMonth()+1}-${dueDateDayString}`
   }
     else
     {
-      dueDateString=`${new Date(this.props.duedate).getFullYear()}-${new Date(this.props.duedate).getMonth()+1}-${dueDateDayString}`;
+      dueDateString=`${new Date(this.props.duedate).getFullYear()}-${new Date(this.props.duedate).getUTCMonth()+1}-${dueDateDayString}`;
   }
     console.log(dueDateString);
     this.state = {
