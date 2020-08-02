@@ -3,6 +3,8 @@ import { NavLink, Link } from 'react-router-dom';
 import SchoolClassItem from '../SchoolClassItem/SchoolClassItem';
 import ClassDetails from '../ClassDetails/ClassDetails';
 import ApiContext from '../ApiContext/ApiContext';
+import './SchoolClassList.css';
+
 
 class SchoolClassList extends Component {
   static contextType = ApiContext;

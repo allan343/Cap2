@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './SchoolClassItem.css';
 
 
 export default function SchoolClassItem(props) {
