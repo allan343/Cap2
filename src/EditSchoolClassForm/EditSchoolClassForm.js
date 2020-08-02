@@ -35,6 +35,7 @@ class EditSchoolClassForm extends React.Component {
 
     let finishDateString = '';
     let finishDateDayString = '';
+    console.log(this.props.finishdate);
     if (new Date(this.props.finishdate).getUTCDate() < 10) {
       finishDateDayString = `0${new Date(this.props.finishdate).getUTCDate()}`
     }
@@ -42,17 +43,22 @@ class EditSchoolClassForm extends React.Component {
       finishDateDayString = `${new Date(this.props.finishdate).getUTCDate()}`
     }
 
-    if ((new Date(this.props.finishdate).getMonth()) < 9) {
+    if ((new Date(this.props.finishdate).getUTCMonth()) < 9) {
+      console.log((new Date(this.props.finishdate).getUTCMonth()));
       console.log("a");
-      console.log(new Date(this.props.finishdate).getMonth());
-      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-0${new Date(this.props.finishdate).getMonth() + 1 }-${finishDateDayString}`
+      console.log(new Date(this.props.finishdate).getUTCMonth());
+      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-0${new Date(this.props.finishdate).getUTCMonth() + 1 }-${finishDateDayString}`
+      console.log(finishDateString);
     }
     else {
+      console.log((new Date(this.props.finishdate).getUTCMonth()));
       console.log("b");
-      console.log(new Date(this.props.finishdate).getMonth());
-      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-${new Date(this.props.finishdate).getMonth() + 1}-${finishDateDayString}`;
+      console.log(new Date(this.props.finishdate).getUTCMonth());
+      finishDateString = `${new Date(this.props.finishdate).getFullYear()}-${new Date(this.props.finishdate).getUTCMonth() + 1}-${finishDateDayString}`;
+      console.log(finishDateString);
     }
   
+
     let startDateString = '';
     let startDateDayString = '';
     if (new Date(this.props.startdate).getUTCDate()< 10) {
