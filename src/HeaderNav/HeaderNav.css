@@ -1,0 +1,15 @@
+.HeaderListNav{
+    width: 100%;
+    background-color: #336699;
+    overflow: auto;
+  }
+
+  .HomeLink, .CalenderLink, .HomeworkLink{
+    float: left;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    width: 29.5%; /* Four links of equal widths */
+    text-align: center;
+  }

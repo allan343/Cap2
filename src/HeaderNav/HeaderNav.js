@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink, Link } from 'react-router-dom';
 //import ApiContext from '../ApiContext/ApiContext';
 
-//import './FooterListNav.css';
+import './HeaderNav.css';
 
 export default class HeaderNav extends React.Component {
   //static contextType = ApiContext;
