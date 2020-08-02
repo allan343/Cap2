@@ -21,7 +21,7 @@ class SchoolClassList extends Component {
     console.log(this.context.classClicked);
     return (
       <section className='SchoolClassList'>
-
+        Classes
         <NavLink className="addClassPath"
           to={`/add-class`}
         >
