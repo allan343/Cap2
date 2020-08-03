@@ -1,6 +1,7 @@
 import React from 'react';
 import ApiContext from '../ApiContext/ApiContext';
 import { NavLink, Link } from 'react-router-dom';
+import './HomeworkDetails.css';
 
 
 
@@ -23,14 +24,16 @@ export default class ClassDetails extends React.Component {
 
 
 
-      <div className='SchoolClassItem__row'>
+      <div className='HomeworkDetails__row'>
 
         <button type="cancel" className="cancelShowButton" onClick={this.props.hideHomework}>
           Back
         </button>
-        {<h3> Description: {homework.homeworkdescription}</h3>}
-        {<h3> Due date: {homework.duedate}</h3>}
-        {<h3> Due  time:  {homework.duetime}</h3>}
+        {<div className="description"> Description: {homework.homeworkdescription}</div>}
+        {<div className="class"> Class: {homework.schoolclass}</div>}
+        {<div className="type"> Type: {homework.homeworktype}</div>}
+        {<div className="dueDate"> Due date: {homework.duedate}</div>}
+        {<div className="dueTime"> Due time:  {homework.duetime}</div>}
 
 
         <NavLink className="addClassPath"
