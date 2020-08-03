@@ -22,6 +22,16 @@ export default class ClassDetails extends React.Component {
     let schoolClass = this.context.getClass(this.props.id);
     console.log(schoolClass);
 
+   
+    let Sun = schoolClass.sun ? 'Sun' : '';
+    let Mon = schoolClass.mon ? 'Mon' : '';
+    let Tue = schoolClass.tue ? 'Tue' : '';
+    let Wed = schoolClass.wed ? 'Wed' : '';
+    let Thurs = schoolClass.thurs ? 'Thurs' : '';
+    let Fri = schoolClass.fri ? 'Fri' : '';
+    let Sat = schoolClass.sat ? 'Sat' : '';
+    let days = `${Sun} ${Mon} ${Tue} ${Wed} ${Thurs} ${Fri} ${Sat}`;
+  
     return (
 
 
@@ -38,6 +48,8 @@ export default class ClassDetails extends React.Component {
         {<div className="teacher"> Teacher: {schoolClass.teacher}</div>}
         {<div className="startTime"> Class Start Time: {schoolClass.starttime}</div>}
         {<div className="endTime"> Class End Time: {schoolClass.endtime}</div>}
+        {<h3 className="classTimes"> Class Times </h3>}
+    {<div className="classTimes"> {days}</div>}
 
         <NavLink className="editClassPath"
           to={`/ClassDetails/Edit/${this.context.getClassId()}`}
