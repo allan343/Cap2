@@ -4,3 +4,15 @@
     margin:0;
     padding:10px;
 }
+
+.cancelShowButton{
+    padding:5px;
+    margin-top:10px;
+    margin-left:10px;
+}
+
+.editClassPath{
+    padding:10px;
+    margin-bottom:5px;
+    margin-left:5px;
+}
