@@ -7,10 +7,10 @@ export default function HomeworkItem(props) {
 
   return (
         <div className='HomeworkItem__row'>
-    { <h3> {props.homeworkdescription}</h3>}
-    { <h3> Class{props.schoolclass}</h3>}
-    { <h3> Due Date{props.duedate}</h3>}
-    { <h3> Due time {props.duetime}</h3>}
+    { <div className="homeworkDescription"> {props.homeworkdescription}</div>}
+    { <div className="schoolClass"> Class {props.schoolclass}</div>}
+    { <div className="dueDate"> Due Date {props.duedate}</div>}
+    { <div className="dueTime"> Due time {props.duetime}</div>}
      
       </div>
     
