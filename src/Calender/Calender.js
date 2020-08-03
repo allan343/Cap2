@@ -41,13 +41,17 @@ export default class Calender extends React.Component {
       <span className='NoteListMain__button-container'>
        
        <HeaderNav></HeaderNav>
-       <div class="calenderAndClases">
+       <div className="calenderAndClasses">
+         <div className="calender">
        <label for="startDate">Select a day</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateDayOfWeek(e.target.value)} ></input>
             </div>
-        <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(schoolClass.startdate)<= new Date(this.state.date) && new Date(schoolClass.finishdate)>= new Date(this.state.date))} ></SchoolClassList>
-       
+            <div className="homeworkTitle">
        Homework due that day:
+       </div>
+        
+        </div>
+        <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(schoolClass.startdate)<= new Date(this.state.date) && new Date(schoolClass.finishdate)>= new Date(this.state.date))} ></SchoolClassList>
        <HomeworkList homeworkList={   this.context.homeworkList.filter(homework => homework.duedate==this.state.date)} ></HomeworkList>
       </span>
     )

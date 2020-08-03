@@ -1,13 +1,47 @@
 .calenderAndClasses{
     float:left;
-    width: 40%;
+    width: 100%;
 }
 .CalenderSchoolClassList{
     float:left;
-    width: 40%;
+    width: 38%;
 }
 .CalenderHomeWorkList{
     float:right;
     width: 0%;
 }
 
+
+.calenderClassList{
+    float: left;
+    width: 100%;
+    height: 100vh;
+    background-color: #ebebeb;
+    margin-left: 38px;
+}
+
+.HomeWorkList{
+    float:right;
+    width: 55%;
+    
+    height: 100vh;
+    background-color: #ebebeb;
+    margin-right: 38px;
+    
+}
+
+.calender{
+    display:inline-block;
+    margin-left: 40px;
+    margin-bottom: 20px;
+}
+
+.calenderLabel, .homeworkTitle{
+    color:white;
+}
+
+.homeworkTitle{
+    display:inline-block;
+    margin-left: 270px;
+ 
+}
