@@ -5,7 +5,7 @@
     background-color: white;
 }
 
-.SchoolClassItem__row .courseName{
+.SchoolClassItem__row .courseName, .startEnd, .days{
     margin:0;
     padding:10px;
 }

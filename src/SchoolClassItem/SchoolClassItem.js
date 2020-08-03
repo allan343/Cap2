@@ -16,10 +16,10 @@ export default function SchoolClassItem(props) {
 
   return (
     <div className='SchoolClassItem__row'>
-      {<h3 className="courseName"> {props.classname}</h3>}
-      {days}
+      {<div className="courseName"> {props.classname}</div>}
+      {<div className="days">{days}</div>}
 
-      {<h3> {props.starttime}</h3>}  {<h3> {props.endtime}</h3>}
+      {<div className="startEnd"> {props.starttime} - {props.endtime}</div>} 
 
     </div>
 
