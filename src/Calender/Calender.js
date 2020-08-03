@@ -43,10 +43,10 @@ export default class Calender extends React.Component {
        <HeaderNav></HeaderNav>
        <div className="calenderAndClasses">
          <div className="calender">
-       <label for="startDate">Select a day</label>
+       <label className="calenderLabel" for="startDate">Select a day</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateDayOfWeek(e.target.value)} ></input>
             </div>
-            <div className="homeworkTitle">
+            <div className="HomeworkTitle">
        Homework due that day:
        </div>
         

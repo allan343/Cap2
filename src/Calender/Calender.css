@@ -36,11 +36,11 @@
     margin-bottom: 20px;
 }
 
-.calenderLabel, .homeworkTitle{
+.calenderLabel, .HomeworkTitle{
     color:white;
 }
 
-.homeworkTitle{
+.HomeworkTitle{
     display:inline-block;
     margin-left: 270px;
  
