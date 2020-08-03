@@ -5,7 +5,8 @@ body {background-color: #336699;
 
 
 .SchoolClassList{
-    float: left;
+/*  float: left;*/
+    display:inline-block;
     width: 38%;
     height: 100vh;
     background-color: #ebebeb;
@@ -13,7 +14,8 @@ body {background-color: #336699;
 }
 
 .HomeWorkList{
-    float:right;
+  /*  float:right;*/
+    display:inline-block;
     width: 55%;
     
     height: 100vh;
