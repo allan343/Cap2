@@ -1,0 +1,6 @@
+
+
+ .schoolClassName, .startDate, .endDate, .location, .teacher,.startTime,.endTime {
+    margin:0;
+    padding:10px;
+}
