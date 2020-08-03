@@ -1,0 +1,12 @@
+.HomeworkList{
+    list-style-type:none;
+}
+
+.titleAndAddButton{
+    display:flex;
+    padding:10px;
+}
+
+.homeworkTitle{
+    flex-grow: 1
+}

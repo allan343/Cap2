@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import HomeworkItem from '../HomeworkItem/HomeworkItem';
 import HomeworkDetails from '../HomeworkDetails/HomeworkDetails';
 import ApiContext from '../ApiContext/ApiContext';
+import './HomeworkList.css';
 
 class HomeworkList extends Component {
   static contextType = ApiContext;
@@ -36,13 +37,19 @@ class HomeworkList extends Component {
     console.log(homeworkList);
     return (
       <section className='HomeWorkList'>
+         <div className= 'titleAndAddButton'>
+          <span className='homeworkTitle'>
+            Homework
+            </span>
         {(this.context.schoolClasses.length)?
           <NavLink className="addHomeWorkPath"
             to={`/add-homework`}
           >
-            Homework  +
+            Add Homework
         </NavLink>:""
+       
         }
+        </div>
         {
 
 

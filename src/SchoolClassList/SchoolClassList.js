@@ -30,7 +30,7 @@ class SchoolClassList extends Component {
         <NavLink className="addClassPath"
           to={`/add-class`}
         >
-          Classes  +
+          Add Class
             </NavLink>
             </div>
         {(this.context.classClicked) ? <ClassDetails id={this.context.getClassId()} hideClass={() => { this.setState({ clicked: false }) }} /> :
