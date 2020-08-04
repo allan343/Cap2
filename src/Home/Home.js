@@ -24,8 +24,8 @@ export default class Home extends React.Component {
        
     <SchoolClassList schoolClasses={this.context.schoolClasses} ></SchoolClassList>
 
-{(this.context.classClicked)? <HomeworkList homeworkList={this.context.homeworkList.filter(homework=>homework.classid== this.context.getClassId())} ></HomeworkList> :
-<HomeworkList homeworkList={this.context.homeworkList} ></HomeworkList>
+{(this.context.classClicked)? <HomeworkList heading = "Homework" homeworkList={this.context.homeworkList.filter(homework=>homework.classid== this.context.getClassId())} ></HomeworkList> :
+<HomeworkList heading = "Homework" homeworkList={this.context.homeworkList} ></HomeworkList>
    
     } 
     

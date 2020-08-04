@@ -9,7 +9,8 @@ class HomeworkList extends Component {
   static contextType = ApiContext;
 
   static defaultProps = {
-    homeworkList: []
+    homeworkList: [],
+    heading:''
   };
 
   constructor(props) {
@@ -39,7 +40,7 @@ class HomeworkList extends Component {
       <section className='HomeWorkList'>
          <div className= 'titleAndAddButton'>
           <span className='homeworkTitle'>
-            Homework
+            {this.props.heading}
             </span>
         {(this.context.schoolClasses.length)?
           <NavLink className="addHomeWorkPath"

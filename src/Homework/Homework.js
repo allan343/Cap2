@@ -18,16 +18,11 @@ export default class Home extends React.Component {
        
        <HeaderNav></HeaderNav>
        <section className= "Late">
-         <div>
-      {"Late"}
-      </div>
-      <HomeworkList homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
+      
+      <HomeworkList heading="Late" homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
       </section>
       <section className= "Upcoming">
-        <div>
-       {"Upcoming"}
-       </div>
-       <HomeworkList homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
+       <HomeworkList heading = "Upcoming" homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
       </section>
       </span>
     )
