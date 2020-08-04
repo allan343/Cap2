@@ -1,6 +1,6 @@
 import React from 'react';
 import ApiContext from '../ApiContext/ApiContext';
-//import './ShowDetails.css';
+import './AddSchoolClassForm.css';
 
 class AddSchoolClassForm extends React.Component {
   static contextType = ApiContext;
@@ -198,15 +198,18 @@ updateEndTime =(event)=> {
        // this.props.history.push(`/`);
        this.props.history.goBack();
         }}>
+          <div className="class-details">
           <h2 className="classDetailsHeading"> Class Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
         </button>
           <div className="class__hint">* required field</div>
-          <div className="form-group">
+          <div className="class-form">
+            <div className="courseName">
             <label htmlFor="classname">Name *</label>
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required"/>
+            </div>
             <label for="startDate">Start Date</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateStartDate(e.target.value)}  required="required"></input>
             <label for="finishDate">Finish Date</label>
@@ -221,9 +224,10 @@ updateEndTime =(event)=> {
             <label htmlFor="name">Teacher *</label>
             <input type="text" className="folder__control"
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} required="required"/>
-          
+          <div className="Sun">
            <input type="checkbox"  id="sun" value={'sun'} onChange={e=>this.updateSunday(e.target.value)} />
            <label htmlFor="sun"> Sun</label><br></br>
+           </div>
            <input type="checkbox"  id="mon" value={'mon'}  onChange={e=>this.updateMonday(e.target.value)} />
            <label for="mon"> Mon</label><br></br>
            <input type="checkbox"  id="tue" value={'tue'}  onChange={e=>this.updateTuesday(e.target.value)} />
@@ -290,12 +294,14 @@ updateEndTime =(event)=> {
               <option value="11:00pm">11:00pm</option>
               <option value="12:00am">12:00am</option>
             </select>
-          </div>
+          
           <div className="addShow__button__group">
-
+      
             <button type="submit" className="saveShowButton" onClick={this.context.a}>
               Save
         </button>
+        </div>
+          </div>
           </div>
         </form>
       </div>
