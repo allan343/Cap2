@@ -229,9 +229,9 @@ updateEndTime =(event)=> {
             <input type="text" className="folder__control"
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} required="required"/>
          <br/>
-         <label htmlFor="sun"> 
+        
            <input type="checkbox"  id="sun" value={'sun'} onChange={e=>this.updateSunday(e.target.value)} />
-           Sun</label><br></br>
+           <label htmlFor="sun">  Sun</label><br></br>
          
            <input type="checkbox"  id="mon" value={'mon'}  onChange={e=>this.updateMonday(e.target.value)} />
            <label for="mon"> Mon</label><br></br>

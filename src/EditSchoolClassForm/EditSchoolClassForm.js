@@ -255,22 +255,26 @@ class EditSchoolClassForm extends React.Component {
             <label htmlFor="classname">Name *</label>
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required" />
+            <br/>
             <label for="startDate">Start Date</label>
 
             <input type="date" id="startDate" name="startDate" value={this.state.displaystartdate} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
-
+            <br/>
             <label for="finishDate">Finish Date</label>
             <input type="date" id="finishDate" name="finishDate" value={this.state.displayfinishdate} onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
-
+            <br/>
             <label htmlFor="name">Building*</label>
             <input type="text" className="folder__control"
               name="building" id="building" value={this.state.building.value} onChange={e => this.updateBuilding(e.target.value)} required="required" />
+            <br/>
             <label htmlFor="name">Room *</label>
             <input type="text" className="room"
               name="room" id="room" value={this.state.room.value} onChange={e => this.updateRoom(e.target.value)} required="required" />
+            <br/>
             <label htmlFor="name">Teacher *</label>
             <input type="text" className="folder__control"
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} required="required" />
+            <br/>
             <input type="checkbox" id="sun" value={'sun'} defaultChecked={this.state.sun ? true : false} onChange={e => this.updateSunday(e.target.value)} />
             <label for="sun"> Sun</label><br></br>
             <input type="checkbox" id="mon" value={'mon'} defaultChecked={this.state.mon ? true : false} onChange={e => this.updateMonday(e.target.value)} />
