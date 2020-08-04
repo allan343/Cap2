@@ -316,6 +316,7 @@ class EditSchoolClassForm extends React.Component {
               <option value="11:00pm">11:00pm</option>
               <option value="12:00am">12:00am</option>
             </select>
+            <br/>
             <label htmlFor="name">End Time</label>
             <select name="endtime" id="endtime" value={this.state.endtime} onChange={this.updateEndTime} required="required">
               <option selected="selected" value="1:00am">1:00am</option>
