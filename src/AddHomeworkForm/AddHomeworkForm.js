@@ -70,7 +70,7 @@ class AddHomeworkForm extends React.Component {
     var d = new Date(date);
     var n = d.getDay();
     console.log(n);
-    let dueDate = date + "T00:00:00.000Z";
+    let dueDate = date;
     console.log(dueDate);
     this.setState({ duedate: dueDate });
   }
