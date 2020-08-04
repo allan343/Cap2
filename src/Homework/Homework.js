@@ -14,15 +14,19 @@ export default class Home extends React.Component {
     var Now = Date.now();
    
     return (
-      <span className='NoteListMain__button-container'>
+      <span className='HomeWorkPage'>
        
        <HeaderNav></HeaderNav>
-       <section class= "Late">
+       <section className= "Late">
+         <div>
       {"Late"}
+      </div>
       <HomeworkList homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
       </section>
-      <section class= "Upcoming">
+      <section className= "Upcoming">
+        <div>
        {"Upcoming"}
+       </div>
        <HomeworkList homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
       </section>
       </span>

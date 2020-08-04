@@ -23,7 +23,9 @@ export default class Calender extends React.Component {
   }
 
   updateDayOfWeek(date) {
-    let selecteddate= date+ "T00:00:00.000Z";
+    //let selecteddate= date+ "T00:00:00.000Z";
+    //2020-08-07
+    let selecteddate= date;
     console.log(selecteddate);
     this.setState({date: selecteddate});
     var selectedDate = new Date(date);
@@ -31,6 +33,11 @@ export default class Calender extends React.Component {
     console.log(dayOfWeekIndex);
     console.log(this.state.day[dayOfWeekIndex] );
     this.setState({ dayOfWeek: this.state.day[dayOfWeekIndex] });
+  }
+
+  formatHomeworkDate(date)
+  {
+
   }
 
   render() {
