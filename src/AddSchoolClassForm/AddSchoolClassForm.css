@@ -3,13 +3,13 @@
 }
 
 .class-details
-{   height: 600px;
+{ text-align: center;  
+  height: 600px;
     width: 600px;
-    margin-left: auto;
-    margin-right: auto;
+    margin:0 auto;
     background-color: #ebebeb;
 }
-
+/*
 input { 
   display:block;
   float:left;
@@ -24,5 +24,9 @@ label{
   margin-left:90px;
   margin-right:20px;
 }
-
+*/
+.class-details {
+  margin: 0 auto;
+  text-align: center;
+}
 
