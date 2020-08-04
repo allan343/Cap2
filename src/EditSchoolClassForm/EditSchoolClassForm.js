@@ -245,6 +245,7 @@ class EditSchoolClassForm extends React.Component {
           this.context.updateClass(schoolClass, this.context.getClassId());
           this.props.history.goBack();
         }}>
+           <div className="class-details">
           <h2 className="classDetailsHeading"> Class Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
@@ -347,6 +348,8 @@ class EditSchoolClassForm extends React.Component {
             <button type="reset" className="delShowButton" onClick={this.deleteHandle}>
               Delete
         </button>
+          </div>
+          
           </div>
         </form>
       </div>
