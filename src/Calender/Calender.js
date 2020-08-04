@@ -37,7 +37,26 @@ export default class Calender extends React.Component {
 
   formatHomeworkDate(date)
   {
-
+    let DayString='';
+    let DateString='';
+    if(new Date(date).getUTCDate() < 10)
+    {
+      DayString=`0${new Date(date).getUTCDate()}`
+      console.log(DayString);
+    }
+    else {
+     DayString = `${new Date(date).getUTCDate()}`
+      console.log(DayString);
+    }
+    if((new Date(date).getUTCMonth())< 9 )
+    { 
+    DateString= `${new Date(date).getFullYear()}-0${new Date(date).getUTCMonth()+1}-${DayString}`
+  }
+    else
+    {
+      DateString=`${new Date(date).getFullYear()}-${new Date(date).getUTCMonth()+1}-${DayString}`;
+  }
+    return (DateString);
   }
 
   render() {
@@ -59,7 +78,7 @@ export default class Calender extends React.Component {
         
         </div>
         <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(schoolClass.startdate)<= new Date(this.state.date) && new Date(schoolClass.finishdate)>= new Date(this.state.date))} ></SchoolClassList>
-       <HomeworkList heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => homework.duedate==this.state.date)} ></HomeworkList>
+       <HomeworkList heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.formatHomeworkDate(homework.duedate)==this.state.date)} ></HomeworkList>
       </span>
     )
   }
