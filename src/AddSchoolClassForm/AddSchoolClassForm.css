@@ -10,10 +10,19 @@
     background-color: #ebebeb;
 }
 
-label {
-  display: inline-block;
+input { 
+  display:block;
+  float:left;
+  margin-bottom: 10px; }
+
+label{
+  display: block;
+  float: left;
+  clear: left;
   width: 140px;
   text-align: right;
+  margin-left:90px;
+  margin-right:20px;
 }
 
-input { margin-bottom: 10px; }
+

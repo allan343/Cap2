@@ -89,7 +89,7 @@ class AddHomeworkForm extends React.Component {
   render() {
     let classList = this.context.schoolClasses;
     return (
-      <div id="homework-details">
+      <div id="homeworkDetails">
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let homework = {
@@ -115,6 +115,7 @@ class AddHomeworkForm extends React.Component {
         this.props.history.goBack();
           console.log("Homework" + this.context.homeworkList);
         }}>
+          <div className="homework-details">
           <h2 className="classDetailsHeading"> Homework Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
@@ -191,6 +192,7 @@ class AddHomeworkForm extends React.Component {
             <button type="submit" className="saveShowButton">
               Save
         </button>
+          </div>
           </div>
         </form>
       </div>

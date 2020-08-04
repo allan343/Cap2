@@ -1,11 +1,12 @@
-label{
-    display: block;
-    float: left;
-    clear: left;
-    width: 250px;
-    text-align: right;
-}
-input {
+/*label{
   display: block;
   float: left;
+  clear: left;
+  width: 250px;
+  text-align: right;
 }
+/*
+input {
+display: block;
+float: left;
+}*/
