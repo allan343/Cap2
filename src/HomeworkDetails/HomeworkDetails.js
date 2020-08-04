@@ -36,7 +36,7 @@ export default class ClassDetails extends React.Component {
         {<div className="dueTime"> Due time:  {homework.duetime}</div>}
 
 
-        <NavLink className="addClassPath"
+        <NavLink className="editHomeworkPath"
           to={`/HomeworkDetails/Edit/${this.context.getHomeworkId()}`}
         >
           Edit
