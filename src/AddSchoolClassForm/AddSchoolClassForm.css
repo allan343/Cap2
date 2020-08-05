@@ -3,7 +3,8 @@
 }
 
 .class-details
-{ text-align: center;  
+{ 
+  /*text-align: center;*/  
   height: 600px;
     width: 600px;
     margin:0 auto;
@@ -31,14 +32,23 @@ label{
 }*/
 label {
   display:inline-block;
- 
+  margin-left: 80px;
+  margin-right: 20px;
   float: left;
   padding-top: 5px;
   text-align: right;
   width: 140px;
 }
 
-input, select {
+input {
   margin-bottom:10px;
+}
+
+select{
+  margin-top:10px;
+}
+
+#sun,#mon,#tue,#wed,#thurs,#fri,#sat{
+  margin-top:6px;
 }
 

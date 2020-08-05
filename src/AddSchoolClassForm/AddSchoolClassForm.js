@@ -245,7 +245,7 @@ updateEndTime =(event)=> {
            <label for="fri"> Fri</label><br></br>
            <input type="checkbox"  id="sat" value={'sat'}  onChange={e=>this.updateSaturday(e.target.value)} />
            <label for="sat"> Sat</label><br></br>
-           <br/>
+        
            <label htmlFor="name">Start Time</label>
            <select name="starttime" id="starttime" onChange={this.updateStartTime} required="required">
               <option selected="selected" value="1:00am">1:00am</option>
