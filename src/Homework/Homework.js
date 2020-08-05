@@ -12,17 +12,18 @@ export default class Home extends React.Component {
   //only show shows that have that state for this view
   render() {
     var Now = Date.now();
-   
+    let pendingMessage="Nothing upcoming.";
+    let dueMessage ="Nothing is late."
     return (
       <span className='HomeWorkPage'>
        
        <HeaderNav></HeaderNav>
        <section className= "Late">
       
-      <HomeworkList heading="Late" homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
+      <HomeworkList message ={dueMessage} heading="Late" homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
       </section>
       <section className= "Upcoming">
-       <HomeworkList heading = "Upcoming" homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
+       <HomeworkList message= {pendingMessage}heading = "Upcoming" homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
       </section>
       </span>
     )

@@ -60,7 +60,8 @@ export default class Calender extends React.Component {
   }
 
   render() {
-
+    let message = "No classes for this day.";
+    let homeworkMessage= "No homework due on this day."
     console.log(this.state.date);
     //console.log(new Date(this.state.date));
     return (
@@ -77,8 +78,8 @@ export default class Calender extends React.Component {
        </div>
         
         </div>
-        <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(this.formatDate(schoolClass.startdate))<= new Date(this.formatDate(this.state.date)) && new Date(this.formatDate(schoolClass.finishdate))>= new Date(this.formatDate(this.state.date)))} ></SchoolClassList>
-       <HomeworkList heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.formatDate(homework.duedate)==this.state.date)} ></HomeworkList>
+        <SchoolClassList message ={message} schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(this.formatDate(schoolClass.startdate))<= new Date(this.formatDate(this.state.date)) && new Date(this.formatDate(schoolClass.finishdate))>= new Date(this.formatDate(this.state.date)))} ></SchoolClassList>
+       <HomeworkList message= {homeworkMessage} heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.formatDate(homework.duedate)==this.state.date)} ></HomeworkList>
       </span>
     )
   }

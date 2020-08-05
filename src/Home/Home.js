@@ -15,17 +15,19 @@ export default class Home extends React.Component {
   
   render() {
     console.log(this.context);
+    let message ="This is where all your classes will be displayed.  Click on Add Class to add a class";
+    let homeworkMessage="This is where your assignments, tests and projects will be displayed. First add a school class, then add a homework by clicking on Add Homework."
     return (
       
       <span className='NoteListMain__button-container'>
        
        <HeaderNav></HeaderNav>
       
-       
-    <SchoolClassList schoolClasses={this.context.schoolClasses} ></SchoolClassList>
+   
+    <SchoolClassList message ={message} schoolClasses={this.context.schoolClasses} ></SchoolClassList>
 
 {(this.context.classClicked)? <HomeworkList heading = "Homework" homeworkList={this.context.homeworkList.filter(homework=>homework.classid== this.context.getClassId())} ></HomeworkList> :
-<HomeworkList heading = "Homework" homeworkList={this.context.homeworkList} ></HomeworkList>
+<HomeworkList message = {homeworkMessage} heading = "Homework" homeworkList={this.context.homeworkList} ></HomeworkList>
    
     } 
     

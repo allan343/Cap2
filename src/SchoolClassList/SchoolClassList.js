@@ -10,7 +10,8 @@ class SchoolClassList extends Component {
   static contextType = ApiContext;
 
   static defaultProps = {
-    schoolclasses: []
+    schoolclasses: [],
+    message:''
   };
 
   constructor(props) {
@@ -18,7 +19,32 @@ class SchoolClassList extends Component {
   }
 
   render() {
-    const { schoolClasses } = this.props
+
+    const { schoolClasses } = this.props;
+    const {message}= this.props;
+    let display=""
+    if(schoolClasses.length==0){
+        display=message;
+    }
+    else{
+      display = <div>
+      {(this.context.classClicked) ? <ClassDetails id={this.context.getClassId()} hideClass={() => { this.setState({ clicked: false }) }} /> :
+        <div className="classList">
+          <ul className='SchoolClassList__list' aria-live='polite'>
+            {schoolClasses.map(schoolClass =>
+
+              <li id="class" onClick={() => this.context.setClassClicked(schoolClass.id)}>
+                <SchoolClassItem
+                  key={schoolClass.id}
+                  {...schoolClass}
+                />
+              </li>
+            )}
+          </ul>
+        </div>
+         }
+         </div>
+    }
     console.log(schoolClasses);
     console.log(this.context.classClicked);
     return (
@@ -33,22 +59,7 @@ class SchoolClassList extends Component {
           Add Class
             </NavLink>
             </div>
-        {(this.context.classClicked) ? <ClassDetails id={this.context.getClassId()} hideClass={() => { this.setState({ clicked: false }) }} /> :
-          <div className="classList">
-            <ul className='SchoolClassList__list' aria-live='polite'>
-              {schoolClasses.map(schoolClass =>
-
-                <li id="class" onClick={() => this.context.setClassClicked(schoolClass.id)}>
-                  <SchoolClassItem
-                    key={schoolClass.id}
-                    {...schoolClass}
-                  />
-                </li>
-              )}
-            </ul>
-          </div>
-        }
-
+           {display}
       </section>
     );
   }

@@ -10,7 +10,8 @@ class HomeworkList extends Component {
 
   static defaultProps = {
     homeworkList: [],
-    heading:''
+    heading:'',
+    message:''
   };
 
   constructor(props) {
@@ -34,7 +35,10 @@ class HomeworkList extends Component {
 
 
   render() {
-    const { homeworkList } = this.props
+    let display="none";
+    
+    const { homeworkList } = this.props;
+    const {message} = this.props;
     console.log(homeworkList);
     return (
       <section className='HomeWorkList'>
@@ -52,8 +56,8 @@ class HomeworkList extends Component {
         }
         </div>
         {
-
-
+(homeworkList.length)?
+          
           (this.state.clicked) ? <HomeworkDetails homeworkid={this.context.getHomeworkId()} hideHomework={() => { this.setState({ clicked: false }) }} /> :
             <ul className='SchoolClassList__list' aria-live='polite'>
               {homeworkList.map(homework =>
@@ -65,6 +69,7 @@ class HomeworkList extends Component {
                 </li>
               )}
             </ul>
+            : <div>{message}</div>
         }
       </section>
     );
