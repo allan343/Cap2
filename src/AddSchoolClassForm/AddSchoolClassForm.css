@@ -35,7 +35,7 @@ select{
   margin-top:6px;
 }
 
-.saveClassButton{
+ .addClass__button__group .saveClassButton{
   display: block;
   margin: 20px auto;
 }

@@ -3,6 +3,10 @@ body {background-color: #336699;
     margin: 0px;
 }
 
+button{
+    color:white;
+    background-color: #336699;
+}
 
 .SchoolClassList{
     display:inline-block;
