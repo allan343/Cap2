@@ -5,3 +5,9 @@
     border-bottom: 1px solid grey;
     background-color: white;
 }
+
+.message{
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
