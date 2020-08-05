@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom';
 import SchoolClassItem from '../SchoolClassItem/SchoolClassItem';
 import ClassDetails from '../ClassDetails/ClassDetails';
 import ApiContext from '../ApiContext/ApiContext';
+import Placeholder from '../Placeholder/Placeholder';
 import './SchoolClassList.css';
 
 
@@ -59,7 +60,10 @@ class SchoolClassList extends Component {
           Add Class
             </NavLink>
             </div>
-           {display}
+            <Placeholder
+                  message={message}
+                
+                />
       </section>
     );
   }

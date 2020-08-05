@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { NavLink, Link } from 'react-router-dom';
 import HomeworkItem from '../HomeworkItem/HomeworkItem';
 import HomeworkDetails from '../HomeworkDetails/HomeworkDetails';
+import Placeholder from '../Placeholder/Placeholder';
 import ApiContext from '../ApiContext/ApiContext';
 import './HomeworkList.css';
 
@@ -69,7 +70,10 @@ class HomeworkList extends Component {
                 </li>
               )}
             </ul>
-            : <div>{message}</div>
+            : <div>  <Placeholder
+            message={message}
+          
+          /></div>
         }
       </section>
     );
