@@ -25,7 +25,10 @@ class SchoolClassList extends Component {
     const {message}= this.props;
     let display=""
     if(schoolClasses.length==0){
-        display=message;
+        display=  <Placeholder
+        message={message}
+      
+      />;
     }
     else{
       display = <div>
@@ -60,10 +63,7 @@ class SchoolClassList extends Component {
           Add Class
             </NavLink>
             </div>
-            <Placeholder
-                  message={message}
-                
-                />
+           {display}
       </section>
     );
   }
