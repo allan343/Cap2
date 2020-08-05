@@ -1,3 +1,4 @@
+
 import React from 'react';
 import ApiContext from '../ApiContext/ApiContext';
 import './AddSchoolClassForm.css';
@@ -203,7 +204,6 @@ updateEndTime =(event)=> {
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
         </button>
-          <div className="class__hint">* required field</div>
           <div className="class-form">
             <div className="courseName">
             <label htmlFor="classname">Name *</label>

@@ -250,7 +250,6 @@ class EditSchoolClassForm extends React.Component {
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
         </button>
-          <div className="class__hint">* required field</div>
           <div className="form-group">
             <label htmlFor="classname">Name *</label>
             <input type="text" className="folder__control"
