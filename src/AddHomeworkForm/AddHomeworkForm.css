@@ -1,12 +1,18 @@
-/*label{
-  display: block;
-  float: left;
-  clear: left;
-  width: 250px;
-  text-align: right;
+.homework-details
+{   
+     /*text-align: center;*/  
+  display:block;
+  height: 600px;
+    width: 600px;
+    margin:0 auto;
+    background-color: #ebebeb;
 }
-/*
-input {
-display: block;
-float: left;
-}*/
+
+.homework-type{
+  margin-top: 10px;
+}
+
+.saveHomeworkButton{
+  display: block;
+  margin: 20px auto;
+}

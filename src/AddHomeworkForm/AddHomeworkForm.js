@@ -120,11 +120,12 @@ class AddHomeworkForm extends React.Component {
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
         </button>
-          <div className="class__hint">* required field</div>
+       
           <div className="form-group">
             <label htmlFor="homeworkDesc">Description *</label>
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
+            <br/>
             <label for="cars">Class:</label>
             <select name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
@@ -135,6 +136,8 @@ class AddHomeworkForm extends React.Component {
                 )
               }
             </select>
+            <br/>
+            <div className="homework-type">
             <label for="classType">Type:</label>
             <select name="classType" id="classType" onChange={this.updateType}>
               <option selected="selected" value="Homework">Homework</option>
@@ -149,11 +152,13 @@ class AddHomeworkForm extends React.Component {
               <option value="Quiz">Quiz</option>
               <option value="Project">Project</option>
             </select>
+            </div>
+            <br/>
             <label for="dueDate">Due Date</label>
             <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)} required="required"></input>
 
-
-            <label htmlFor="name">Due Time e.g. 8:30 or 2:15 pm *</label>
+            <br/>
+            <label htmlFor="name">Due Time</label>
             <select name="starttime" id="starttime" onChange={this.updateDueTime} required="required">
               <option selected="selected" value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
@@ -180,16 +185,20 @@ class AddHomeworkForm extends React.Component {
               <option value="11:00pm">11:00pm</option>
               <option value="12:00am">12:00am</option>
             </select>
+            <br/>
+            <br/>
             <label for="priority">Priority</label>
             <select name="priority" id="priority" onChange={this.updatePriority} >
               <option value="High" selected>High</option>
               <option value="Medium">Medium</option>
               <option value="Low">Low</option>
             </select>
+            <br/>
+            
           </div>
           <div className="addHomework__button__group">
 
-            <button type="submit" className="saveShowButton">
+            <button type="submit" className="saveHomeworkButton">
               Save
         </button>
           </div>

@@ -1,4 +1,27 @@
-#homework-details
-{
+#homeworkDetails
+{   
+     /*text-align: center;*/  
+  display:block;
+  height: 600px;
+    width: 600px;
+    margin:0 auto;
     background-color: #ebebeb;
 }
+
+.homework-type{
+  margin-top: 10px;
+}
+
+.saveHomeworkButton{
+  display: block;
+  margin: 20px auto;
+}
+.editHomework__button__group{
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+  }
+  
+  .editHomework__button__group button{
+    margin-right: 10px;
+  }

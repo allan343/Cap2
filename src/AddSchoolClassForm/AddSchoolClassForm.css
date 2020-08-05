@@ -6,6 +6,7 @@
 .class-details
 { 
   /*text-align: center;*/  
+  display:block;
   height: 600px;
     width: 600px;
     margin:0 auto;
