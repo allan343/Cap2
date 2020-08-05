@@ -344,7 +344,7 @@ class EditSchoolClassForm extends React.Component {
               <option value="12:00am">12:00am</option>
             </select>
           </div>
-          <div className="addShow__button__group">
+          <div className="editClass__button__group">
 
             <button type="submit" className="saveShowButton" onClick={this.context.a}>
               Save

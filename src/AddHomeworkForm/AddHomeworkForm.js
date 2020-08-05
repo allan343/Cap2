@@ -187,7 +187,7 @@ class AddHomeworkForm extends React.Component {
               <option value="Low">Low</option>
             </select>
           </div>
-          <div className="addShow__button__group">
+          <div className="addHomework__button__group">
 
             <button type="submit" className="saveShowButton">
               Save

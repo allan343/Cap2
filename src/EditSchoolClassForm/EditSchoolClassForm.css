@@ -1,44 +1,9 @@
-/*.classDetailsHeading{
-  text-align: center;
-}
-
-.class-details
-{ text-align: center;  
-  height: 600px;
-    width: 600px;
-    margin:0 auto;
-    background-color: #ebebeb;
-}
-/*
-input { 
-  display:block;
-  float:left;
-  margin-bottom: 10px; }
-
-label{
+.editClass__button__group{
   display: block;
-  float: left;
-  clear: left;
-  width: 140px;
-  text-align: right;
-  margin-left:90px;
-  margin-right:20px;
-}
-*//*
-.class-details {
-  margin: 0 auto;
+  margin: 20px auto;
   text-align: center;
 }
-label {
-  display:inline-block;
- 
-  float: left;
-  padding-top: 5px;
-  text-align: right;
-  width: 140px;
-}
 
-input, select {
-  margin-bottom:10px;
+.editClass__button__group button{
+  margin-right: 10px;
 }
-*/

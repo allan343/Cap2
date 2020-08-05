@@ -200,7 +200,9 @@ updateEndTime =(event)=> {
        this.props.history.goBack();
         }}>
           <div className="class-details">
-          <h2 className="classDetailsHeading"> Class Details</h2>
+          <div className="classDetailsHeading">
+          <h2 > Class Details</h2>
+          </div>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
         </button>
@@ -302,9 +304,9 @@ updateEndTime =(event)=> {
               <option value="12:00am">12:00am</option>
             </select>
           
-          <div className="addShow__button__group">
+          <div className="addClass__button__group">
       
-            <button type="submit" className="saveShowButton" onClick={this.context.a}>
+            <button type="submit" className="saveClassButton" onClick={this.context.a}>
               Save
         </button>
         </div>

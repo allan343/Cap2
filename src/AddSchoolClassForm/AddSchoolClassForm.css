@@ -1,5 +1,6 @@
 .classDetailsHeading{
   text-align: center;
+  margin-top: 20px;
 }
 
 .class-details
@@ -31,4 +32,9 @@ select{
 
 #sun,#mon,#tue,#wed,#thurs,#fri,#sat{
   margin-top:6px;
+}
+
+.saveClassButton{
+  display: block;
+  margin: 20px auto;
 }
