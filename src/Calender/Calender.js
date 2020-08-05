@@ -35,7 +35,7 @@ export default class Calender extends React.Component {
     this.setState({ dayOfWeek: this.state.day[dayOfWeekIndex] });
   }
 
-  formatHomeworkDate(date)
+  formatDate(date)
   {
     let DayString='';
     let DateString='';
@@ -77,8 +77,8 @@ export default class Calender extends React.Component {
        </div>
         
         </div>
-        <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(schoolClass.startdate)<= new Date(this.state.date) && new Date(schoolClass.finishdate)>= new Date(this.state.date))} ></SchoolClassList>
-       <HomeworkList heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.formatHomeworkDate(homework.duedate)==this.state.date)} ></HomeworkList>
+        <SchoolClassList schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(this.formatDate(schoolClass.startdate))<= new Date(this.formatDate(this.state.date)) && new Date(this.formatDate(schoolClass.finishdate))>= new Date(this.formatDate(this.state.date)))} ></SchoolClassList>
+       <HomeworkList heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.formatDate(homework.duedate)==this.state.date)} ></HomeworkList>
       </span>
     )
   }
