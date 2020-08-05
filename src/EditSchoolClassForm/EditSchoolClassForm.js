@@ -346,10 +346,10 @@ class EditSchoolClassForm extends React.Component {
           </div>
           <div className="editClass__button__group">
 
-            <button type="submit" className="saveShowButton" onClick={this.context.a}>
+            <button type="submit" className="saveClassButton" onClick={this.context.a}>
               Save
         </button>
-            <button type="reset" className="delShowButton" onClick={this.deleteHandle}>
+            <button type="reset" className="delClassButton" onClick={this.deleteHandle}>
               Delete
         </button>
           </div>

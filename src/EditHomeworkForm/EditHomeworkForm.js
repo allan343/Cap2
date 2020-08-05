@@ -222,7 +222,7 @@ let dueDate = date;
             <button type="submit" className="saveHomeworkButton" >
               Save
         </button>
-        <button type="reset" className="delShowButton" onClick={this.deleteHandle}>
+        <button type="reset" className="delHomeworkButton" onClick={this.deleteHandle}>
                 Delete
         </button>
           </div>
