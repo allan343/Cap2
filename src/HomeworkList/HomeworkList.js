@@ -60,7 +60,8 @@ class HomeworkList extends Component {
 (homeworkList.length)?
           
           (this.state.clicked) ? <HomeworkDetails homeworkid={this.context.getHomeworkId()} hideHomework={() => { this.setState({ clicked: false }) }} /> :
-            <ul className='SchoolClassList__list' aria-live='polite'>
+            <div className="hwlist">
+            <ul className='HomeworkList__list' aria-live='polite'>
               {homeworkList.map(homework =>
                 <li id="homework" onClick={() => this.homeworkClicked(homework.homeworkid)}>
                   <HomeworkItem
@@ -70,6 +71,7 @@ class HomeworkList extends Component {
                 </li>
               )}
             </ul>
+            </div>
             : <div>  <Placeholder
             message={message}
           

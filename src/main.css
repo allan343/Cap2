@@ -27,3 +27,23 @@ button{
     vertical-align: top;
 }
 
+@media screen and (max-width:900px) {
+
+    .HomeWorkList{
+       /* display:flex;*/
+      /*  flex-shrink: 2;*/
+        display:inline-block;
+       max-width: 45%;
+        
+        height: 100vh;
+        background-color: #ebebeb;
+        margin-left: 28px;
+        vertical-align: top;
+    }
+    .HomeWorkList div{
+      /*  flex-shrink: 1;*/
+       /* max-width: 55%;*/
+    }
+
+}
+
