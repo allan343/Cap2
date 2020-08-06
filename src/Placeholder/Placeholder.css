@@ -1,7 +1,7 @@
 .MessageWrapper
 {
     height: 100px;
-    /*border-top: 1px solid grey;*/
+    
     border-bottom: 1px solid grey;
     background-color: white;
 }
@@ -17,7 +17,7 @@
     .MessageWrapper
     {
         height: 150px;
-        /*border-top: 1px solid grey;*/
+      
         border-bottom: 1px solid grey;
         background-color: white;
     }
@@ -28,7 +28,7 @@
     .MessageWrapper
     {
         height: 200px;
-        /*border-top: 1px solid grey;*/
+    
         border-bottom: 1px solid grey;
         background-color: white;
     }

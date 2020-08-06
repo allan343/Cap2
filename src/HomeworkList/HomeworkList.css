@@ -1,4 +1,4 @@
-.HomeworkList{
+.HomeWorkList{
     list-style-type:none;
     padding:0;
 }
@@ -10,4 +10,9 @@
 
 .homeworkTitle{
     flex-grow: 1
+}
+
+.HomeworkList__list{
+    list-style-type:none;
+    padding:0;
 }

@@ -17,7 +17,7 @@ button{
 }
 
 .HomeWorkList{
- 
+   
     display:inline-block;
     width: 55%;
     
@@ -30,8 +30,9 @@ button{
 @media screen and (max-width:900px) {
 
     .HomeWorkList{
-       /* display:flex;*/
-      /*  flex-shrink: 2;*/
+        list-style-type:none;
+    padding:0;
+  
         display:inline-block;
        max-width: 45%;
         
@@ -40,10 +41,6 @@ button{
         margin-left: 28px;
         vertical-align: top;
     }
-    .HomeWorkList div{
-      /*  flex-shrink: 1;*/
-       /* max-width: 55%;*/
-    }
-
+   
 }
 
