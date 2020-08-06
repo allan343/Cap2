@@ -116,7 +116,7 @@ class AddHomeworkForm extends React.Component {
           console.log("Homework" + this.context.homeworkList);
         }}>
           <div className="homework-details">
-          <h2 className="classDetailsHeading"> Homework Details</h2>
+          <h2 className="homeworkDetailsHeading"> Homework Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
         </button>

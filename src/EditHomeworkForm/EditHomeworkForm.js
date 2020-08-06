@@ -138,7 +138,7 @@ let dueDate = date;
         this.props.history.goBack();
         console.log("Homework"+ this.context.homeworkList);
         }}>
-          <h2 className="classDetailsHeading"> Homework Details</h2>
+          <h2 className="homeworkDetailsHeading"> Homework Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
         </button>

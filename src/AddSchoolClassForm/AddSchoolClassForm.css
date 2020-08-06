@@ -7,7 +7,7 @@
 { 
   /*text-align: center;*/  
   display:block;
-  height: 600px;
+  height: 700px;
     width: 600px;
     margin:0 auto;
     background-color: #ebebeb;
@@ -38,4 +38,8 @@ select{
  .addClass__button__group .saveClassButton{
   display: block;
   margin: 20px auto;
+}
+
+.classDetailsHeading{
+  padding-top: 10px;
 }
