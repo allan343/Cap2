@@ -42,6 +42,7 @@ class HomeworkList extends Component {
     const {message} = this.props;
     console.log(homeworkList);
     return (
+   
       <section className='HomeWorkList'>
          <div className= 'titleAndAddButton'>
            <div className='homeworkTitle'>
@@ -82,6 +83,7 @@ class HomeworkList extends Component {
           /></div>
         }
       </section>
+      
     );
   }
 }

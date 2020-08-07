@@ -39,7 +39,7 @@ button{
 
 @media screen and (max-width:900px) {
 
-    .HomeWorkList{
+     .HomeWorkList{
         list-style-type:none;
     padding:0;
   
@@ -58,9 +58,9 @@ button{
    
 }
 
-@media screen and (max-width:300px) {
+@media screen and (max-width:400px) {
 
-    .HomeWorkList{
+   .HomeWorkList{
         list-style-type:none;
     padding:0;
   

@@ -40,3 +40,11 @@
    
 }
 
+
+@media screen and (max-width:900px) {
+
+  .Upcoming{
+      max-width: 35%;
+  }
+   
+}
