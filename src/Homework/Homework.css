@@ -22,3 +22,21 @@
     margin-left: 28px;
     vertical-align: top;
 }
+
+@media screen and (max-width:900px) {
+
+    .Late .HomeWorkList,.Upcoming .HomeWorkList {
+        list-style-type:none;
+    padding:0;
+  
+        display:inline-block;
+       max-width: 85%;
+        
+        height: 100vh;
+        background-color: #ebebeb;
+        margin-left: 28px;
+        vertical-align: top;
+    }
+   
+}
+
