@@ -27,6 +27,16 @@ button{
     vertical-align: top;
 }
 
+.titleAndAddButton{
+    display:flex;
+    flex-wrap: wrap;
+
+}
+
+.homeworkTitle, .addHomeWorkPath{
+    flex-grow: 1;
+}
+
 @media screen and (max-width:900px) {
 
     .HomeWorkList{
@@ -48,3 +58,26 @@ button{
    
 }
 
+@media screen and (max-width:300px) {
+
+    .HomeWorkList{
+        list-style-type:none;
+    padding:0;
+  
+        display:inline-block;
+       width: 40%;
+        
+        height: 100vh;
+        background-color: #ebebeb;
+       /* margin-left: 28px;*/
+        vertical-align: top;
+    }
+
+    .SchoolClassList{
+        display:inline-block;
+        width: 30%;
+         
+        /*margin-left: 20px;*/
+    }
+   
+}

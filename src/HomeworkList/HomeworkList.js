@@ -44,17 +44,21 @@ class HomeworkList extends Component {
     return (
       <section className='HomeWorkList'>
          <div className= 'titleAndAddButton'>
-          <span className='homeworkTitle'>
+           <div className='homeworkTitle'>
+        
             {this.props.heading}
-            </span>
+          
+            </div>
+            <div className="addHomeWorkPath">
         {(this.context.schoolClasses.length)?
-          <NavLink className="addHomeWorkPath"
+        
+          <NavLink
             to={`/add-homework`}
           >
             Add Homework
         </NavLink>:""
-       
         }
+        </div>
         </div>
         {
 (homeworkList.length)?

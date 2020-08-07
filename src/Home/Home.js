@@ -19,7 +19,7 @@ export default class Home extends React.Component {
     let homeworkMessage="This is where your assignments, tests and projects will be displayed. First add a school class, then add a homework by clicking on Add Homework."
     return (
       
-      <span className='NoteListMain__button-container'>
+      <div className='HomeworkMain__button-container'>
        
        <HeaderNav></HeaderNav>
       
@@ -31,7 +31,7 @@ export default class Home extends React.Component {
    
     } 
     
-    </span>
+    </div>
     )
   }
 }
