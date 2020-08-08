@@ -43,3 +43,23 @@ select{
 .classDetailsHeading{
   padding-top: 10px;
 }
+
+@media screen and (max-width:600px) {
+  .class-details
+{ 
+  max-width: 80%;
+}
+
+  .class-form input{
+    display: block;
+    margin: 0 auto;
+  }
+
+  .class-form label{
+      
+        display: block;
+        margin: 0 auto;
+        width: 140px;
+    }
+  
+}

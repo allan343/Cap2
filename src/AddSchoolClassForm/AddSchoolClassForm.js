@@ -207,12 +207,12 @@ updateEndTime =(event)=> {
             Back
         </button>
           <div className="class-form">
-            <div className="courseName">
+            
             <label htmlFor="classname">Name *</label>
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required"/>
             <br/>
-            </div>
+          
             <label for="startDate">Start Date</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateStartDate(e.target.value)}  required="required"></input>
             <br/>
