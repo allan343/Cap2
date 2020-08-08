@@ -89,7 +89,7 @@ class AddHomeworkForm extends React.Component {
   render() {
     let classList = this.context.schoolClasses;
     return (
-      <div id="homeworkDetails">
+      <div className="homeworkDetails">
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let homework = {

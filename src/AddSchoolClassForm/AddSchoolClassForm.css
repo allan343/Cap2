@@ -23,7 +23,7 @@ label {
   width: 140px;
 }
 
-input {
+.class-details input, .homeworkDetails input{
   margin-bottom:10px;
 }
 
@@ -50,19 +50,19 @@ select{
   max-width: 80%;
 }
 
-  .class-form input{
+  .class-details input{
     display: block;
     margin: 0 auto;
   }
 
-  .class-form label{
+  .class-details label{
       display:block;
-    float: none;
+  
     padding-top: 5px;
     text-align: center;
     }
 
-    .class-form input {
+    .class-details input {
       margin-bottom:0px;
     }
   

@@ -118,7 +118,7 @@ let dueDate = date;
   render() {
     let classList=  this.context.schoolClasses;
     return (
-      <div id="homeworkDetails">
+      <div className="homeworkDetails">
         <form className="folder" onSubmit={(event) => {
           event.preventDefault();
           let homework = {
@@ -138,6 +138,7 @@ let dueDate = date;
         this.props.history.goBack();
         console.log("Homework"+ this.context.homeworkList);
         }}>
+           <div className="homework-details">
           <h2 className="homeworkDetailsHeading"> Homework Details</h2>
           <button type="cancel" className="cancelShowButton" onClick={this.cancelHandle}>
             Back
@@ -225,6 +226,7 @@ let dueDate = date;
         <button type="reset" className="delHomeworkButton" onClick={this.deleteHandle}>
                 Delete
         </button>
+          </div>
           </div>
         </form>
       </div>
