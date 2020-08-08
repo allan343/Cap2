@@ -27,7 +27,7 @@ label {
   margin-bottom:10px;
 }
 
-select{
+.class-details select, .homeworkDetails select{
   margin-top:5px;
 }
 
@@ -48,6 +48,7 @@ select{
   .class-details
 { 
   max-width: 80%;
+  height: 100%;
 }
 
   .class-details input{
@@ -66,4 +67,16 @@ select{
       margin-bottom:0px;
     }
   
+    .class-details select{
+      display:block;
+      margin: 0 auto;
+    }
+
+    .class-details .addClass__button__group{
+      padding-bottom: 20px;
+    }
+
+    .class-details .addClass__button__group button{
+      margin: 20px auto
+    }
 }

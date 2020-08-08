@@ -305,7 +305,7 @@ updateEndTime =(event)=> {
             </select>
           
           <div className="addClass__button__group">
-      
+          
             <button type="submit" className="saveClassButton" onClick={this.context.a}>
               Save
         </button>
