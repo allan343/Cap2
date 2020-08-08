@@ -56,10 +56,14 @@ select{
   }
 
   .class-form label{
-      
-        display: block;
-        margin: 0 auto;
-        width: 140px;
+      display:block;
+    float: none;
+    padding-top: 5px;
+    text-align: center;
+    }
+
+    .class-form input {
+      margin-bottom:0px;
     }
   
 }
