@@ -83,6 +83,9 @@ label {
     }
 
     .class-details .editClass__button__group button{
-      margin: 20px auto
+      margin: 20px auto;
+      margin-left:20px;
     }
+
+    
 }
