@@ -75,6 +75,7 @@ label {
     .class-details select{
       display:block;
       margin: 0 auto;
+      margin-top: 30px;
     }
 
     .class-details .editClass__button__group{
