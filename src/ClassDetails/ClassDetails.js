@@ -42,8 +42,8 @@ export default class ClassDetails extends React.Component {
           Close Details
         </button>
         {<div className="schoolClassName"> {schoolClass.classname}</div>}
-        {<div className="startDate"> Started: {schoolClass.startdate}</div>}
-        {<div className="endDate"> Ends: {schoolClass.finishdate}</div>}
+        {<div className="startDate"> Started: {this.context.formatDate(schoolClass.startdate)}</div>}
+        {<div className="endDate"> Ends: {this.context.formatDate(schoolClass.finishdate)}</div>}
         {<div className="location"> Location: {schoolClass.building}</div>}
         {<div className="teacher"> Teacher: {schoolClass.teacher}</div>}
         {<div className="startTime"> Class Start Time: {schoolClass.starttime}</div>}

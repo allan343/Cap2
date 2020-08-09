@@ -32,7 +32,7 @@ export default class ClassDetails extends React.Component {
         {<div className="description"> Description: {homework.homeworkdescription}</div>}
         {<div className="class"> Class: {homework.schoolclass}</div>}
         {<div className="type"> Type: {homework.homeworktype}</div>}
-        {<div className="dueDate"> Due date: {homework.duedate}</div>}
+        {<div className="dueDate"> Due date: {this.context.formatDate(homework.duedate)}</div>}
         {<div className="dueTime"> Due time:  {homework.duetime}</div>}
 
 
