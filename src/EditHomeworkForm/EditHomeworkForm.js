@@ -159,7 +159,7 @@ let dueDate = date;
               }
             </select>
             <br/>
-            <div className="homework-type">
+            
          <label for="classType">Type:</label>
             <select name="classType" id="classType" value={this.state.homeworktype} onChange={this.updateType}>
             <option value="Homework">Homework</option>
@@ -174,7 +174,7 @@ let dueDate = date;
             <option value="Quiz">Quiz</option>
             <option value="Project">Project</option>
             </select>
-            </div>
+            
 
             <br/>
             <label for="dueDate">Due Date</label>

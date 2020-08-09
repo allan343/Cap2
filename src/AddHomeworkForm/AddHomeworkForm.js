@@ -137,7 +137,7 @@ class AddHomeworkForm extends React.Component {
               }
             </select>
             <br/>
-            <div className="homework-type">
+            
             <label for="classType">Type:</label>
             <select name="classType" id="classType" onChange={this.updateType}>
               <option selected="selected" value="Homework">Homework</option>
@@ -152,7 +152,7 @@ class AddHomeworkForm extends React.Component {
               <option value="Quiz">Quiz</option>
               <option value="Project">Project</option>
             </select>
-            </div>
+           
             <br/>
             <label for="dueDate">Due Date</label>
             <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)} required="required"></input>
