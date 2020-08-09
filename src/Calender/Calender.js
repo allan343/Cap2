@@ -35,6 +35,7 @@ export default class Calender extends React.Component {
     this.setState({ dayOfWeek: this.state.day[dayOfWeekIndex] });
   }
 
+  /*
   formatDate(date)
   {
     let DayString='';
@@ -57,7 +58,7 @@ export default class Calender extends React.Component {
       DateString=`${new Date(date).getFullYear()}-${new Date(date).getUTCMonth()+1}-${DayString}`;
   }
     return (DateString);
-  }
+  }*/
 
   render() {
     let message = "No classes for this day.";
@@ -76,8 +77,8 @@ export default class Calender extends React.Component {
           
         
         </div>
-        <SchoolClassList message ={message} schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(this.formatDate(schoolClass.startdate))<= new Date(this.formatDate(this.state.date)) && new Date(this.formatDate(schoolClass.finishdate))>= new Date(this.formatDate(this.state.date)))} ></SchoolClassList>
-       <HomeworkList message= {homeworkMessage} heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.formatDate(homework.duedate)==this.state.date)} ></HomeworkList>
+        <SchoolClassList message ={message} schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(this.context.formatDate(schoolClass.startdate))<= new Date(this.context.formatDate(this.state.date)) && new Date(this.context.formatDate(schoolClass.finishdate))>= new Date(this.context.formatDate(this.state.date)))} ></SchoolClassList>
+       <HomeworkList message= {homeworkMessage} heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.context.formatDate(homework.duedate)==this.state.date)} ></HomeworkList>
       </span>
     )
   }

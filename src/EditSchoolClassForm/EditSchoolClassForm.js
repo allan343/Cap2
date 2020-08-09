@@ -32,7 +32,7 @@ class EditSchoolClassForm extends React.Component {
   constructor(props) {
     //states a show can have
     super(props);
-
+    /*
     let finishDateString = '';
     let finishDateDayString = '';
     console.log(this.props.finishdate);
@@ -75,7 +75,7 @@ class EditSchoolClassForm extends React.Component {
     }
 
     console.log(finishDateString);
-    console.log(startDateString);
+    console.log(startDateString);*/
     this.state = {
       id: this.props.id,
       classname: {
@@ -84,8 +84,6 @@ class EditSchoolClassForm extends React.Component {
       },
       finishdate: this.props.finishdate,
       startdate: this.props.startdate,
-      displayfinishdate:finishDateString,
-      displaystartdate:startDateString,
       building: {
         value: this.props.building,
         touched: false
@@ -257,10 +255,10 @@ class EditSchoolClassForm extends React.Component {
             <br/>
             <label for="startDate">Start Date</label>
 
-            <input type="date" id="startDate" name="startDate" value={this.state.displaystartdate} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
+            <input type="date" id="startDate" name="startDate" value={this.context.formatDate(this.state.startdate)} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
             <br/>
             <label for="finishDate">Finish Date</label>
-            <input type="date" id="finishDate" name="finishDate" value={this.state.displayfinishdate} onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
+            <input type="date" id="finishDate" name="finishDate" value={this.context.formatDate(this.state.finishdate)} onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
             <br/>
             <label htmlFor="name">Building*</label>
             <input type="text" className="folder__control"
@@ -346,7 +344,7 @@ class EditSchoolClassForm extends React.Component {
           </div>
           <div className="editClass__button__group">
 
-            <button type="submit" className="saveClassButton" onClick={this.context.a}>
+            <button type="submit" className="saveClassButton" >
               Save
         </button>
             <button type="reset" className="delClassButton" onClick={this.deleteHandle}>

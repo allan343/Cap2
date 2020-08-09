@@ -229,8 +229,6 @@ class App extends Component {
         this.setState({
             homeworkid: homeworkId
         });
-
-
     };
 
     getHomeworkId = () => {
@@ -244,6 +242,29 @@ class App extends Component {
 
     getFirstClassId = () => {
         return this.state.schoolClasses[0].id;
+    }
+
+    formatDate(date){
+        let DayString='';
+        let DateString='';
+        if(new Date(date).getUTCDate() < 10)
+        {
+          DayString=`0${new Date(date).getUTCDate()}`
+          console.log(DayString);
+        }
+        else {
+         DayString = `${new Date(date).getUTCDate()}`
+          console.log(DayString);
+        }
+        if((new Date(date).getUTCMonth())< 9 )
+        { 
+        DateString= `${new Date(date).getFullYear()}-0${new Date(date).getUTCMonth()+1}-${DayString}`
+      }
+        else
+        {
+          DateString=`${new Date(date).getFullYear()}-${new Date(date).getUTCMonth()+1}-${DayString}`;
+      }
+        return (DateString);
     }
 
     renderNavRoutes() {
@@ -331,7 +352,8 @@ class App extends Component {
             setClassClicked: this.setClassClicked,
             closeClass: this.closeClass,
             getFirstClassName: this.getFirstClassName,
-            getFirstClassId: this.getFirstClassId
+            getFirstClassId: this.getFirstClassId,
+            formatDate: this.formatDate
         };
         return (
 

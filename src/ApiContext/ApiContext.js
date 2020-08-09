@@ -22,6 +22,7 @@ export default React.createContext({
   setClassClicked: ()=>{ },
   closeClass: ()=>{ },
   getFirstClassName: ()=>{},
-  getFirstClassId:()=>{}
+  getFirstClassId:()=>{},
+  formatDate:()=>{}
   
 })

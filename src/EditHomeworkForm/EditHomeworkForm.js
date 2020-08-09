@@ -21,8 +21,10 @@ class EditHomeworkForm extends React.Component {
   constructor(props) {
     //states a show can have
     super(props);
+    /*
     let dueDateString='';
-    let dueDateDayString='';
+    let dueDateDayString='';*/
+    /*
     console.log(this.props.duedate);
     console.log(new Date(this.props.duedate).getUTCDate());
     if(new Date(this.props.duedate).getUTCDate() < 10)
@@ -42,7 +44,8 @@ class EditHomeworkForm extends React.Component {
     {
       dueDateString=`${new Date(this.props.duedate).getFullYear()}-${new Date(this.props.duedate).getUTCMonth()+1}-${dueDateDayString}`;
   }
-    console.log(dueDateString);
+    console.log(dueDateString);*/
+   // let dueDateString= formatDate(this.props.duedate);
     this.state = {
       homeworkid: this.props.homeworkid,
       classid:this.props.classid,
@@ -53,7 +56,6 @@ class EditHomeworkForm extends React.Component {
       schoolclass:this.props.schoolclass,
       homeworktype: this.props.homeworktype,
       duedate:this.props.duedate,
-      displayduedate:dueDateString,
       duetime:this.props.duetime,
        
       homeworkpriority:this.props.homeworkpriority
@@ -61,6 +63,7 @@ class EditHomeworkForm extends React.Component {
     console.log(this.state.schoolclass);
 
   }
+
   //methods to update show state from user input
   cancelHandle = (e) => {
     e.preventDefault();
@@ -112,8 +115,6 @@ let dueDate = date;
     
     this.setState({ homeworkpriority: event.target.value });
   };
-
-  
 
   render() {
     let classList=  this.context.schoolClasses;
@@ -178,7 +179,7 @@ let dueDate = date;
 
             <br/>
             <label for="dueDate">Due Date</label>
-            <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.displayduedate} required="required"></input>
+            <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.context.formatDate(this.state.duedate)} required="required"></input>
           
             <br/>
            <label htmlFor="name">Due Time *</label>
