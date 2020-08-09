@@ -12,8 +12,10 @@
     flex-grow: 1
 }
 
+
 .HomeworkList__list{
     list-style-type:none;
     padding:0;
+    
 }
- 
+
