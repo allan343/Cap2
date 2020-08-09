@@ -181,7 +181,7 @@ let dueDate = date;
             <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.state.displayduedate} required="required"></input>
           
             <br/>
-           <label htmlFor="name">Due Time e.g. 8:30 or 2:15 pm *</label>
+           <label htmlFor="name">Due Time *</label>
            <select name="starttime" id="starttime"  value={this.state.duetime} onChange={this.updateDueTime} required="required">
               <option selected="selected" value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>

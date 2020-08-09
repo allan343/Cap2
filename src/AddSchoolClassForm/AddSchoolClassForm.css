@@ -13,7 +13,7 @@
     background-color: #ebebeb;
 }
 
-label {
+.class-details label {
   display:inline-block;
   margin-left: 80px;
   margin-right: 20px;

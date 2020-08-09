@@ -21,3 +21,40 @@
   padding-top: 30px;
   text-align: center;
 }
+
+@media screen and (max-width:600px) {
+  .homework-details
+{ 
+  max-width: 80%;
+}
+
+.homework-details input{
+  display: block;
+  margin: 0 auto;
+}
+
+.homework-details label{
+    display:block;
+
+  padding-top: 5px;
+  text-align: center;
+  }
+
+  .homework-details input {
+    margin-bottom:0px;
+  }
+
+  .homework-details select{
+    display:block;
+    margin: 0 auto ;
+    margin-top: 30px;
+  }
+
+  .homework-details .addClass__button__group{
+    padding-bottom: 20px;
+  }
+
+  .homework-details .addClass__button__group button{
+    margin: 20px auto
+  }
+}
