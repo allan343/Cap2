@@ -73,9 +73,7 @@ export default class Calender extends React.Component {
        <label className="calenderLabel" for="startDate">Select a day</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateDayOfWeek(e.target.value)} ></input>
             </div>
-            <div className="HomeworkTitle">
-       Homework due that day:
-       </div>
+          
         
         </div>
         <SchoolClassList message ={message} schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(this.formatDate(schoolClass.startdate))<= new Date(this.formatDate(this.state.date)) && new Date(this.formatDate(schoolClass.finishdate))>= new Date(this.formatDate(this.state.date)))} ></SchoolClassList>
