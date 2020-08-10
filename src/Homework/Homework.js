@@ -19,14 +19,13 @@ export default class Home extends React.Component {
       <div className='HomeWorkPage'>
        
        <HeaderNav></HeaderNav>
-       <div className="homework-columns">
+       <div className="columns">
       
-      
+
       <HomeworkList message ={dueMessage} heading="Late" homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
 
-     
-       <HomeworkList message= {pendingMessage}heading = "Upcoming" homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
-
+       <HomeworkList  message= {pendingMessage}heading = "Upcoming" homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
+    
       </div>
       </div>
     )
