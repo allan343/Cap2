@@ -10,9 +10,9 @@ export default function HomeworkItem(props) {
   return (
         <div className='HomeworkItem__row'>
     { <div className="homeworkDescription"> {props.homeworkdescription}</div>}
-    { <div className="schoolClass"> Class {props.schoolclass}</div>}
-    { <div className="dueDate"> Due Date {context.formatDate(props.duedate)}</div>}
-    { <div className="dueTime"> Due time {props.duetime}</div>}
+    { <div className="schoolClass"> Class: {props.schoolclass}</div>}
+    { <div className="dueDate"> Due Date: {context.formatDate(props.duedate)}</div>}
+    { <div className="dueTime"> Due time: {props.duetime}</div>}
      
       </div>
     
