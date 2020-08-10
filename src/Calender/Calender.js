@@ -6,6 +6,7 @@ import HomeworkList from '../HomeworkList/HomeworkList';
 import ApiContext from '../ApiContext/ApiContext';
 import HeaderNav from '../HeaderNav/HeaderNav';
 import './Calender.css';
+//import '../main.css';
 
 export default class Calender extends React.Component {
 
@@ -71,14 +72,19 @@ export default class Calender extends React.Component {
        <HeaderNav></HeaderNav>
        <div className="calenderAndClasses">
          <div className="calender">
+      
+           
        <label className="calenderLabel" for="startDate">Select a day</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateDayOfWeek(e.target.value)} ></input>
-            </div>
+       
           
         
         </div>
+          <div className="columns" >
         <SchoolClassList message ={message} schoolClasses={ this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek]==true && new Date(this.context.formatDate(schoolClass.startdate))<= new Date(this.context.formatDate(this.state.date)) && new Date(this.context.formatDate(schoolClass.finishdate))>= new Date(this.context.formatDate(this.state.date)))} ></SchoolClassList>
        <HomeworkList message= {homeworkMessage} heading = "Homework" homeworkList={   this.context.homeworkList.filter(homework => this.context.formatDate(homework.duedate)==this.state.date)} ></HomeworkList>
+        </div>
+      </div>
       </span>
     )
   }

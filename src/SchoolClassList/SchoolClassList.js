@@ -52,7 +52,7 @@ class SchoolClassList extends Component {
     console.log(schoolClasses);
     console.log(this.context.classClicked);
     return (
-      <section className='SchoolClassList'>
+      <div className='SchoolClassList'>
         <div className= 'titleAndAddButton'>
           <span className='classTitle'>
         Classes
@@ -64,7 +64,7 @@ class SchoolClassList extends Component {
             </NavLink>
             </div>
            {display}
-      </section>
+      </div>
     );
   }
 }

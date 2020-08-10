@@ -15,7 +15,7 @@ export default class Home extends React.Component {
     let pendingMessage="Nothing upcoming.";
     let dueMessage ="Nothing is late."
     return (
-      <span className='HomeWorkPage'>
+      <div className='HomeWorkPage'>
        
        <HeaderNav></HeaderNav>
        <section className= "Late">
@@ -25,7 +25,7 @@ export default class Home extends React.Component {
       <section className= "Upcoming">
        <HomeworkList message= {pendingMessage}heading = "Upcoming" homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
       </section>
-      </span>
+      </div>
     )
   }
 }

@@ -27,7 +27,20 @@
 
 
 
-    .Late .HomeWorkList,.Upcoming .HomeWorkList {
+    .Late .HomeWorkList {
+        list-style-type:none;
+    padding:0;
+  
+        display:inline-block;
+       max-width: 85%;
+        
+        max-height: 100vh;
+        background-color: #ebebeb;
+        margin-left: 28px;
+        vertical-align: top;
+    }
+
+    .Upcoming .HomeWorkList {
         list-style-type:none;
     padding:0;
   

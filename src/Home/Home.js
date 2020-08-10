@@ -23,14 +23,14 @@ export default class Home extends React.Component {
        
        <HeaderNav></HeaderNav>
       
-   
+   <div className="columns">
     <SchoolClassList message ={message} schoolClasses={this.context.schoolClasses} ></SchoolClassList>
 
 {(this.context.classClicked)? <HomeworkList heading = "Homework" homeworkList={this.context.homeworkList.filter(homework=>homework.classid== this.context.getClassId())} ></HomeworkList> :
 <HomeworkList message = {homeworkMessage} heading = "Homework" homeworkList={this.context.homeworkList} ></HomeworkList>
    
     } 
-    
+    </div>
     </div>
     )
   }

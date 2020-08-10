@@ -8,23 +8,36 @@ button{
     background-color: #336699;
 }
 
+.columns{
+    width: 100%;
+ display: flex;
+   /* display: block;*/
+    margin: 0 auto;
+   /* text-align: center;*/
+  /* margin-left:40px;*/
+}
+
 .SchoolClassList{
-    display:inline-block;
-    width: 38%;
+   /* display:inline-block;*/
+   flex-grow: 1;
+    width: 35%;
     height: 100vh;
     background-color: #ebebeb;
-    margin-left: 28px;
+   margin-left: 20px;
+   margin-right: 10px;
 }
 
 .HomeWorkList{
-   
-    display:inline-block;
-    width: 55%;
+   flex-grow: 1;
+  /*  display:inline-block;*/
+    width: 35%;
     
     height: 100vh;
     background-color: #ebebeb;
-    margin-left: 28px;
+   /* margin-left: 28px;*/
     vertical-align: top;
+    margin-left:10px;
+    margin-right: 20px;
 }
 
 .titleAndAddButton{
@@ -36,7 +49,7 @@ button{
 .homeworkTitle, .addHomeWorkPath{
     flex-grow: 1;
 }
-
+/*
 @media screen and (max-width:900px) {
 
      .HomeWorkList{
@@ -80,4 +93,4 @@ button{
      
     }
    
-}
+}*/
