@@ -39,7 +39,7 @@ export default class ClassDetails extends React.Component {
       <div className='SchoolClassItem__row'>
 
         <button type="cancel" className="cancelShowButton" onClick={() => this.cancelHandle()}>
-          Close Details
+          Back
         </button>
         {<div className="schoolClassName"> {schoolClass.classname}</div>}
         {<div className="startDate"> Started: {this.context.formatDate(schoolClass.startdate)}</div>}

@@ -15,8 +15,9 @@ export default class Home extends React.Component {
   
   render() {
     console.log(this.context);
-    let message ="This is where all your classes will be displayed.  Click on Add Class to add a class";
-    let homeworkMessage="This is where your assignments, tests and projects will be displayed. First add a school class, then add a homework by clicking on Add Homework."
+    let message ="This is where all your classes will be displayed.  Click on \"Add Class\" to add a class. \
+     Then click on a class to see class details and homework due for that class.";
+    let homeworkMessage="This is where your assignments, tests and projects will be displayed. First add a school class, then add a homework by clicking on \"Add Homework\"."
     let emptyHomework="There is no homework for this class."
     return (
       
