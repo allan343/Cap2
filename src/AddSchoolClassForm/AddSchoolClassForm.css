@@ -44,6 +44,10 @@
   padding-top: 10px;
 }
 
+.starttime{
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width:600px) {
   .class-details
 { 

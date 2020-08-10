@@ -127,7 +127,7 @@ class AddHomeworkForm extends React.Component {
               name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
             <br/>
             <label for="cars">Class:</label>
-            <select name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
+            <select  className="schoolclass" name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
             
                 classList.map(schoolClass =>
@@ -139,7 +139,7 @@ class AddHomeworkForm extends React.Component {
             <br/>
             
             <label for="classType">Type:</label>
-            <select name="classType" id="classType" onChange={this.updateType}>
+            <select className="classType" name="classType" id="classType" onChange={this.updateType}>
               <option selected="selected" value="Homework">Homework</option>
               <option value="Test">Test</option>
               <option value="Study">Study</option>

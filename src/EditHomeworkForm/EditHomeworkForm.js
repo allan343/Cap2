@@ -150,7 +150,7 @@ let dueDate = date;
               name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
             <br/>
            <label for="cars">Class:</label>
-            <select name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
+            <select className="schoolclass" name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
 
                 classList.map(schoolClass =>
@@ -162,7 +162,7 @@ let dueDate = date;
             <br/>
             
          <label for="classType">Type:</label>
-            <select name="classType" id="classType" value={this.state.homeworktype} onChange={this.updateType}>
+            <select className="classType" name="classType" id="classType" value={this.state.homeworktype} onChange={this.updateType}>
             <option value="Homework">Homework</option>
             <option value="Test">Test</option>
             <option value="Study">Study</option>

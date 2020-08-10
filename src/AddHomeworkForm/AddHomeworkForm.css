@@ -2,7 +2,7 @@
 {   
      /*text-align: center;*/  
   display:block;
-  height: 600px;
+  height: 700px;
     width: 600px;
     margin:0 auto;
     background-color: #ebebeb;
@@ -20,6 +20,10 @@
 .homeworkDetailsHeading{
   padding-top: 30px;
   text-align: center;
+}
+
+.classType, .schoolclass{
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width:600px) {
