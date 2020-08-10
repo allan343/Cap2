@@ -80,12 +80,13 @@ button{
  }*/
 .titleAndAddButton{
     display:flex;
-    flex-wrap: wrap;
+ /*  flex-wrap: wrap;*/
+ justify-content: space-between;
 
 }
 
-.homeworkTitle, .addHomeWorkPath{
-    flex-grow: 1;
+.classTitle, .homeworkTitle, .addHomeWorkPath, .addClassPath{
+   /* flex-grow: 1;*/
 }
 /*
 @media screen and (max-width:900px) {
