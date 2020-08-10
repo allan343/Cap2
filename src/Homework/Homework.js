@@ -3,7 +3,8 @@ import React from 'react';
 import HomeworkList from '../HomeworkList/HomeworkList';
 import ApiContext from '../ApiContext/ApiContext';
 import HeaderNav from '../HeaderNav/HeaderNav';
-import './Homework.css'
+//import './Homework.css'
+import '../main.css';
 
 export default class Home extends React.Component {
   static contextType = ApiContext;
@@ -18,13 +19,15 @@ export default class Home extends React.Component {
       <div className='HomeWorkPage'>
        
        <HeaderNav></HeaderNav>
-       <section className= "Late">
+       <div className="columns">
+      
       
       <HomeworkList message ={dueMessage} heading="Late" homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
-      </section>
-      <section className= "Upcoming">
+
+     
        <HomeworkList message= {pendingMessage}heading = "Upcoming" homeworkList={this.context.homeworkList.filter(homework => new Date(homework.duedate) > Now)} ></HomeworkList>
-      </section>
+
+      </div>
       </div>
     )
   }
