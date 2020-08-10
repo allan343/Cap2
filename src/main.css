@@ -17,6 +17,15 @@ button{
   /* margin-left:40px;*/
 }
 
+.homework-columns{
+    width: 100%;
+ display: flex;
+   /* display: block;*/
+    margin: 0 auto;
+   /* text-align: center;*/
+  /* margin-left:40px;*/
+}
+
 .SchoolClassList{
    /* display:inline-block;*/
    flex-grow: 1;
@@ -40,6 +49,18 @@ button{
     margin-right: 20px;
 }
 
+.homework-columns .HomeWorkList{
+    flex-grow: 1;
+  
+     width: 35%;
+     
+     height: 100vh;
+     background-color: #ebebeb;
+ 
+     vertical-align: top;
+     margin-left:20px;
+     margin-right: 20px;
+ }
 .titleAndAddButton{
     display:flex;
     flex-wrap: wrap;

@@ -19,7 +19,7 @@ export default class Home extends React.Component {
       <div className='HomeWorkPage'>
        
        <HeaderNav></HeaderNav>
-       <div className="columns">
+       <div className="homework-columns">
       
       
       <HomeworkList message ={dueMessage} heading="Late" homeworkList={this.context.homeworkList.filter(homework =>new Date(homework.duedate) < Now)} ></HomeworkList>
