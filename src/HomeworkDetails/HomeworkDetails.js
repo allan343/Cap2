@@ -17,9 +17,9 @@ export default class ClassDetails extends React.Component {
 
 
   render() {
-    console.log(this.props.homeworkid);
+    
     let homework = this.context.getHomework(this.props.homeworkid);
-    console.log(homework.description);
+  
     return (
 
 
