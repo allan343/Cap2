@@ -213,10 +213,10 @@ updateEndTime =(event)=> {
               name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required"/>
             <br/>
           
-            <label for="startDate">Start Date</label>
+            <label htmlFor="startDate">Start Date</label>
             <input type="date" id="startDate" name="startDate" onChange={e => this.updateStartDate(e.target.value)}  required="required"></input>
             <br/>
-            <label for="finishDate">Finish Date</label>
+            <label htmlFor="finishDate">Finish Date</label>
             <input type="date" id="finishDate" name="finishDate" onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
             <br/>
             <label htmlFor="name">Building*</label>
@@ -236,21 +236,21 @@ updateEndTime =(event)=> {
            <label htmlFor="sun">  Sun</label><br></br>
          
            <input type="checkbox"  id="mon" value={'mon'}  onChange={e=>this.updateMonday(e.target.value)} />
-           <label for="mon"> Mon</label><br></br>
+           <label htmlFor="mon"> Mon</label><br></br>
            <input type="checkbox"  id="tue" value={'tue'}  onChange={e=>this.updateTuesday(e.target.value)} />
-           <label for="tues"> Tues</label><br></br>
+           <label htmlFor="tues"> Tues</label><br></br>
            <input type="checkbox"  id="wed" value={'wed'}   onChange={e=>this.updateWednesday(e.target.value)} />
-           <label for="wed"> Wed</label><br></br>
+           <label htmlFor="wed"> Wed</label><br></br>
            <input type="checkbox"  id="thurs" value={'thurs'} onChange={e=>this.updateThursday(e.target.value)} />
-           <label for="thurs"> Thurs</label><br></br>
+           <label htmlFor="thurs"> Thurs</label><br></br>
            <input type="checkbox"  id="fri" value={'fri'} onChange={e=>this.updateFriday(e.target.value)} />
-           <label for="fri"> Fri</label><br></br>
+           <label htmlFor="fri"> Fri</label><br></br>
            <input type="checkbox"  id="sat" value={'sat'}  onChange={e=>this.updateSaturday(e.target.value)} />
-           <label for="sat"> Sat</label><br></br>
+           <label htmlFor="sat"> Sat</label><br></br>
         
            <label htmlFor="name">Start Time</label>
            <select className="starttime" name="starttime" id="starttime" onChange={this.updateStartTime} required="required">
-              <option selected="selected" value="1:00am">1:00am</option>
+              <option defaultValue value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
               <option value="4:00am">4:00am</option>
@@ -278,7 +278,7 @@ updateEndTime =(event)=> {
             <br/>
              <label htmlFor="name">End Time</label>
              <select name="endtime" id="endtime" onChange={this.updateEndTime} required="required">
-              <option selected="selected" value="1:00am">1:00am</option>
+              <option defaultValue value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
               <option value="4:00am">4:00am</option>

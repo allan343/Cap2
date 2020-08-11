@@ -149,7 +149,7 @@ let dueDate = date;
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
             <br/>
-           <label for="cars">Class:</label>
+           <label htmlFor="cars">Class:</label>
             <select className="schoolclass" name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
 
@@ -161,7 +161,7 @@ let dueDate = date;
             </select>
             <br/>
             
-         <label for="classType">Type:</label>
+         <label htmlFor="classType">Type:</label>
             <select className="classType" name="classType" id="classType" value={this.state.homeworktype} onChange={this.updateType}>
             <option value="Homework">Homework</option>
             <option value="Test">Test</option>
@@ -178,13 +178,13 @@ let dueDate = date;
             
 
             <br/>
-            <label for="dueDate">Due Date</label>
+            <label htmlFor="dueDate">Due Date</label>
             <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)}   value={this.context.formatDate(this.state.duedate)} required="required"></input>
           
             <br/>
            <label htmlFor="name">Due Time *</label>
            <select name="starttime" id="starttime"  value={this.state.duetime} onChange={this.updateDueTime} required="required">
-              <option selected="selected" value="1:00am">1:00am</option>
+              <option value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
               <option value="4:00am">4:00am</option>
@@ -211,7 +211,7 @@ let dueDate = date;
             </select>
             <br/>
             <br/>
-           <label for="priority">Priority</label>
+           <label htmlFor="priority">Priority</label>
           <select name="priority" id="priority" value={this.state.homeworkpriority} onChange={this.updatePriority}>
             <option value="High">High</option>
             <option value="Medium">Medium</option>

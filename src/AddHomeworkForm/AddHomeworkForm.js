@@ -126,7 +126,7 @@ class AddHomeworkForm extends React.Component {
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required"/>
             <br/>
-            <label for="cars">Class:</label>
+            <label htmlFor="cars">Class:</label>
             <select  className="schoolclass" name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
               {
             
@@ -138,9 +138,9 @@ class AddHomeworkForm extends React.Component {
             </select>
             <br/>
             
-            <label for="classType">Type:</label>
+            <label htmlFor="classType">Type:</label>
             <select className="classType" name="classType" id="classType" onChange={this.updateType}>
-              <option selected="selected" value="Homework">Homework</option>
+              <option defaultValue value="Homework">Homework</option>
               <option value="Test">Test</option>
               <option value="Study">Study</option>
               <option value="Read">Read</option>
@@ -154,13 +154,13 @@ class AddHomeworkForm extends React.Component {
             </select>
            
             <br/>
-            <label for="dueDate">Due Date</label>
+            <label htmlFor="dueDate">Due Date</label>
             <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)} required="required"></input>
 
             <br/>
             <label htmlFor="name">Due Time</label>
             <select name="starttime" id="starttime" onChange={this.updateDueTime} required="required">
-              <option selected="selected" value="1:00am">1:00am</option>
+              <option defaultValue value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
               <option value="4:00am">4:00am</option>
@@ -187,9 +187,9 @@ class AddHomeworkForm extends React.Component {
             </select>
             <br/>
             <br/>
-            <label for="priority">Priority</label>
+            <label htmlFor="priority">Priority</label>
             <select name="priority" id="priority" onChange={this.updatePriority} >
-              <option value="High" selected>High</option>
+              <option value="High"  defaultValue>High</option>
               <option value="Medium">Medium</option>
               <option value="Low">Low</option>
             </select>

@@ -253,11 +253,11 @@ class EditSchoolClassForm extends React.Component {
             <input type="text" className="folder__control"
               name="classname" id="classname" value={this.state.classname.value} onChange={e => this.updateClassName(e.target.value)} required="required" />
             <br/>
-            <label for="startDate">Start Date</label>
+            <label htmlFor="startDate">Start Date</label>
 
             <input type="date" id="startDate" name="startDate" value={this.context.formatDate(this.state.startdate)} onChange={e => this.updateStartDate(e.target.value)} required="required"></input>
             <br/>
-            <label for="finishDate">Finish Date</label>
+            <label htmlFor="finishDate">Finish Date</label>
             <input type="date" id="finishDate" name="finishDate" value={this.context.formatDate(this.state.finishdate)} onChange={e => this.updateFinishDate(e.target.value)} required="required"></input>
             <br/>
             <label htmlFor="name">Building*</label>
@@ -273,22 +273,22 @@ class EditSchoolClassForm extends React.Component {
               name="showdescription" id="showdescription" value={this.state.teacher.value} onChange={e => this.updateTeacher(e.target.value)} required="required" />
             <br/>
             <input type="checkbox" id="sun" value={'sun'} defaultChecked={this.state.sun ? true : false} onChange={e => this.updateSunday(e.target.value)} />
-            <label for="sun"> Sun</label><br></br>
+            <label htmlFor="sun"> Sun</label><br></br>
             <input type="checkbox" id="mon" value={'mon'} defaultChecked={this.state.mon ? true : false} onChange={e => this.updateMonday(e.target.value)} />
-            <label for="son"> Mon</label><br></br>
+            <label htmlFor="son"> Mon</label><br></br>
             <input type="checkbox" id="tue" value={'tue'} defaultChecked={this.state.tue ? true : false} onChange={e => this.updateTuesday(e.target.value)} />
-            <label for="tue"> Tues</label><br></br>
+            <label htmlFor="tue"> Tues</label><br></br>
             <input type="checkbox" id="wed" value={'wed'} defaultChecked={this.state.wed ? true : false} onChange={e => this.updateWednesday(e.target.value)} />
-            <label for="wed"> Wed</label><br></br>
+            <label htmlFor="wed"> Wed</label><br></br>
             <input type="checkbox" id="thurs" value={'thurs'} defaultChecked={this.state.thurs ? true : false} onChange={e => this.updateThursday(e.target.value)} />
-            <label for="thurs"> Thurs</label><br></br>
+            <label htmlFor="thurs"> Thurs</label><br></br>
             <input type="checkbox" id="fri" value={'fri'} defaultChecked={this.state.fri ? true : false} onChange={e => this.updateFriday(e.target.value)} />
-            <label for="fri"> Fri</label><br></br>
+            <label htmlFor="fri"> Fri</label><br></br>
             <input type="checkbox" id="sat" value={'sat'} defaultChecked={this.state.sat ? true : false} onChange={e => this.updateSaturday(e.target.value)} />
-            <label for="sat"> Sat</label><br></br>
+            <label htmlFor="sat"> Sat</label><br></br>
             <label htmlFor="name">Start Time</label>
             <select className="starttime" name="starttime" id="starttime" value={this.state.starttime} onChange={this.updateStartTime} required="required">
-              <option selected="selected" value="1:00am">1:00am</option>
+              <option  value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
               <option value="4:00am">4:00am</option>
@@ -316,7 +316,7 @@ class EditSchoolClassForm extends React.Component {
             <br/>
             <label htmlFor="name">End Time</label>
             <select name="endtime" id="endtime" value={this.state.endtime} onChange={this.updateEndTime} required="required">
-              <option selected="selected" value="1:00am">1:00am</option>
+              <option value="1:00am">1:00am</option>
               <option value="2:00am">2:00am</option>
               <option value="3:00am">3:00am</option>
               <option value="4:00am">4:00am</option>
