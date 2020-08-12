@@ -32,7 +32,7 @@ In the home tab, clicking on a class will show all homework this class has.  In 
 
 App Screenshots and instructions:
 
-At the homescreen click on Add Class.
+At the homescreen click on "Add Class".
 
 ![](imagesForReadMe/AddClass.PNG)
 
@@ -42,7 +42,7 @@ Enter class details and click save.  In order to use the calender functionality 
 You now have a new class.
 ![](imagesForReadMe/NewClass.PNG)
 
-Now that you have a class you can add homework with Add Homework.
+Now that you have a class you can add homework with "Add Homework".
 ![](imagesForReadMe/AddHomework.PNG)
 
 Enter homework details and click save.  The class you created previously will be selectable in a dropdown.
