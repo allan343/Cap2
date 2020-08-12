@@ -1,4 +1,4 @@
-Name of app: ShowApp
+Name of app: HomeworkApp
 
 Link to app: https://my-homework-app.allanhfcheng.vercel.app
 
