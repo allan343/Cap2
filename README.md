@@ -62,16 +62,17 @@ Click on a homework to see homework details.  Both class details and homework de
 ![](imagesForReadMe/HomeworkDetails1.PNG)
 ![](imagesForReadMe/HomeworkDetailsWithDelete.PNG)  
 
-Click on the calender tab.
+Click on the "Calender" tab.
 ![](imagesForReadMe/Calender.PNG)
 
-Select a day of the week (mon, tues, wed etc.)  If a class shows up on this day, it will be listed.  The class will not show up if you select a date before its start date or a date after its end date.
+Select a day of the week (mon, tues, wed etc.)  If a class occurs on this day, it will be listed.  The class will not show up if you select a date before its start date or a date after its end date.
 ![](imagesForReadMe/ClassOnDay.PNG)
 
 Selecting a day that has homework due will have homework for that day listed.
 ![](imagesForReadMe/HomeworkDue.PNG)
 
-
+Click on "Homework" tab.  All homework is grouped under "Late" and "Pending".
+![](imagesForReadMe/HomeworkTab.PNG)
 
 Technology used:
 React, Javascript, Css, Html, Node, Postgres.
