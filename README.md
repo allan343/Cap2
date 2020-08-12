@@ -33,6 +33,7 @@ In the home tab, clicking on a class will show all homework this class has.  In 
 App Screenshots and instructions:
 
 At the homescreen click on Add Class.
+
 ![](imagesForReadMe/AddClass.PNG)
 
 Enter class details and click save.  In order to use the calender functionality later, enter days of week.
