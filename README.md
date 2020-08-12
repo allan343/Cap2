@@ -57,7 +57,7 @@ Using previous steps add a new class.  Then for this class add a new homework.
 Click on a class to see class details.  When you click on a class, the homework column is filtered for only homework for that class.
 ![](imagesForReadMe/HomweorkForClass.PNG)
 
-Click on a homework to see homework details.  Both class details and homework details pages have a edit button allowing you to edit class and homework details.
+Click on a homework to see homework details.  Both class details and homework details pages have a edit button allowing you to edit class and homework details respectively.
 
 ![](imagesForReadMe/HomeworkDetails1.PNG)
 ![](imagesForReadMe/HomeworkDetailsWithDelete.PNG)  
