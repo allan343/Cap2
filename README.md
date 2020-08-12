@@ -59,7 +59,7 @@ Click on a class to see class details.  When you click on a class, the homework 
 
 Click on a homework to see homework details.  Both class details and homework details pages have a edit button allowing you to edit class and homework details.
 
-![](imagesForReadMe/HomeworkDetails.PNG)
+![](imagesForReadMe/HomeworkDetails1.PNG)
 ![](imagesForReadMe/HomeworkDetailsWithDelete.PNG)  
 
 Technology used:
