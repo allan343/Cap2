@@ -1,68 +1,52 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Name of app: ShowApp
 
-## Available Scripts
+Link to app: https://bookmarks-app.allanhfcheng.now.sh/
 
-In the project directory, you can run:
+Description of App:
 
-### `npm start`
+This app allows the user to add shows they plan to watch, currently watching, and shows they have already watched.   This is represented in the three tabs: To Watch, Watching, and Finished.  
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+A show can be moved to these three states.  Each show has the following:
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+Title,
+Genre,
+Number of Seasons,
+Description,
+Language of show.
 
-### `npm test`
+A show in the Watching state has a start date and a current season
+A show in the Finished state has a finished date.
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+In each tab (To Watch, Watching, Finished), you can search for the shows in that state.
 
-### `npm run build`
+App Screenshots and instructions:
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+At the app homescreen click on Add Show.
+![](imagesForReadMe/AddShow.PNG)
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Enter show details and click save.
+![](imagesForReadMe/ShowDetails.PNG)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+Select the show's state.
+![](imagesForReadMe/ShowState.PNG)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+You now have the show listed under the state you set it to (To Watch, Watching Finished)
+![](imagesForReadMe/AddedShow.PNG)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Click on a show to enter show Information page
+![](imagesForReadMe/ShowInformation.PNG)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+On the same page as the previous step (Information page) click on "Update" or "Edit"
+Update allows you to change state of show.
+Edit allows you to edit show details
+![](imagesForReadMe/UpdateDetails.PNG)
+![](imagesForReadMe/EditDetails.PNG)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+The Nav at the top allows you to look at shows in different states.
+![](imagesForReadMe/ShowStateNavigation.PNG)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Technology used:
+React, Javascript, Css, Html, Node, Postgres.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
