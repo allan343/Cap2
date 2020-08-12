@@ -65,7 +65,7 @@ Click on a homework to see homework details.  Both class details and homework de
 Click on the "Calender" tab.
 ![](imagesForReadMe/Calender.PNG)
 
-Select a day of the week (mon, tues, wed etc.)  If a class occurs on this day, it will be listed.  The class will not show up if you select a date before its start date or a date after its end date.
+Select a date in the calender. If a class occurs on this day, it will be listed (You previously entered days of week when creating a class mon tue wed etc.).  The class will not show up if you select a date before its start date or a date after its end date.
 ![](imagesForReadMe/ClassOnDay.PNG)
 
 Selecting a day that has homework due will have homework for that day listed.
