@@ -1,51 +1,63 @@
 Name of app: ShowApp
 
-Link to app: https://bookmarks-app.allanhfcheng.now.sh/
+Link to app: https://my-homework-app.allanhfcheng.vercel.app
 
 Description of App:
 
-This app allows the user to add shows they plan to watch, currently watching, and shows they have already watched.   This is represented in the three tabs: To Watch, Watching, and Finished.  
+This app allows users to add classes and homework.  One class can have one or more homework.  
+A class has the following information:
 
-A show can be moved to these three states.  Each show has the following:
+classname,
+finish date,
+start date,
+building,
+room,
+teacher,
+starttime,
+endtime,
+days of the week it occurs.
 
-Title,
-Genre,
-Number of Seasons,
-Description,
-Language of show.
+A homework has the following:
 
-A show in the Watching state has a start date and a current season
-A show in the Finished state has a finished date.
+description,
+class it belogns to,
+type,
+due date,
+due time,
+priority
+            
+This app has three tabs: Home, Calender, Homework
 
-In each tab (To Watch, Watching, Finished), you can search for the shows in that state.
+In the home tab, clicking on a class will show all homework this class has.  In the calender tab, clicking on a day in the calender will list all classes on that day.  It will also list homework due on that day.  In the homewwork tab, all homework will either be in the past due column or pending column.
 
 App Screenshots and instructions:
 
-At the app homescreen click on Add Show.
-![](imagesForReadMe/AddShow.PNG)
+At the homescreen click on Add Class.
+![](imagesForReadMe/AddClass.PNG)
 
-Enter show details and click save.
-![](imagesForReadMe/ShowDetails.PNG)
+Enter class details and click save.  In order to use the calender functionality later, enter days of week.
+![](imagesForReadMe/ClassDetails.PNG)
 
+You now have a new class.
+![](imagesForReadMe/NewClass.PNG)
 
-Select the show's state.
-![](imagesForReadMe/ShowState.PNG)
+Now that you have a class you can add homework with Add Homework.
+![](imagesForReadMe/AddHomework.PNG)
 
-You now have the show listed under the state you set it to (To Watch, Watching Finished)
-![](imagesForReadMe/AddedShow.PNG)
+Enter homework details and click save.  The class you created previously will be selectable in a dropdown.
+![](imagesForReadMe/HomeworkDetails.PNG)
 
-Click on a show to enter show Information page
-![](imagesForReadMe/ShowInformation.PNG)
+You now have a new homework.
+![](imagesForReadMe/NewHomework.PNG)
 
-On the same page as the previous step (Information page) click on "Update" or "Edit"
-Update allows you to change state of show.
-Edit allows you to edit show details
-![](imagesForReadMe/UpdateDetails.PNG)
-![](imagesForReadMe/EditDetails.PNG)
+Using previous steps add a new class.  Then for this class add a new homework.
+![](imagesForReadMe/SecondClass.PNG)
 
+Click on a class to see class details.  When you click on a class, the homework column is filtered for only homework for that class.
+![](imagesForReadMe/HomweorkForClass.PNG)
 
-The Nav at the top allows you to look at shows in different states.
-![](imagesForReadMe/ShowStateNavigation.PNG)
+Click on a homework to see homework details.  Both class details and homework details pages have a edit button allowing you to edit class and homework details.
+![](imagesForReadMe/HomeworkDetails.PNG)  
 
 Technology used:
 React, Javascript, Css, Html, Node, Postgres.
