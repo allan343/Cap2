@@ -20,7 +20,7 @@ days of the week it occurs.
 A homework has the following:
 
 description,
-class it belogns to,
+class it belongs to,
 type,
 due date,
 due time,
