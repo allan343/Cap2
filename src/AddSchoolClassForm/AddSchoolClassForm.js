@@ -160,7 +160,7 @@ class AddSchoolClassForm extends React.Component {
             thurs: this.state.thurs,
             fri: this.state.fri,
             sat: this.state.sat,
-          }
+          };
           //add class object to class array
           // then go back to previous page
           this.context.addSchoolClass(schoolClass);

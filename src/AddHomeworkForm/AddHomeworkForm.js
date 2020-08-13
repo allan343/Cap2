@@ -87,7 +87,7 @@ class AddHomeworkForm extends React.Component {
             duedate: this.state.duedate,
             duetime: this.state.duetime,
             homeworkpriority: this.state.homeworkpriority
-          }
+          };
           //the user has to create a class before he can add a homework
           //if the user only created one class
           //a homework created will belong to that one class (ie. user created class math  homework belongs to math)

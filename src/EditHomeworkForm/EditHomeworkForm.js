@@ -90,7 +90,7 @@ class EditHomeworkForm extends React.Component {
             duedate: this.state.duedate,
             duetime: this.state.duetime,
             homeworkpriority: this.state.homeworkpriority
-          }
+          };
           this.context.updateHomework(homework, this.context.getHomeworkId());
           this.props.history.goBack();
         }}>
