@@ -52,8 +52,8 @@ class HomeworkList extends Component {
           </div>
         </div>
         {
+        /*if user has added homework show homework list, otherwise show place holder with instructions get started.  Acts as a landing page */
           (homeworkList.length) ?
-          {/*if user has added homework show homework list, otherwise show place holder with instructions get started.  Acts as a landing page */}
             (this.state.clicked) ? <HomeworkDetails homeworkid={this.context.getHomeworkId()} hideHomework={() => { this.setState({ clicked: false }) }} /> :
               <div className="hwlist">
                 <ul className='HomeworkList__list' aria-live='polite'>
