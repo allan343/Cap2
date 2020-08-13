@@ -3,8 +3,6 @@ import ApiContext from '../ApiContext/ApiContext';
 import { NavLink, Link } from 'react-router-dom';
 import './HomeworkDetails.css';
 
-
-
 export default class ClassDetails extends React.Component {
   static contextType = ApiContext;
   constructor(props) {
@@ -15,17 +13,13 @@ export default class ClassDetails extends React.Component {
     this.props.closeHomework();
   }
 
-
   render() {
-    
+
     let homework = this.context.getHomework(this.props.homeworkid);
-  
+
     return (
 
-
-
       <div className='HomeworkDetails__row'>
-
         <button type="cancel" className="cancelShowButton" onClick={this.props.hideHomework}>
           Back
         </button>
@@ -34,7 +28,6 @@ export default class ClassDetails extends React.Component {
         {<div className="type"> Type: {homework.homeworktype}</div>}
         {<div className="dueDate"> Due date: {this.context.formatDate(homework.duedate)}</div>}
         {<div className="dueTime"> Due time:  {homework.duetime}</div>}
-
 
         <NavLink className="editHomeworkPath"
           to={`/HomeworkDetails/Edit/${this.context.getHomeworkId()}`}

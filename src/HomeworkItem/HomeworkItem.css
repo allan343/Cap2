@@ -1,11 +1,10 @@
-.HomeworkItem__row
-{
+.HomeworkItem__row {
     border-bottom: 1px solid grey;
     background-color: white;
     cursor: pointer;
 }
 
-.HomeworkItem__row .homeworkDescription, .schoolClass, .dueDate, .dueTime{
-    margin:0;
-    padding:10px;
+.HomeworkItem__row .homeworkDescription, .schoolClass, .dueDate, .dueTime {
+    margin: 0;
+    padding: 10px;
 }
