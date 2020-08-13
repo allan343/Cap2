@@ -117,16 +117,12 @@ class App extends Component {
         fetch(`${config.API_ENDPOINT}/schoolClass/${classId}`, { method: "DELETE" })
             .then(response => {
                 response.json()
-                console.log(response);
             })
             .then(responseJson => {
-                console.log("here?");
-                console.log()
                 this.setState({
                     schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
                 });
                 let filteredHomework = this.state.homeworkList.filter(homework => homework.classid != classId)
-                console.log(filteredHomework);
                 this.setState({
                     homeworkList: filteredHomework
                 });
@@ -147,7 +143,6 @@ class App extends Component {
     };
 
     getClassId = () => {
-        console.log("get id " + this.state.id);
         return this.state.id;
     };
 
@@ -214,7 +209,6 @@ class App extends Component {
     };
 
     setHomeworkId = (homeworkId) => {
-        console.log(homeworkId);
         this.setState({
             homeworkid: homeworkId
         });
