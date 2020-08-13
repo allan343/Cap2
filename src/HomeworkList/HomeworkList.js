@@ -68,7 +68,7 @@ class HomeworkList extends Component {
             <div className="hwlist">
             <ul className='HomeworkList__list' aria-live='polite'>
               {homeworkList.map(homework =>
-                <li id="homework" onClick={() => this.homeworkClicked(homework.homeworkid)}>
+                <li  key={homework.homeworkid} id="homework" onClick={() => this.homeworkClicked(homework.homeworkid)}>
                   <HomeworkItem
                     key={homework.homeworkid}
                     {...homework}

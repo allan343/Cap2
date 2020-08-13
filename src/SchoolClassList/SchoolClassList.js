@@ -37,7 +37,7 @@ class SchoolClassList extends Component {
           <ul className='SchoolClassList__list' aria-live='polite'>
             {schoolClasses.map(schoolClass =>
 
-              <li id="class" onClick={() => this.context.setClassClicked(schoolClass.id)}>
+              <li key={schoolClass.id} id="class" onClick={() => this.context.setClassClicked(schoolClass.id)}>
                 <SchoolClassItem
                   key={schoolClass.id}
                   {...schoolClass}
