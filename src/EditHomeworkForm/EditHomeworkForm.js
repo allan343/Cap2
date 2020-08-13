@@ -104,11 +104,11 @@ class EditHomeworkForm extends React.Component {
               <input type="text" className="folder__control"
                 name="classname" id="classname" value={this.state.homeworkdescription.value} onChange={e => this.updateDescription(e.target.value)} required="required" />
               <br />
-              <label htmlFor="cars">Class:</label>
+              <label htmlFor="class">Class:</label>
               <select className="schoolclass" name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
                 {
                   classList.map(schoolClass =>
-                    <option key ={schoolClass.id} value={schoolClass.id}>{schoolClass.classname}</option>
+                    <option key={schoolClass.id} value={schoolClass.id}>{schoolClass.classname}</option>
                   )
                 }
               </select>
