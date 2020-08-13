@@ -106,7 +106,7 @@ class EditHomeworkForm extends React.Component {
               <br />
               <label htmlFor="class">Class:</label>
               <select className="schoolclass" name="schoolclass" id="schoolclass" value={this.state.classid} onChange={this.updateClass} required="required">
-                {
+                {/* take all school classes and list them as drop down option */
                   classList.map(schoolClass =>
                     <option key={schoolClass.id} value={schoolClass.id}>{schoolClass.classname}</option>
                   )
