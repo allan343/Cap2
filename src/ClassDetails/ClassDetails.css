@@ -1,19 +1,17 @@
-
-
- .schoolClassName, .startDate, .endDate, .location, .teacher,.startTime,.endTime,.classTimes {
-    margin:0;
-    padding:10px;
+.schoolClassName, .startDate, .endDate, .location, .teacher, .startTime, .endTime, .classTimes {
+    margin: 0;
+    padding: 10px;
 }
 
-.cancelShowButton{
-    padding:5px;
-    margin-top:10px;
-    margin-left:10px;
+.cancelShowButton {
+    padding: 5px;
+    margin-top: 10px;
+    margin-left: 10px;
 }
 
-.editClassPath{
-    display:block;
-    padding:10px;
-    margin-bottom:10px;
-    margin-left:5px;
+.editClassPath {
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+    margin-left: 5px;
 }

@@ -34,7 +34,7 @@ export default class Calender extends React.Component {
     //messages for no classes and no homework for a day selected by user
     let message = "No classes for this day.";
     let homeworkMessage = "No homework due on this day."
-    
+
     return (
       <span className='NoteListMain__button-container'>
 
@@ -47,9 +47,9 @@ export default class Calender extends React.Component {
           </div>
           <div className="columns" >
             {/* show only classes that has a week day which is selected by user on calender*/}
-             {/* checks that the day selected by user is between start date and end date of class*/}
+            {/* checks that the day selected by user is between start date and end date of class*/}
             <SchoolClassList message={message} schoolClasses={this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek] === true && new Date(this.context.formatDate(schoolClass.startdate)) <= new Date(this.context.formatDate(this.state.date)) && new Date(this.context.formatDate(schoolClass.finishdate)) >= new Date(this.context.formatDate(this.state.date)))} ></SchoolClassList>
-             {/* show only homework that has a due date as selected by user in calender*/}
+            {/* show only homework that has a due date as selected by user in calender*/}
             <HomeworkList message={homeworkMessage} heading="Homework" homeworkList={this.context.homeworkList.filter(homework => this.context.formatDate(homework.duedate) == this.state.date)} ></HomeworkList>
           </div>
         </div>
