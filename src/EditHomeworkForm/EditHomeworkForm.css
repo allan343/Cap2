@@ -1,24 +1,21 @@
-#homeworkDetails
-{   
-     /*text-align: center;*/  
-  display:block;
+#homeworkDetails {
+  display: block;
   height: 600px;
-    width: 600px;
-    margin:0 auto;
-    background-color: #ebebeb;
+  width: 600px;
+  margin: 0 auto;
+  background-color: #ebebeb;
 }
 
-.homework-type{
+.homework-type {
   margin-top: 10px;
 }
 
+.editHomework__button__group {
+  display: block;
+  margin: 20px auto;
+  text-align: center;
+}
 
-.editHomework__button__group{
-    display: block;
-    margin: 20px auto;
-    text-align: center;
-  }
-  
-  .editHomework__button__group button{
-    margin-right: 10px;
-  }
+.editHomework__button__group button {
+  margin-right: 10px;
+}
