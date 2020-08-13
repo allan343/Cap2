@@ -1,11 +1,9 @@
-.homework-details
-{   
-     /*text-align: center;*/  
+.homework-details{    
   display:block;
   height: 700px;
-    width: 600px;
-    margin:0 auto;
-    background-color: #ebebeb;
+  width: 600px;
+  margin:0 auto;
+  background-color: #ebebeb;
 }
 
 .homework-type{
@@ -27,8 +25,8 @@
 }
 
 @media screen and (max-width:600px) {
-  .homework-details
-{ 
+
+.homework-details{ 
   max-width: 80%;
 }
 
@@ -38,27 +36,26 @@
 }
 
 .homework-details label{
-    display:block;
-
+  display:block;
   padding-top: 5px;
   text-align: center;
-  }
+}
 
-  .homework-details input {
-    margin-bottom:0px;
-  }
+.homework-details input {
+  margin-bottom:0px;
+}
 
-  .homework-details select{
-    display:block;
-    margin: 0 auto ;
-    margin-top: 30px;
-  }
+.homework-details select{
+  display:block;
+  margin: 0 auto ;
+  margin-top: 30px;
+}
 
-  .homework-details .addClass__button__group{
-    padding-bottom: 20px;
-  }
+.homework-details .addClass__button__group{
+  padding-bottom: 20px;
+}
 
-  .homework-details .addClass__button__group button{
-    margin: 20px auto
-  }
+.homework-details .addClass__button__group button{
+  margin: 20px auto
+}
 }
