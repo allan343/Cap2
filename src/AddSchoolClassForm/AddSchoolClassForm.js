@@ -57,10 +57,6 @@ class AddSchoolClassForm extends React.Component {
       thurs: false,
       fri: false,
       sat: false,
-      room: {
-        value: '',
-        touched: false
-      },
       starttime: "1:00am",
       endtime: "1:00am"
     };

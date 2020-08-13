@@ -91,7 +91,7 @@ class AddHomeworkForm extends React.Component {
           //the user has to create a class before he can add a homework
           //if the user only created one class
           //a homework created will belong to that one class (ie. user created class math  homework belongs to math)
-          if (homework.classid === "" || homework.schoolclass === "") {
+          if (homework.classid == "" || homework.schoolclass == "") {
             homework.classid = this.context.getFirstClassId();
             homework.schoolclass = this.context.getFirstClassName();
           }

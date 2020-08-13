@@ -77,7 +77,7 @@ class App extends Component {
     handleGetClass = (id) => {
         return this.state.schoolClasses.find(
             function (schoolClass) {
-                return schoolClass.id === id;
+                return schoolClass.id == id;
             });
     };
 
@@ -99,7 +99,7 @@ class App extends Component {
             .then(responseJson => {
 
                 if (responseJson.id && responseJson.classname) {
-                    let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id === classId);
+                    let schoolClass = this.state.schoolClasses.find(schoolClass => schoolClass.id == classId);
                     for (let key in schoolClass) {
                         schoolClass[key] = classObject[key];
                     }
@@ -120,9 +120,9 @@ class App extends Component {
             })
             .then(responseJson => {
                 this.setState({
-                    schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id != classId)
+                    schoolClasses: this.state.schoolClasses.filter(schoolClass => schoolClass.id !== classId)
                 });
-                let filteredHomework = this.state.homeworkList.filter(homework => homework.classid != classId)
+                let filteredHomework = this.state.homeworkList.filter(homework => homework.classid !== classId)
                 this.setState({
                     homeworkList: filteredHomework
                 });
@@ -196,7 +196,7 @@ class App extends Component {
             })
             .then(responseJson => {
                 this.setState({
-                    homeworkList: this.state.homeworkList.filter(homeworkClass => homeworkClass.homeworkid != homeworkId)
+                    homeworkList: this.state.homeworkList.filter(homeworkClass => homeworkClass.homeworkid !== homeworkId)
                 });
             });
     };
@@ -204,7 +204,7 @@ class App extends Component {
     handleGetHomework = (id) => {
         return this.state.homeworkList.find(
             function (homework) {
-                return homework.homeworkid === id;
+                return homework.homeworkid == id;
             });
     };
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ApiContext from '../ApiContext/ApiContext';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import './ClassDetails.css';
 
 export default class ClassDetails extends React.Component {
