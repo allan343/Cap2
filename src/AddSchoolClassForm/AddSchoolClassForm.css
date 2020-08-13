@@ -1,20 +1,18 @@
-.classDetailsHeading{
+.classDetailsHeading {
   text-align: center;
   margin-top: 20px;
 }
 
-.class-details
-{ 
-  /*text-align: center;*/  
-  display:block;
+.class-details {
+  display: block;
   height: 700px;
-    width: 600px;
-    margin:0 auto;
-    background-color: #ebebeb;
+  width: 600px;
+  margin: 0 auto;
+  background-color: #ebebeb;
 }
 
 .class-details label {
-  display:inline-block;
+  display: inline-block;
   margin-left: 80px;
   margin-right: 20px;
   float: left;
@@ -23,65 +21,57 @@
   width: 140px;
 }
 
-.class-details input, .homeworkDetails input{
-  margin-bottom:10px;
+.class-details input, .homeworkDetails input {
+  margin-bottom: 10px;
 }
 
-.class-details select, .homeworkDetails select{
-  margin-top:5px;
+.class-details select, .homeworkDetails select {
+  margin-top: 5px;
 }
 
-#sun,#mon,#tue,#wed,#thurs,#fri,#sat{
-  margin-top:6px;
+#sun, #mon, #tue, #wed, #thurs, #fri, #sat {
+  margin-top: 6px;
 }
 
- .addClass__button__group .saveClassButton{
+.addClass__button__group .saveClassButton {
   display: block;
   margin: 20px auto;
 }
 
-.classDetailsHeading{
+.classDetailsHeading {
   padding-top: 10px;
 }
 
-.starttime{
+.starttime {
   margin-bottom: 10px;
 }
 
 @media screen and (max-width:600px) {
-  .class-details
-{ 
-  max-width: 80%;
-  height: 100%;
-}
-
-  .class-details input{
+  .class-details {
+    max-width: 80%;
+    height: 100%;
+  }
+  .class-details input {
     display: block;
     margin: 0 auto;
   }
-
-  .class-details label{
-      display:block;
-  
+  .class-details label {
+    display: block;
     padding-top: 5px;
     text-align: center;
-    }
-
-    .class-details input {
-      margin-bottom:0px;
-    }
-  
-    .class-details select{
-      display:block;
-      margin: 0 auto ;
-      margin-top: 30px;
-    }
-
-    .class-details .addClass__button__group{
-      padding-bottom: 20px;
-    }
-
-    .class-details .addClass__button__group button{
-      margin: 20px auto
-    }
+  }
+  .class-details input {
+    margin-bottom: 0px;
+  }
+  .class-details select {
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+  }
+  .class-details .addClass__button__group {
+    padding-bottom: 20px;
+  }
+  .class-details .addClass__button__group button {
+    margin: 20px auto
+  }
 }

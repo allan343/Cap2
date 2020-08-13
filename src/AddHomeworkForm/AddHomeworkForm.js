@@ -99,7 +99,7 @@ class AddHomeworkForm extends React.Component {
           //navigate back to previous page.
           this.context.addHomework(homework);
           this.props.history.goBack();
-          
+
         }}>
           <div className="homework-details">
             <h2 className="homeworkDetailsHeading"> Homework Details</h2>

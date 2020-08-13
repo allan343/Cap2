@@ -18,11 +18,11 @@ export default class Calender extends React.Component {
       dayOfWeek: '',
       date: ''
     };
-
   }
 
+  // gets the day of week from calender selection
+  //converts it to mon tue wed etc.
   updateDayOfWeek(date) {
-   
     let selecteddate = date;
     this.setState({ date: selecteddate });
     var selectedDate = new Date(date);
@@ -31,6 +31,7 @@ export default class Calender extends React.Component {
   }
 
   render() {
+    //messages for no classes and no homework for a day selected by user
     let message = "No classes for this day.";
     let homeworkMessage = "No homework due on this day."
     
@@ -45,7 +46,10 @@ export default class Calender extends React.Component {
 
           </div>
           <div className="columns" >
-            <SchoolClassList message={message} schoolClasses={this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek] == true && new Date(this.context.formatDate(schoolClass.startdate)) <= new Date(this.context.formatDate(this.state.date)) && new Date(this.context.formatDate(schoolClass.finishdate)) >= new Date(this.context.formatDate(this.state.date)))} ></SchoolClassList>
+            {/* show only classes that has a week day which is selected by user on calender*/}
+             {/* checks that the day selected by user is between start date and end date of class*/}
+            <SchoolClassList message={message} schoolClasses={this.context.schoolClasses.filter(schoolClass => schoolClass[this.state.dayOfWeek] === true && new Date(this.context.formatDate(schoolClass.startdate)) <= new Date(this.context.formatDate(this.state.date)) && new Date(this.context.formatDate(schoolClass.finishdate)) >= new Date(this.context.formatDate(this.state.date)))} ></SchoolClassList>
+             {/* show only homework that has a due date as selected by user in calender*/}
             <HomeworkList message={homeworkMessage} heading="Homework" homeworkList={this.context.homeworkList.filter(homework => this.context.formatDate(homework.duedate) == this.state.date)} ></HomeworkList>
           </div>
         </div>

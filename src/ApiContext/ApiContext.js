@@ -12,17 +12,16 @@ export default React.createContext({
   updateClass: () => { },
   getClassId: () => { },
   setClassId: () => { },
-
   addHomework: () => { },
   deleteHomework: () => { },
   getHomework: () => { },
   updateHomework: () => { },
   getHomeworkId: () => { },
   setHomeworkId: () => { },
-  setClassClicked: ()=>{ },
-  closeClass: ()=>{ },
-  getFirstClassName: ()=>{},
-  getFirstClassId:()=>{},
-  formatDate:()=>{}
-  
+  setClassClicked: () => { },
+  closeClass: () => { },
+  getFirstClassName: () => { },
+  getFirstClassId: () => { },
+  formatDate: () => { }
+
 })
