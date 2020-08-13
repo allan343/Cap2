@@ -16,119 +16,44 @@ button{
     width: 100%;
  display: flex;
  justify-content: space-evenly;
-   /* display: block;*/
+  
     margin: 0 auto;
-   /* text-align: center;*/
-  /* margin-left:40px;*/
+   
 }
 
 .homework-columns{
     width: 100%;
  display: flex;
  justify-content: space-evenly;
-   /* display: block;*/
+  
     margin: 0 auto;
-   /* text-align: center;*/
-  /* margin-left:40px;*/
+  
 }
 
 .SchoolClassList{
-   /* display:inline-block;*/
  
-  /* flex-grow: 1;*/
     width: 47%;
     height: 100vh;
     background-color: #ebebeb;
-  /* margin-left: 20px;
-   margin-right: 10px;*/
+ 
 }
 
 .HomeWorkList{
     
-   /*flex-grow: 1;
-   display:inline-block;*/
+ 
     width: 47%;
     
     height: 100vh;
     background-color: #ebebeb;
-   /* margin-left: 28px;*/
+ 
     vertical-align: top;
-    /*margin-left:10px;
-    margin-right: 20px;*/
+   
 }
-/*
-.Late .HomeWorkList{
-    flex-grow: 1;
-  
-     width: 35%;
-     
-     height: 100vh;
-     background-color: #ebebeb;
- 
-     vertical-align: top;
-     margin-left:20px;
-     margin-right: 10px;
- }
 
- .Upcoming .HomeWorkList{
-    flex-grow: 1;
-  
-     width: 35%;
-     
-     height: 100vh;
-     background-color: #ebebeb;
- 
-     vertical-align: top;
-     margin-left:10px;
-     margin-right: 20px;
- }*/
 .titleAndAddButton{
     display:flex;
- /*  flex-wrap: wrap;*/
+
  justify-content: space-between;
 
 }
 
-.classTitle, .homeworkTitle, .addHomeWorkPath, .addClassPath{
-   /* flex-grow: 1;*/
-}
-/*
-@media screen and (max-width:900px) {
-     .HomeWorkList{
-        list-style-type:none;
-    padding:0;
-  
-        display:inline-block;
-       max-width: 45%;
-        
-        height: 100vh;
-        background-color: #ebebeb;
-        margin-left: 28px;
-        vertical-align: top;
-    }
-    .SchoolClassList{
-        margin-left: 20px;
-    }
-   
-}
-@media screen and (max-width:400px) {
-   .HomeWorkList{
-        list-style-type:none;
-    padding:0;
-  
-        display:inline-block;
-       width: 40%;
-        
-        height: 100vh;
-        background-color: #ebebeb;
-  
-        vertical-align: top;
-    }
-    .SchoolClassList{
-        display:inline-block;
-        width: 30%;
-         
-     
-    }
-   
-}*/
