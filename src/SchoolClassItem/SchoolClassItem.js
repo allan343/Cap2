@@ -1,10 +1,8 @@
 import React from 'react';
 import './SchoolClassItem.css';
 
-
 export default function SchoolClassItem(props) {
   let schoolItem = props
-  console.log("props " + schoolItem.classname);
   let Sun = schoolItem.sun ? 'Sun' : '';
   let Mon = schoolItem.mon ? 'Mon' : '';
   let Tue = schoolItem.tue ? 'Tue' : '';
@@ -18,13 +16,8 @@ export default function SchoolClassItem(props) {
     <div className='SchoolClassItem__row'>
       {<div className="courseName"> {props.classname}</div>}
       {<div className="days">{days}</div>}
-
-      {<div className="startEnd"> {props.starttime} - {props.endtime}</div>} 
-
+      {<div className="startEnd"> {props.starttime} - {props.endtime}</div>}
     </div>
-
-
-
   )
 }
 

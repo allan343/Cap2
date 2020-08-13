@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import HomeworkItem from '../HomeworkItem/HomeworkItem';
-import HomeworkDetails from '../HomeworkDetails/HomeworkDetails';
 import ApiContext from '../ApiContext/ApiContext';
 import './Placeholder.css';
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink} from 'react-router-dom';
 import SchoolClassItem from '../SchoolClassItem/SchoolClassItem';
 import ClassDetails from '../ClassDetails/ClassDetails';
 import ApiContext from '../ApiContext/ApiContext';
@@ -32,7 +32,8 @@ class SchoolClassList extends Component {
     }
     else{
       display = <div>
-      {(this.context.classClicked) ? <ClassDetails id={this.context.getClassId()} hideClass={() => { this.setState({ clicked: false }) }} /> :
+      {/*if a class is clicked show class details, else show class list */
+      (this.context.classClicked) ? <ClassDetails id={this.context.getClassId()} hideClass={() => { this.setState({ clicked: false }) }} /> :
         <div className="classList">
           <ul className='SchoolClassList__list' aria-live='polite'>
             {schoolClasses.map(schoolClass =>
@@ -49,8 +50,7 @@ class SchoolClassList extends Component {
          }
          </div>
     }
-    console.log(schoolClasses);
-    console.log(this.context.classClicked);
+
     return (
       <div className='SchoolClassList'>
         <div className= 'titleAndAddButton'>

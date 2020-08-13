@@ -1,14 +1,13 @@
-.SchoolClassList__list{
-    list-style-type:none;
-    padding:0;
+.SchoolClassList__list {
+    list-style-type: none;
+    padding: 0;
 }
 
-.titleAndAddButton{
-    display:flex;
-    padding:10px;
+.titleAndAddButton {
+    display: flex;
+    padding: 10px;
 }
 
-
-.classTitle{
+.classTitle {
     flex-grow: 1
 }
