@@ -5,30 +5,28 @@ import HomeworkDetails from '../HomeworkDetails/HomeworkDetails';
 import ApiContext from '../ApiContext/ApiContext';
 import './Placeholder.css';
 
-class HomeworkList extends Component {
+class Placeholder extends Component {
   static contextType = ApiContext;
 
   static defaultProps = {
-   
-    message:''
+    message: ''
   };
 
   constructor(props) {
     super(props);
-  
+
   }
-  
 
   render() {
-const {message}= this.props;
+    const { message } = this.props;
     return (
-        <div className='MessageWrapper'>
-     <div className="message">
-         {message}
-         </div>
-         </div>
+      <div className='MessageWrapper'>
+        <div className="message">
+          {message}
+        </div>
+      </div>
     );
   }
 }
 
-export default HomeworkList;
+export default Placeholder;

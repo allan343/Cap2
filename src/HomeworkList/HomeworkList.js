@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NavLink, Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import HomeworkItem from '../HomeworkItem/HomeworkItem';
 import HomeworkDetails from '../HomeworkDetails/HomeworkDetails';
 import Placeholder from '../Placeholder/Placeholder';
@@ -11,8 +11,8 @@ class HomeworkList extends Component {
 
   static defaultProps = {
     homeworkList: [],
-    heading:'',
-    message:''
+    heading: '',
+    message: ''
   };
 
   constructor(props) {
@@ -22,68 +22,58 @@ class HomeworkList extends Component {
     };
   }
   homeworkClicked(homeworkId) {
-    console.log("homeworkid " + homeworkId);
     this.setState({ clicked: true });
     this.context.setHomeworkId(homeworkId);
-    console.log("h2!" + this.context.getHomeworkId());
   }
 
-  closeHomework(classId) {
-
+  closeHomework() {
     this.setState({ clicked: false });
-
   }
 
 
   render() {
-    let display="none";
-    
     const { homeworkList } = this.props;
-    const {message} = this.props;
-    console.log(homeworkList);
+    const { message } = this.props;
     return (
-   
       <div className='HomeWorkList'>
-         <div className= 'titleAndAddButton'>
-           <div className='homeworkTitle'>
-        
+        <div className='titleAndAddButton'>
+          <div className='homeworkTitle'>
             {this.props.heading}
-          
-            </div>
-            <div className="addHomeWorkPath">
-        {(this.context.schoolClasses.length)?
-        
-          <NavLink
-            to={`/add-homework`}
-          >
-            Add Homework
-        </NavLink>:""
-        }
-        </div>
+          </div>
+          <div className="addHomeWorkPath">
+            {/*if user has added a school class enable add homework button */}
+            {(this.context.schoolClasses.length) ?
+              <NavLink
+                to={`/add-homework`}
+              >
+                Add Homework
+        </NavLink> : ""
+            }
+          </div>
         </div>
         {
-(homeworkList.length)?
-          
-          (this.state.clicked) ? <HomeworkDetails homeworkid={this.context.getHomeworkId()} hideHomework={() => { this.setState({ clicked: false }) }} /> :
-            <div className="hwlist">
-            <ul className='HomeworkList__list' aria-live='polite'>
-              {homeworkList.map(homework =>
-                <li  key={homework.homeworkid} id="homework" onClick={() => this.homeworkClicked(homework.homeworkid)}>
-                  <HomeworkItem
-                    key={homework.homeworkid}
-                    {...homework}
-                  />
-                </li>
-              )}
-            </ul>
-            </div>
+          (homeworkList.length) ?
+          {/*if user has added homework show homework list, otherwise show place holder with instructions get started.  Acts as a landing page */}
+            (this.state.clicked) ? <HomeworkDetails homeworkid={this.context.getHomeworkId()} hideHomework={() => { this.setState({ clicked: false }) }} /> :
+              <div className="hwlist">
+                <ul className='HomeworkList__list' aria-live='polite'>
+                  {homeworkList.map(homework =>
+                    <li key={homework.homeworkid} id="homework" onClick={() => this.homeworkClicked(homework.homeworkid)}>
+                      <HomeworkItem
+                        key={homework.homeworkid}
+                        {...homework}
+                      />
+                    </li>
+                  )}
+                </ul>
+              </div>
             : <div>  <Placeholder
-            message={message}
-          
-          /></div>
+              message={message}
+
+            /></div>
         }
       </div>
-      
+
     );
   }
 }

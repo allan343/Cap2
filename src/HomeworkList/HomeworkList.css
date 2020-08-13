@@ -1,21 +1,18 @@
- .HomeWorkList{
-    list-style-type:none;
-    padding:0;
-}
+ .HomeWorkList {
+     list-style-type: none;
+     padding: 0;
+ }
 
-.titleAndAddButton{
-    display:flex;
-    padding:10px;
-}
+ .titleAndAddButton {
+     display: flex;
+     padding: 10px;
+ }
 
-.homeworkTitle{
-    flex-grow: 1
-}
+ .homeworkTitle {
+     flex-grow: 1
+ }
 
-
-.HomeworkList__list{
-    list-style-type:none;
-    padding:0;
-    
-}
-
+ .HomeworkList__list {
+     list-style-type: none;
+     padding: 0;
+ }
