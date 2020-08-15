@@ -15,3 +15,7 @@
     margin-bottom: 10px;
     margin-left: 5px;
 }
+
+#item-details-label{
+    font-weight: bold;
+}

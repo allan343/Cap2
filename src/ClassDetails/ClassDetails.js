@@ -31,14 +31,14 @@ export default class ClassDetails extends React.Component {
           Back
         </button>
         {/*provides summary of class details */}
-        {<div className="schoolClassName"> {schoolClass.classname}</div>}
-        {<div className="startDate"> Started: {this.context.formatDate(schoolClass.startdate)}</div>}
-        {<div className="endDate"> Ends: {this.context.formatDate(schoolClass.finishdate)}</div>}
-        {<div className="location"> Location: {schoolClass.building}</div>}
-        {<div className="teacher"> Teacher: {schoolClass.teacher}</div>}
-        {<div className="startTime"> Class Start Time: {schoolClass.starttime}</div>}
-        {<div className="endTime"> Class End Time: {schoolClass.endtime}</div>}
-        {<h3 className="classTimes"> Class Times </h3>}
+        {<div className="schoolClassName"> <span id="item-details-label">{schoolClass.classname}</span></div>}
+        {<div className="startDate"> <span id="item-details-label">Started:</span> {this.context.formatDate(schoolClass.startdate)}</div>}
+        {<div className="endDate"> <span id="item-details-label">Ends:</span> {this.context.formatDate(schoolClass.finishdate)}</div>}
+        {<div className="location"> <span id="item-details-label">Location: </span>{schoolClass.building}</div>}
+        {<div className="teacher"> <span id="item-details-label">Teacher:</span> {schoolClass.teacher}</div>}
+        {<div className="startTime"> <span id="item-details-label">Class Start Time:</span> {schoolClass.starttime}</div>}
+        {<div className="endTime"> <span id="item-details-label">Class End Time:</span> {schoolClass.endtime}</div>}
+        {<h4 className="classTimes"> Class Times </h4>}
         {<div className="classTimes"> {days}</div>}
         <NavLink className="editClassPath"
           to={`/ClassDetails/Edit/${this.context.getClassId()}`}

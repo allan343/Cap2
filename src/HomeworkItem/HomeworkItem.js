@@ -6,10 +6,10 @@ export default function HomeworkItem(props) {
   const context = React.useContext(ApiContext)
   return (
     <div className='HomeworkItem__row'>
-      {<div className="homeworkDescription"> {props.homeworkdescription}</div>}
-      {<div className="schoolClass"> Class: {props.schoolclass}</div>}
-      {<div className="dueDate"> Due Date: {context.formatDate(props.duedate)}</div>}
-      {<div className="dueTime"> Due time: {props.duetime}</div>}
+      {<h4 className="homeworkDescription"> {props.homeworkdescription}</h4>}
+      {<div className="schoolClass"><span id="item-details-label"> Class: </span>{props.schoolclass}</div>}
+      {<div className="dueDate"><span id="item-details-label"> Due Date: </span>{context.formatDate(props.duedate)}</div>}
+      {<div className="dueTime"><span id="item-details-label"> Due time: </span> {props.duetime}</div>}
     </div>
   )
 }
