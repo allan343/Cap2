@@ -196,20 +196,20 @@ class AddSchoolClassForm extends React.Component {
               <br />
 
               <input type="checkbox" id="sun" value={'sun'} onChange={e => this.updateSunday(e.target.value)} />
-              <label htmlFor="sun">  Sun</label><br></br>
+              <label className = "day-check" htmlFor="sun">  Sun</label><br></br>
 
               <input type="checkbox" id="mon" value={'mon'} onChange={e => this.updateMonday(e.target.value)} />
-              <label htmlFor="mon"> Mon</label><br></br>
+              <label className = "day-check" htmlFor="mon"> Mon</label><br></br>
               <input type="checkbox" id="tue" value={'tue'} onChange={e => this.updateTuesday(e.target.value)} />
-              <label htmlFor="tues"> Tues</label><br></br>
+              <label className = "day-check" htmlFor="tues"> Tues</label><br></br>
               <input type="checkbox" id="wed" value={'wed'} onChange={e => this.updateWednesday(e.target.value)} />
-              <label htmlFor="wed"> Wed</label><br></br>
+              <label className = "day-check" htmlFor="wed"> Wed</label><br></br>
               <input type="checkbox" id="thurs" value={'thurs'} onChange={e => this.updateThursday(e.target.value)} />
-              <label htmlFor="thurs"> Thurs</label><br></br>
+              <label className = "day-check" htmlFor="thurs"> Thurs</label><br></br>
               <input type="checkbox" id="fri" value={'fri'} onChange={e => this.updateFriday(e.target.value)} />
-              <label htmlFor="fri"> Fri</label><br></br>
+              <label className = "day-check" htmlFor="fri"> Fri</label><br></br>
               <input type="checkbox" id="sat" value={'sat'} onChange={e => this.updateSaturday(e.target.value)} />
-              <label htmlFor="sat"> Sat</label><br></br>
+              <label className = "day-check" htmlFor="sat"> Sat</label><br></br>
 
               <label htmlFor="name">Start Time</label>
               <select className="starttime" name="starttime" id="starttime" onChange={this.updateStartTime} required="required">

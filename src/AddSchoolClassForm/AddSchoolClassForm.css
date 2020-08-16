@@ -15,12 +15,16 @@
   display: inline-block;
   margin-left: 80px;
   margin-right: 20px;
-  float: left;
+  /*float: left;*/
   padding-top: 5px;
   text-align: right;
   width: 140px;
 }
-
+.day-check{
+  /*display:inline-block;
+  margin:0 auto;*/
+  float:left;
+}
 .class-details input, .homeworkDetails input {
   margin-bottom: 10px;
 }
