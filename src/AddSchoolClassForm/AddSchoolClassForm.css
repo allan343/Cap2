@@ -70,16 +70,22 @@
   .start-label{
     margin-top:10px;
   }
-  .starttime {
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-  }
-  #endtime{
+  .starttime,#endtime {
     display: block;
     margin: 0 auto;
     margin-top: 10px;
   }
+  /*
+  #endtime{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+  }*/
+
+  .starttime-label{
+    margin-top: 20px;
+  }
+
   .class-details .addClass__button__group {
     padding-bottom: 20px;
   }
