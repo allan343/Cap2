@@ -19,3 +19,7 @@
 #item-details-label{
     font-weight: bold;
 }
+
+#item-content, #duedatetext{
+    font-size:14px;
+}

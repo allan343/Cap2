@@ -32,12 +32,12 @@ export default class ClassDetails extends React.Component {
         </button>
         {/*provides summary of class details */}
         {<div className="schoolClassName"> <span id="item-details-label">{schoolClass.classname}</span></div>}
-        {<div className="startDate"> <span id="item-details-label">Started:</span> {this.context.formatDate(schoolClass.startdate)}</div>}
-        {<div className="endDate"> <span id="item-details-label">Ends:</span> {this.context.formatDate(schoolClass.finishdate)}</div>}
-        {<div className="location"> <span id="item-details-label">Location: </span>{schoolClass.building}</div>}
-        {<div className="teacher"> <span id="item-details-label">Teacher:</span> {schoolClass.teacher}</div>}
-        {<div className="startTime"> <span id="item-details-label">Class Start Time:</span> {schoolClass.starttime}</div>}
-        {<div className="endTime"> <span id="item-details-label">Class End Time:</span> {schoolClass.endtime}</div>}
+        {<div className="startDate"> <span id="item-details-label">Started:</span> <span id="item-content">{this.context.formatDate(schoolClass.startdate)}</span></div>}
+        {<div className="endDate"> <span id="item-details-label">Ends:</span> <span id="item-content">{this.context.formatDate(schoolClass.finishdate)}</span></div>}
+        {<div className="location"> <span id="item-details-label">Location: </span><span id="item-content">{schoolClass.building}</span></div>}
+        {<div className="teacher"> <span id="item-details-label">Teacher:</span> <span id="item-content">{schoolClass.teacher}</span></div>}
+        {<div className="startTime"> <span id="item-details-label">Class Start Time:</span> <span id="item-content"> {schoolClass.starttime}</span> </div>}
+        {<div className="endTime"> <span id="item-details-label">Class End Time:</span> <span id="item-content"> {schoolClass.endtime}</span></div>}
         {<h4 className="classTimes"> Class Times </h4>}
         {<div className="classTimes"> {days}</div>}
         <NavLink className="editClassPath"
