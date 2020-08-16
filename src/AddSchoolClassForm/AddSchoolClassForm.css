@@ -15,24 +15,19 @@
   display: inline-block;
   margin-left: 80px;
   margin-right: 20px;
-  /*float: left;*/
   padding-top: 5px;
   text-align: right;
   width: 140px;
 }
-.day-check{
-  /*display:inline-block;
-  margin:0 auto;*/
-  float:left;
+
+.day-check {
+  float: left;
 }
+
 .class-details input, .homeworkDetails input {
   margin-bottom: 10px;
 }
-/*
-.class-details select, .homeworkDetails select {
-  margin-top: 5px;
-}
-*/
+
 #sun, #mon, #tue, #wed, #thurs, #fri, #sat {
   margin-top: 6px;
 }
@@ -67,25 +62,17 @@
   .class-details input {
     margin-bottom: 0px;
   }
-  .start-label{
-    margin-top:10px;
+  .start-label {
+    margin-top: 10px;
   }
-  .starttime,#endtime {
+  .starttime, #endtime {
     display: block;
     margin: 0 auto;
     margin-top: 10px;
   }
-  /*
-  #endtime{
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px;
-  }*/
-
-  .starttime-label{
+  .starttime-label {
     margin-top: 20px;
   }
-
   .class-details .addClass__button__group {
     padding-bottom: 20px;
   }

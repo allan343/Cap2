@@ -15,7 +15,6 @@ label {
   display: inline-block;
   margin-left: 80px;
   margin-right: 20px;
- /* float: left;*/
   padding-top: 5px;
   text-align: right;
   width: 140px;
@@ -24,11 +23,7 @@ label {
 .class-details input, .homeworkDetails input {
   margin-bottom: 10px;
 }
-/*
-.class-details select, .homeworkDetails select {
-  margin-top: 5px;
-}
-*/
+
 #sun, #mon, #tue, #wed, #thurs, #fri, #sat {
   margin-top: 6px;
 }
@@ -52,32 +47,21 @@ label {
     max-width: 80%;
     height: 100%;
   }
-
   .class-details input {
     display: block;
     margin: 0 auto;
   }
-
   .class-details label {
     display: block;
     padding-top: 5px;
     text-align: center;
   }
-
   .class-details input {
     margin-bottom: 0px;
   }
-  /*
-  .class-details select {
-    display: block;
-    margin: 0 auto;
-    margin-top: 30px;
-  }*/
-
   .class-details .editClass__button__group {
     padding-bottom: 20px;
   }
-  
   .class-details .editClass__button__group button {
     margin: 20px auto;
     margin-left: 20px;
