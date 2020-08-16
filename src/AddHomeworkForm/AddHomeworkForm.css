@@ -44,7 +44,7 @@
   .homework-details select {
     display: block;
     margin: 0 auto;
-    margin-top: 30px;
+    /*margin-top: 30px;*/
   }
   
   .homework-details .addClass__button__group {
