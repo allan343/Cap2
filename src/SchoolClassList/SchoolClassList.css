@@ -9,5 +9,6 @@
 }
 
 .classTitle {
-    flex-grow: 1
+    flex-grow: 1;
+    font-weight:bold;
 }

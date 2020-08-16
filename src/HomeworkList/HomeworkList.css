@@ -9,7 +9,8 @@
  }
 
  .homeworkTitle {
-     flex-grow: 1
+     flex-grow: 1;
+     font-weight: bold;
  }
 
  .HomeworkList__list {
@@ -18,17 +19,15 @@
  }
 
  @media screen and (max-width:450px) {
-    .titleAndAddButton {
-        display: block;
-        padding: 10px;
-    }
-
-    .addHomeWorkPath{
-        margin-top:10px;
-    }
-
-    .addClassPath{
-        display: block;
-        margin-top: 10px;
-    }
-}
+     .titleAndAddButton {
+         display: block;
+         padding: 10px;
+     }
+     .addHomeWorkPath {
+         margin-top: 10px;
+     }
+     .addClassPath {
+         display: block;
+         margin-top: 10px;
+     }
+ }
