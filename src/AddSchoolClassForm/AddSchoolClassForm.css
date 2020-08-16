@@ -28,11 +28,11 @@
 .class-details input, .homeworkDetails input {
   margin-bottom: 10px;
 }
-
+/*
 .class-details select, .homeworkDetails select {
   margin-top: 5px;
 }
-
+*/
 #sun, #mon, #tue, #wed, #thurs, #fri, #sat {
   margin-top: 6px;
 }
@@ -67,10 +67,18 @@
   .class-details input {
     margin-bottom: 0px;
   }
-  .class-details select {
+  .start-label{
+    margin-top:10px;
+  }
+  .starttime {
     display: block;
     margin: 0 auto;
     margin-top: 30px;
+  }
+  #endtime{
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
   }
   .class-details .addClass__button__group {
     padding-bottom: 20px;

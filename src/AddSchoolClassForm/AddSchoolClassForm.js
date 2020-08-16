@@ -211,7 +211,7 @@ class AddSchoolClassForm extends React.Component {
               <input type="checkbox" id="sat" value={'sat'} onChange={e => this.updateSaturday(e.target.value)} />
               <label className = "day-check" htmlFor="sat"> Sat</label><br></br>
 
-              <label htmlFor="name">Start Time</label>
+              <label className = "day-check" htmlFor="name">Start Time</label>
               <select className="starttime" name="starttime" id="starttime" onChange={this.updateStartTime} required="required">
                 <option defaultValue value="1:00am">1:00am</option>
                 <option value="2:00am">2:00am</option>

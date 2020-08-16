@@ -25,6 +25,7 @@
 }
 
 @media screen and (max-width:600px) {
+ 
   .homework-details {
     max-width: 80%;
   }
@@ -45,6 +46,7 @@
     margin: 0 auto;
     margin-top: 30px;
   }
+  
   .homework-details .addClass__button__group {
     padding-bottom: 20px;
   }

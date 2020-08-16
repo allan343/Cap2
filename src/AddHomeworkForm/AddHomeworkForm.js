@@ -138,7 +138,7 @@ class AddHomeworkForm extends React.Component {
               <label htmlFor="dueDate">Due Date</label>
               <input type="date" id="dueDate" name="dueDate" onChange={e => this.updateDueDate(e.target.value)} required="required"></input>
               <br />
-              <label htmlFor="name">Due Time</label>
+              <label className="start-label" htmlFor="name">Due Time</label>
               <select name="starttime" id="starttime" onChange={this.updateDueTime} required="required">
                 <option defaultValue value="1:00am">1:00am</option>
                 <option value="2:00am">2:00am</option>
