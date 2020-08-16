@@ -16,3 +16,14 @@
      list-style-type: none;
      padding: 0;
  }
+
+ @media screen and (max-width:450px) {
+    .titleAndAddButton {
+        display: block;
+        padding: 10px;
+    }
+
+    .addHomeWorkPath{
+        margin-top:10px;
+    }
+}
