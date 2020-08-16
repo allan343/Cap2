@@ -26,4 +26,9 @@
     .addHomeWorkPath{
         margin-top:10px;
     }
+
+    .addClassPath{
+        display: block;
+        margin-top: 10px;
+    }
 }
