@@ -1,3 +1,3 @@
 export default {
-   API_ENDPOINT: `https://radiant-mesa-02365.herokuapp.com`
+   API_ENDPOINT: `https://rhubarb-shortcake-42614.herokuapp.com`
 }
